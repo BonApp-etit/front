@@ -59,7 +59,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            Read our docs Prueba 1
           </a>
         </div>
       </main>
