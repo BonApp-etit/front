@@ -9,13 +9,13 @@ const tarjetasData = [
 
 const second = () => {
   return (
-    <section className="bg-white py-12 px-4">
+    <section className="bg-white py-12 px-4 font-sans">
       {/* Título Principal */}
       <div className="text-center mb-8">
         <p className='mb-4 text-[#FF441F]'>
             Que hacemos
         </p>
-        <h2 className="text-4xl font-bold text-black">Facilitamos el proceso de ordenar comida en restaurantes.</h2>
+        <h2 className="text-4xl font-bold text-black">Facilitamos el proceso de ordenar comida en <br></br>restaurantes.</h2>
         <p className="mt-4 text-gray-500">
           Hacemos que tus usuarios seleccionen sus platos favoritos y realicen sus pedidos de manera rápida y sencilla.
         </p>
