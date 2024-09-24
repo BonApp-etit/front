@@ -1,17 +1,14 @@
-import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
 export default function Home() {
-  return;
+  return (
+    <>
+      <h1 className="font-poppins text- text-main">
+        Aqui debe ir la landing Page
+      </h1>
+      <h1 className="font-poppins text-[18px] text-main">
+        Aqui debe ir la landing Page
+      </h1>
+      <p className="font-roboto text-second">Parrfo para roboto</p>
+      <p className="font-roboto text-black/60">Parrfo para roboto</p>
+    </>
+  );
 }
