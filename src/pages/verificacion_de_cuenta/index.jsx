@@ -1,27 +1,30 @@
 import React from 'react';
 import { Container } from '@mui/material';
 import CustomButton from "@/components/CustomButton"
-import { Button } from '@mui/material';
+//import { Button } from '@mui/material';
 export default function verificacion_de_cuenta(){
     return (
-        <main className="flex justify-center">
-            <div className="gap-2">
+        <main className=" p-4">
+
+            <div className='gap-4 flex flex-col shadow-md p-2 rounded-md'>
+
+            <div className=" flex justify-start flex-col">
             <div className="text-black text-[28px] font-semibold font-poppins">Verifica tu cuenta</div>
             <div className="text-black/50 text-xs font-normal font-poppins leading-[11px] tracking-tight">Ingresa tu corrreo o numero de telefono para<br/>recibir tu codigo de verificacion. </div>
-
-            <div>
-                <Container>
+            </div>
+           
+                <Container className='flex justify-center'>
                     <CustomButton
-                     
+                     size='medium'
                      text="Enviar codigo de verificacion" 
                      uppercase={false} 
                      //fontFamily="poppins"
-                     tailwindClasses="p-2 bg-red-600 hover:bg-red-700 rounded-md shadow-md font-poppins "
+                     tailwindClasses="rounded-lg shadow-md justify-center bg-main"
                     >
                     </CustomButton>
                 </Container>
                
-            </div>
+            
 
 {/**
             <div>
@@ -33,7 +36,10 @@ export default function verificacion_de_cuenta(){
 
  */}
            
+            
+
             </div>
+            
             
         </main>
     )

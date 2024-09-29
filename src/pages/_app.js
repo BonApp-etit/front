@@ -3,10 +3,10 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 const theme = createTheme({ // Colores personalizados para Material UI
   palette: {
     primary: {
-      main: '#1e90ff', // Color azul personalizado
+      main: '#ff441f', // Color azul personalizado
     },
     secondary: {
-      main: '#ff6347', // Color tomate personalizado
+      main: '#ffffff', // Color tomate personalizado
     },
   },
 });

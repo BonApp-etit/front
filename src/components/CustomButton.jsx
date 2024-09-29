@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import { Add } from '@mui/icons-material'; // Asegúrate de tener `@mui/icons-material` instalado
+import { Add, ArrowForward} from '@mui/icons-material'; // Asegúrate de tener `@mui/icons-material` instalado
 
-const CustomButton = ({text, uppercase, fontFamily, tailwindClasses, props}) => {
+const CustomButton = ({text, uppercase, fontFamily, tailwindClasses, size, props}) => {
   const handleClick = () => {
     alert('¡Botón clickeado!');
   };
@@ -10,17 +10,22 @@ const CustomButton = ({text, uppercase, fontFamily, tailwindClasses, props}) => 
   return (
     <Button
       variant="contained"           // Estilo del botón
-      color="secondary"               // Color del botón
-      size="large"                  // Tamaño del botón
-      startIcon={<Add />}           // Icono al inicio
+      // color="primary"               // Color del botón // Configurado desde _app.js Discutir si usar la configuracion de Material UI o Tailwind
+      size = {size ? size : 'medium' }                  // Tamaño del botón
+      //endIcon={<ArrowForward />}   // Icono al inicio
       onClick={handleClick}         // Maneja el evento de clic
-      fullWidth                     // Ocupa todo el ancho
-      sx={{ color:'white',
+                     
+      sx={{ 
+        height:'34px',
+        fontSize: '12px',
+        fontWeight: '900',
+        padding:'8px 12px',
+        color:'white',
         textTransform: uppercase ? 'uppercase' : 'none',
         '&:hover': {
-          backgroundColor: '#f01d06',
+          backgroundColor: '#secondary',
         },
-        fontFamily:fontFamily || 'Arial' // Estilo adicional  TODO: Agregar fuente poppins para usarla no solo con tailwind
+        fontFamily:fontFamily || 'Arial' // Estilo adicional  
        }}    
        className={tailwindClasses} // Aplica clases de Tailwind
        {...props} // Permite pasar otras propiedades
