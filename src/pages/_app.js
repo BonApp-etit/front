@@ -1,12 +1,13 @@
-import * as React from 'react';
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-const theme = createTheme({ // Colores personalizados para Material UI
+import * as React from "react";
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+const theme = createTheme({
+  // Colores personalizados para Material UI
   palette: {
     primary: {
-      main: '#ff441f', // Color azul personalizado
+      main: "#ff441f", // Color azul personalizado
     },
     secondary: {
-      main: '#ffffff', // Color tomate personalizado
+      main: "#ffffff", // Color tomate personalizado
     },
   },
 });
@@ -28,13 +29,12 @@ const roboto = Roboto({
 export default function App({ Component, pageProps }) {
   return (
     <main className={`${poppins.variable} font-sans`}>
-      
-      <ThemeProvider theme={theme}> {/**Configuraciones de Material UI */}
-      <CssBaseline />
-      <Component {...pageProps} />
-      
+      <ThemeProvider theme={theme}>
+        {" "}
+        {/**Configuraciones de Material UI */}
+        <CssBaseline />
+        <Component {...pageProps} />
       </ThemeProvider>
     </main>
-      
   );
 }
