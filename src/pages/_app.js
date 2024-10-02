@@ -1,29 +1,19 @@
 import * as React from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-const theme = createTheme({
-  // Colores personalizados para Material UI
-  palette: {
-    primary: {
-      main: "#ff441f", // Color azul personalizado
-    },
-    secondary: {
-      main: "#ffffff", // Color tomate personalizado
-    },
-  },
-});
+import theme from "../theme";
 import "@/styles/globals.css";
 import { Poppins, Roboto } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: "500",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
-  weight: "500",
+  weight: ["100", "300", "400", "500", "700", "900"],
 });
 
 export default function App({ Component, pageProps }) {

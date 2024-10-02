@@ -19,7 +19,6 @@ module.exports = {
         cs400: "#ff6037",
         cs500: "#FF441F",
         cs600: "#f01d06",
-        //   third: "#FFF6F4",
         cs700: "#c71007",
         cs800: "#9e0f0e",
         cs900: "#7f110f",
