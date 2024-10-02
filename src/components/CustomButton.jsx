@@ -2,17 +2,30 @@ import React from "react";
 import { Button } from "@mui/material";
 import { Add, ArrowForward } from "@mui/icons-material"; // Asegúrate de tener `@mui/icons-material` instalado
 
-const CustomButton = ({ text, uppercase, tailwindClasses, size, props }) => {
+const CustomButton = ({
+  text,
+  uppercase,
+  tailwindClasses,
+  type,
+  size,
+  onClick,
+  props,
+}) => {
+  {
+    /**
   const handleClick = () => {
     alert("¡Botón clickeado!");
   };
+   */
+  }
 
   return (
     <Button
       variant="contained" // Estilo del botón
       size={size ? size : "medium"} // Tamaño del botón
+      type={type}
       //endIcon={<ArrowForward />}   // Icono al inicio
-      onClick={handleClick} // Maneja el evento de clic
+      onClick={onClick} // Maneja el evento de clic
       sx={{
         textTransform: uppercase ? "uppercase" : "none",
       }}
