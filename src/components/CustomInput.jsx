@@ -17,7 +17,6 @@ const CustomInput = ({
       <label className="block text-lg font-medium mb-2">{label}</label>
       <TextField
         fullWidth
-        variant="outlined"
         id={id}
         name={name}
         value={value}
