@@ -35,17 +35,19 @@ const features = [
   ];
 
 export default function Third(){
-    return(
-        <>
-            <section className="bg-white py-12 px-4">
-            <div className="text-center mb-8">
-                <h2 className="text-4xl font-bold text-black">Funciones destacadas que facilitan tu <br></br> experiencia</h2>
-            </div>
-            
-           
-      
     
-        <div className="flex flex-wrap justify-center">
+  return (
+    <>
+      <section className="bg-white py-12 px-4">
+        {/* Título Principal */}
+        <div className="text-center mb-8">
+          <h2 className="text-4xl font-bold text-black">
+            Funciones destacadas que facilitan tu <br /> experiencia
+          </h2>
+        </div>
+  
+        {/* Sección de Tarjetas */}
+        <div className="mx-[120px] grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <TarjetasSegundas
               key={index}
@@ -55,9 +57,8 @@ export default function Third(){
             />
           ))}
         </div>
-      
-
-            </section>
-        </>
-    );
+      </section>
+    </>
+  );
+  
 }
