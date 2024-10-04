@@ -11,7 +11,6 @@ const theme = createTheme({
       //main: "#ff441f", // Naranja principal ---Default 500
       //
     },
-    // Outlined
     secondary: {
       main: "#ff441f", // Naranja outlined  ---- Default
       contrastText: "#FFFFFF", // Texto en blanco sobre el color secundario
@@ -60,19 +59,9 @@ const theme = createTheme({
           textTransform: "none",
           padding: "8px 12px", // Padding del botón (puede ser personalizado)
           borderRadius: "8px", // Radio de borde redondeado
-          border: "none", // Eliminar bordes predeterminados
+
           cursor: "pointer",
           transition: "background-color 0.3s ease", // Transición suave para hover
-          "&:hover": {
-            backgroundColor: theme.palette.action.hover, // Color de hover (personalizable)
-          },
-          "&:active": {
-            backgroundColor: theme.palette.action.selected, // Color de hover (personalizable)
-          },
-          "&:disabled": {
-            backgroundColor: theme.palette.action.disabledBackground, // Color de fondo deshabilitado
-            cursor: "not-allowed",
-          },
         }),
       },
     },
