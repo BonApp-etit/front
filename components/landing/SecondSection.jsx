@@ -1,5 +1,5 @@
 import React from 'react';
-import TarjetasPrimeras from '../components/TarjetasPrimeras'
+import TarjetasPrimeras from './FirstCard'
 
 const tarjetasData = [
   { texto: "Recetas de calidad", src: "/assets/secondFirst.svg" },

@@ -1,5 +1,5 @@
 import React from 'react';
-import TarjetasSegundas from '../components/TarjetasSegundas';
+import TarjetasSegundas from './SecondCard';
 
 const features = [
     {

@@ -1,9 +1,9 @@
-import First from '../../components/first'
-import Second from '../../components/second';
-import Third from '../../components/third'
-import Fourth from '../../components/fourth'
-import Fifth from '../../components/fifth'
-import Footer from '../../components/footer';
+import First from '../../components/landing/FirstSection'
+import Second from '../../components/landing/SecondSection';
+import Third from '../../components/landing/ThirdSection'
+import Fourth from '../../components/landing/FourthSection'
+import Fifth from '../../components/landing/FifthSection'
+import Footer from '../../components/landing/FooterSection';
 
 export default function landing() {
     return (

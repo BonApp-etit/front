@@ -1,4 +1,4 @@
-import TarjetasTerceras from '../../front/components/TarjetasTerceras'
+import TarjetasTerceras from './ThirdCards'
 const infoComments = [
     {
         name:'Jessica',
