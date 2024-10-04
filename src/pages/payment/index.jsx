@@ -1,4 +1,4 @@
-export default function pay(){
+export default function payment(){
     return(
         <>
             
