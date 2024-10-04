@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import theme from "../theme";
+import theme from "../styles/theme";
 import "@/styles/globals.css";
 import { Poppins, Roboto } from "next/font/google";
 

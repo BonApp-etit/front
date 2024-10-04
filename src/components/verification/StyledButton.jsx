@@ -12,7 +12,7 @@ const StyledButton = ({ text, disabled, tailwindClasses }) => {
     fontSize: "0.75rem",
     textTransform: "none",
     padding: "8px 12px", // Padding del botón (puede ser personalizado)
-    borderRadius: "8px", // Radio de borde redondeado
+    borderRadius: "2px", // Radio de borde redondeado
     border: "none", // Eliminar bordes predeterminados
     cursor: "pointer",
     fontSize: "12px",

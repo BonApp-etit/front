@@ -6,7 +6,7 @@ const StyledInput = styled(TextField)(
   ({ theme, customHeight, customWidth }) => ({
     "& .MuiInputBase-root": {
       backgroundColor: "#fff6f3",
-      borderRadius: "8px",
+      borderRadius: "2px",
       padding: "20px 12px",
       height: customHeight || "auto",
       width: customWidth || "300px",
