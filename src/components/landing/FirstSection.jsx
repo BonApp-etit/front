@@ -1,7 +1,7 @@
 export default function First() {
   return (
     <div className="bg-[#FFF1ED]"> {/* Contenedor exterior que extiende el fondo */}
-      <div className="flex flex-col justify-between md:flex-row items-center p-11 md:p-12   space-y-6 md:space-y-0 font-sans mx-[120px]">
+      <div className="flex flex-col justify-between lg:flex-row items-center p-11 md:p-12   space-y-6 md:space-y-0 font-sans mx-[120px]">
         
         {/* Left Side: Text and Button */}
         <div className="text-center md:text-left space-y-4 md:w-1/2 ">
@@ -15,19 +15,19 @@ export default function First() {
             ¡Solicita una demo!
           </button>
           <div className="flex items-center space-x-2 pt-4">
-            <div className="flex -space-x-2">
+            <div className="flex -space-x-2 md:mr-10 sm:mr-0">
               <img
-                src=""
+                src="/assets/pp1.svg"
                 alt="User1"
                 className="w-8 h-8 rounded-full border-2 border-white"
               />
               <img
-                src="https://via.placeholder.com/32"
+                src="/assets/pp2.svg"
                 alt="User2"
                 className="w-8 h-8 rounded-full border-2 border-white"
               />
               <img
-                src="https://via.placeholder.com/32"
+                src="/assets/pp3.svg"
                 alt="User3"
                 className="w-8 h-8 rounded-full border-2 border-white"
               />
@@ -40,11 +40,11 @@ export default function First() {
         </div>
   
         {/* Right Side: Chef Image */}
-        <div className="md: mt-6 md:mt-0 ">
+        <div className="mt-[10px] lg:mt-0 md:mt-10">
           <img
             src="/assets/first.svg" // Cambia esta ruta con tu imagen
             alt="Chef"
-            className="rounded-lg"
+            className="rounded-lg md:mt-10"
           />
         </div>
       
