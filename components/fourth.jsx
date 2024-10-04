@@ -25,16 +25,15 @@ export default function fourth (){
 
             {/* Sección de Tarjetas */}
             <div className="mx-auto sm:mx-8 md:mx-16 lg:mx-[120px] flex flex-wrap justify-center gap-4">
-                 {
-                    infoComments.map((info,index) => (
-                        <TarjetasTerceras
-                        key={index}
-                        review={info.review}
-                        name={info.name}
-                        />
-                    ))
-                 }
+                {infoComments.map((info, index) => (
+                    <TarjetasTerceras
+                    key={index}
+                    review={info.review}
+                    name={info.name}
+                    />
+                ))}
             </div>
+               
         </section>
     );
 }

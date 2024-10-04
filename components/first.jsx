@@ -1,7 +1,7 @@
 export default function First() {
   return (
     <div className="bg-[#FFF1ED]"> {/* Contenedor exterior que extiende el fondo */}
-      <div className="flex flex-col md:flex-row items-center p-11 md:p-12   space-y-6 md:space-y-0 font-sans mx-[120px]">
+      <div className="flex flex-col justify-between md:flex-row items-center p-11 md:p-12   space-y-6 md:space-y-0 font-sans mx-[120px]">
         
         {/* Left Side: Text and Button */}
         <div className="text-center md:text-left space-y-4 md:w-1/2">
