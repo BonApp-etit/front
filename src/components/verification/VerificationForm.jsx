@@ -5,8 +5,8 @@ import { useTheme } from "@mui/material/styles";
 export default function VerificationForm() {
   const theme = useTheme();
   return (
-    <section className="flex justify-center w-1/2">
-      <div className="gap-4 flex flex-col shadow p-4   rounded-xl md:w-[600px] md:px-16 md:pt-36 md:pb-28 w-[360px] lg:pb-48 lg:pt-24 lg:py-16 ">
+    <section className="flex justify-center w-1/2 ">
+      <div className="gap-4 flex flex-col shadow-md p-4   rounded-xl md:w-[600px] md:px-16 md:pt-36 md:pb-28 w-[360px] lg:pb-48 lg:pt-24 lg:py-16 ">
         <div className=" flex justify-start flex-col ">
           <h1 className="text-black text-[28px] md:text-3xl font-semibold font-poppins">
             Verifica tu cuenta
