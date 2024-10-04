@@ -88,8 +88,7 @@ export default function Verificacion_de_cuenta() {
             />
           </div>
         </div>
-        {/**
- *  <CustomInput
+        <CustomInput
           label="Correo"
           placeholder="Escribe tu correo"
           customWidth="150px"
@@ -106,19 +105,18 @@ export default function Verificacion_de_cuenta() {
             "&:hover": { background: "#77463d" },
             padding: "24px",
             borderRadius: "16px",
-            disabled: true,
+            disabled: false,
           }}
           variant="outlined"
         >
           Hola este es prueba
         </Button>
 
-        <Button variant="contained">Este es uno sin sx</Button>
+        <Button color="primary" variant="outlined">
+          Este es uno sin sx
+        </Button>
 
-        <StyledButton>Este es un boton con styled</StyledButton>
- * 
-
- */}
+        <StyledButton text="Este es el mensaje" sx={{ padding: "24px" }} />
       </div>
     </main>
   );

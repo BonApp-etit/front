@@ -11,23 +11,15 @@ const CustomButton = ({
   onClick,
   props,
 }) => {
-  {
-    /**
-  const handleClick = () => {
-    alert("¡Botón clickeado!");
-  };
-   */
-  }
-
   return (
     <Button
-      variant="contained" // Estilo del botón
+      variant="outlined" // Estilo del botón
       size={size ? size : "medium"} // Tamaño del botón
       type={type}
       //endIcon={<ArrowForward />}   // Icono al inicio
       onClick={onClick} // Maneja el evento de clic
       sx={{
-        textTransform: uppercase ? "uppercase" : "none",
+        textTransform: "none",
       }}
       className={[
         tailwindClasses,
