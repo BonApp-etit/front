@@ -4,14 +4,14 @@ export default function First() {
       <div className="flex flex-col justify-between md:flex-row items-center p-11 md:p-12   space-y-6 md:space-y-0 font-sans mx-[120px]">
         
         {/* Left Side: Text and Button */}
-        <div className="text-center md:text-left space-y-4 md:w-1/2">
-          <h1 className="text-[64px] font-bold text-gray-800">
+        <div className="text-center md:text-left space-y-4 md:w-1/2 ">
+          <h1 className="text-[64px] font-bold text-gray-800 font-roboto">
             Ordena fácilmente, <br /> disfruta rápidamente
           </h1>
-          <p className="text-gray-600 text-[24px]">
+          <p className="text-gray-600 text-[24px] font-roboto">
             Ordena lo que te gusta en pocos pasos y disfruta de <br />tu comida sin esperar.
           </p>
-          <button className="bg-[#FF441F] hover:bg-orange-600 text-white py-2 px-4 rounded-full">
+          <button className="bg-[#FF441F] hover:bg-orange-600 text-white py-2 px-4 rounded-full font-roboto">
             ¡Solicita una demo!
           </button>
           <div className="flex items-center space-x-2 pt-4">

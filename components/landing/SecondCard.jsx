@@ -14,10 +14,10 @@ const FeatureCard = ({ image, title, description }) => {
         {/* Contenedor para centrar título y descripción */}
         <div className="flex flex-col items-center">
           {/* Título */}
-          <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">{title}</h3>
+          <h3 className="text-[24px] font-semibold text-gray-800 mb-2 text-center font-poppins">{title}</h3>
           
           {/* Descripción */}
-          <p className="text-gray-600 text-center">{description}</p>
+          <p className="text-gray-600 text-center text-[18px] font-roboto">{description}</p>
         </div>
       </div>
     );
