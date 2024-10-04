@@ -41,7 +41,7 @@ export default function Third(){
       <section className="bg-white py-12 px-4">
         {/* Título Principal */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-black">
+          <h2 className="text-[48px] font-bold text-black font-poppins">
             Funciones destacadas que facilitan tu <br /> experiencia
           </h2>
         </div>

@@ -18,7 +18,7 @@ export default function fourth (){
     return(
         <section className="bg-white py-12 px-4">
             <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-black">
+                <h2 className="text-[48px] font-bold text-black font-poppins">
                 ¿Que dicen nuestros <br /> clientes de nosotros?
                 </h2>
             </div>

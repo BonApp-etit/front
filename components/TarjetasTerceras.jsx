@@ -5,7 +5,7 @@ export default function TestimonialCard ({ review, name })  {
         <div className="text-orange-500 text-5xl leading-none mb-4">“</div>
         
         {/* Texto de la reseña */}
-        <p className="text-gray-700 mb-11 mt-11 text-[20px]">
+        <p className="text-gray-700 mb-11 mt-11 text-[20px] font-robot">
           {review}
         </p>
         
@@ -26,7 +26,7 @@ export default function TestimonialCard ({ review, name })  {
         </div>
   
         {/* Nombre de la persona */}
-        <p className="text-gray-900 font-semibold text-[20px]">-{name}</p>
+        <p className="text-gray-900 font-semibold text-[20px] font-roboto">-{name}</p>
       </div>
     );
   };

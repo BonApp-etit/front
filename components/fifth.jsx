@@ -13,15 +13,15 @@ export default function Fifth() {
 
         {/* Columna de texto */}
         <div className="text-center lg:text-left">
-          <h4 className="text-[20px] text-red-500 font-semibold uppercase">
+          <h4 className="text-[20px] text-red-500 font-roboto uppercase">
             Testimonio
           </h4>
-          <h2 className="text-[50px] font-bold text-gray-900 mt-2">
+          <h2 className="text-[50px] font-poppins text-gray-900 mt-2">
             Descubre la forma más <br /> fácil de disfrutar tus <br /> platos
             favoritos, sin complicaciones ni <br /> esperas.
           </h2>
 
-          <button className="mt-6 bg-[#FF441F] text-white py-3 px-6 rounded-full transition w-[235px] h-[65px] text-[27px]">
+          <button className="mt-6 bg-[#FF441F] text-white py-3 px-6 rounded-full transition w-[235px] h-[65px] text-[27px] font-roboto">
             Únete ahora
           </button>
         </div>
