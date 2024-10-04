@@ -27,10 +27,14 @@ export default function Verificacion_de_cuenta() {
   });
 
   return (
-    <main className="flex flex-col items-center ">
+    <main className="flex flex-col items-center lg:flex-row-reverse  lg:justify-center lg:mt-28 md:mt-14 ">
       <VerificationForm />
 
-      <Image src={autenticationImage} alt="Imagen de autenticacion" />
+      <Image
+        className="md:w-96 lg:w-[400px]"
+        src={autenticationImage}
+        alt="Imagen de autenticacion"
+      />
     </main>
   );
 }
