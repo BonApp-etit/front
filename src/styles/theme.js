@@ -13,6 +13,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#ff441f", // Naranja outlined  ---- Default
+      dark: "#272727",
       contrastText: "#FFFFFF", // Texto en blanco sobre el color secundario
     },
     background: {

@@ -1,10 +1,16 @@
+import { ButtonGroup } from "@mui/material";
+import { Button } from "@mui/material";
+import ButtonGroupCustomized from "@/components/common_components/ButtonGroupCustomized";
 export default function Menu() {
   return (
     <>
-      <h1 className="font-poppins text- text-main">Aqui debe ir el menu</h1>
-      <h1 className="font-poppins text-[18px] text-main">Aqui debe ir</h1>
-      <p className="font-roboto text-second">Parrfo para roboto</p>
-      <p className="font-roboto text-black/60">Parrfo para roboto</p>
+      <ButtonGroupCustomized className="shadow-lg" variant="outlined">
+        <Button>Comprar de nuevo</Button>
+        <Button>Entradas</Button>
+        <Button>Bebidas</Button>
+        <Button>Platillos</Button>
+        <Button>Postres</Button>
+      </ButtonGroupCustomized>
     </>
   );
 }
