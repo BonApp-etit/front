@@ -1,4 +1,4 @@
-import StyledInput from "@/components/verification/StyledInput";
+import StyledInput from "@/components/common_components/StyledInput";
 import { Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
