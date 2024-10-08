@@ -1,5 +1,5 @@
-import { ButtonGroup } from "@mui/material";
 import { Button } from "@mui/material";
+import CardMenu from "@/components/common_components/CardMenu";
 import ButtonGroupCustomized from "@/components/common_components/ButtonGroupCustomized";
 export default function Menu() {
   return (
@@ -11,6 +11,8 @@ export default function Menu() {
         <Button>Platillos</Button>
         <Button>Postres</Button>
       </ButtonGroupCustomized>
+
+      <CardMenu></CardMenu>
     </>
   );
 }
