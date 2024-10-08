@@ -1,11 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: "630px", // Small screens (mínimo 640px)
+      md: "744px", // Medium screens (mínimo 768px)
+      lg: "1024px", // Large screens (mínimo 1024px)
+    },
     extend: {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
@@ -27,4 +32,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
