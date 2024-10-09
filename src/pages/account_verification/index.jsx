@@ -1,7 +1,7 @@
 import React from "react";
 import VerificationForm from "@/components/verification/VerificationForm";
 import Image from "next/image";
-import autenticationImage from "./Authentication.svg";
+import autenticationImage from "@/../public/assets/authenticationForm/Authentication.svg";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
