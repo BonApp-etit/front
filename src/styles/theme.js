@@ -42,8 +42,8 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0, // Extra pequeño
-      sm: 630, // Pequeño
-      md: 744, // Mediano
+      sm: 361, // Pequeño
+      md: 743, // Mediano
       lg: 1200, // Grande
       xl: 1920, // Extra grande
     },
