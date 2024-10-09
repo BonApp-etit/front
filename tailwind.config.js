@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "0px", //
+        sm: "360px", // Small screens (mínimo 640px)
+        md: "744px", // Medium screens (mínimo 768px)
+        lg: "1200px", // Large screens (mínimo 1024px)
+      },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         roboto: ["var(--font-roboto)"],
@@ -27,4 +33,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

@@ -7,7 +7,7 @@ import Footer from "../components/landing/FooterSection";
 
 export default function landing() {
   return (
-    <main className="mx-120">
+    <main>
       <First />
       <Second />
       <Third />

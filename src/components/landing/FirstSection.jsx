@@ -1,55 +1,114 @@
+import Image from "next/image";
+import { Button } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
 export default function First() {
+  const theme = useTheme();
+  const recomendations = useMediaQuery("(min-width:1200px)");
   return (
-    <div className="bg-[#FFF1ED]"> {/* Contenedor exterior que extiende el fondo */}
-      <div className="flex flex-col justify-between lg:flex-row items-center p-11 md:p-12   space-y-6 md:space-y-0 font-sans mx-[120px]">
-        
-        {/* Left Side: Text and Button */}
-        <div className="text-center md:text-left space-y-4 md:w-1/2 ">
-          <h1 className="text-[64px] font-bold text-gray-800 font-roboto">
-            Ordena fácilmente, <br /> disfruta rápidamente
-          </h1>
-          <p className="text-gray-600 text-[24px] font-roboto">
-            Ordena lo que te gusta en pocos pasos y disfruta de <br />tu comida sin esperar.
-          </p>
-          <button className="bg-[#FF441F] hover:bg-orange-600 text-white py-2 px-4 rounded-full font-roboto">
-            ¡Solicita una demo!
-          </button>
-          <div className="flex items-center space-x-2 pt-4">
-            <div className="flex -space-x-2 md:mr-10 sm:mr-0">
-              <img
-                src="/assets/pp1.svg"
-                alt="User1"
-                className="w-8 h-8 rounded-full border-2 border-white"
-              />
-              <img
-                src="/assets/pp2.svg"
-                alt="User2"
-                className="w-8 h-8 rounded-full border-2 border-white"
-              />
-              <img
-                src="/assets/pp3.svg"
-                alt="User3"
-                className="w-8 h-8 rounded-full border-2 border-white"
-              />
-            </div>
-            <div className="text-sm text-gray-600 flex-col">
-              <span className="font-semibold">Nuestros usuarios felices</span>
-              <span>⭐ 4.8 (450+ reviews)</span>
-            </div>
+    <section className=" lg:bg-[#FFF1ED] lg:py-24 flex justify-center p-4">
+      {/* Contenedor exterior que extiende el fondo */}
+
+      <div className=" sm:max-w-96 md:max-w-3xl  md:px-24 lg:flex lg:justify-evenly  lg:items-center lg:max-w-7xl lg:px-[40px] ">
+        <div className=" lg:flex lg:flex-col ">
+          {/**Title and subtittle */}
+          <div className=" mb-8 gap-4 text-black   flex flex-col md:mt-8 md:text-center sm:text-center xs:text-center lg:text-left lg:gap-4  lg:mb-12 ">
+            <h1 className="  text-3xl font-bold font-roboto  md:text-5xl md:font-poppins lg:text-[64px] lg:font-roboto">
+              Ordena fácilmente, disfruta rápidamente
+            </h1>
+            <p className=" text-base font-normal font-roboto md:text-xl lg:text-2xl  ">
+              Ordena lo que te gusta en pocos pasos y disfruta de tu comida sin
+              esperar.
+            </p>
           </div>
+          {/** Button and recomendations */}
+
+          <div className=" flex justify-center mb-10 lg:justify-start">
+            <Button
+              variant="contained"
+              sx={{
+                [theme.breakpoints.up("lg")]: {
+                  borderRadius: "45px",
+                  py: "18px",
+                  px: "32px",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                },
+                [theme.breakpoints.between("md", "lg")]: {
+                  py: "12px",
+                  px: "32px",
+                  borderRadius: "45px",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                },
+                [theme.breakpoints.between("sm", "md")]: {
+                  py: "12px",
+                  px: "32px",
+                  borderRadius: "45px",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                },
+                [theme.breakpoints.down("sm")]: {
+                  py: "12px",
+                  px: "32px",
+                  borderRadius: "45px",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                },
+              }}
+            >
+              ¡Solicita una demo!
+            </Button>
+          </div>
+
+          {recomendations && (
+            <div className="flex justify-start">
+              <div className="flex -space-x-6 ">
+                <Image
+                  src="/assets/pp1.svg"
+                  alt="User1"
+                  width={63}
+                  height={63}
+                  className=" rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/assets/pp2.svg"
+                  alt="User2"
+                  width={63}
+                  height={63}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/assets/pp3.svg"
+                  alt="User3"
+                  width={63}
+                  height={63}
+                  className="rounded-full border-2 border-white"
+                />
+              </div>
+              <div className=" flex flex-col ext-xl font-roboto items-center ">
+                <span className="font-bold  text-black">
+                  Nuestros usuarios felices
+                </span>
+                <span className="text-black/50  font-normal ">
+                  ⭐ 4.8 (450+ reviews)
+                </span>
+              </div>
+            </div>
+          )}
         </div>
-  
+
         {/* Right Side: Chef Image */}
-        <div className="mt-[10px] lg:mt-0 md:mt-10">
-          <img
-            src="/assets/first.svg" // Cambia esta ruta con tu imagen
+        <div className=" mx-auto w-80 h-auto md:w-[550px] lg:w-[950px]  ">
+          <Image
+            width={550}
+            height={440}
+            src="/assets/first.svg"
             alt="Chef"
-            className="rounded-lg md:mt-10"
+            layout="responsive"
           />
         </div>
-      
       </div>
-    </div>
+    </section>
   );
-  
 }
