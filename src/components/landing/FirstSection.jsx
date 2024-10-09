@@ -9,7 +9,7 @@ export default function First() {
     <section className=" lg:bg-[#FFF1ED] lg:py-24 flex justify-center p-4">
       {/* Contenedor exterior que extiende el fondo */}
 
-      <div className=" sm:max-w-96 md:max-w-3xl  md:px-24 lg:flex lg:justify-evenly  lg:items-center lg:max-w-7xl lg:px-[50px] ">
+      <div className=" sm:max-w-96 md:max-w-3xl  md:px-24 lg:flex lg:justify-evenly  lg:items-center lg:max-w-7xl lg:px-[40px] ">
         <div className=" lg:flex lg:flex-col ">
           {/**Title and subtittle */}
           <div className=" mb-8 gap-4 text-black   flex flex-col md:mt-8 md:text-center sm:text-center xs:text-center lg:text-left lg:gap-4  lg:mb-12 ">
@@ -35,21 +35,21 @@ export default function First() {
                   fontWeight: "700",
                 },
                 [theme.breakpoints.between("md", "lg")]: {
-                  py: "12px", // Cambios para tablet (menor a 768px)
+                  py: "12px",
                   px: "32px",
                   borderRadius: "45px",
                   fontSize: "1rem",
                   fontWeight: "700",
                 },
                 [theme.breakpoints.between("sm", "md")]: {
-                  py: "12px", // Cambios para tablet (menor a 768px)
+                  py: "12px",
                   px: "32px",
                   borderRadius: "45px",
                   fontSize: "1rem",
                   fontWeight: "700",
                 },
                 [theme.breakpoints.down("sm")]: {
-                  py: "12px", // Cambios para tablet (menor a 768px)
+                  py: "12px",
                   px: "32px",
                   borderRadius: "45px",
                   fontSize: "1rem",
@@ -99,7 +99,7 @@ export default function First() {
         </div>
 
         {/* Right Side: Chef Image */}
-        <div className=" mx-auto w-80 h-auto md:w-[550px] lg:w-[750px]  ">
+        <div className=" mx-auto w-80 h-auto md:w-[550px] lg:w-[950px]  ">
           <Image
             width={550}
             height={440}
@@ -111,11 +111,4 @@ export default function First() {
       </div>
     </section>
   );
-}
-
-{
-  /**
-   *
-   *
-   */
 }
