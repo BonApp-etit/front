@@ -88,9 +88,9 @@ const Second = () => {
 
       {/* Tarjetas estáticas para desktop */}
       {isDesktop && (
-        <div className="flex justify-center">
+        <div className="flex flex-row justify-center">
           {tarjetasData.map((tarjeta, index) => (
-            <div key={index} className="w-[340px] mx-[100px]">
+            <div key={index} className="flex mx-[80px]">
               <TarjetasPrimeras texto={tarjeta.texto} src={tarjeta.src} />
             </div>
           ))}
