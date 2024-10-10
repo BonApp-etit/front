@@ -2,7 +2,13 @@ import * as React from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import theme from "../styles/theme";
 import "@/styles/globals.css";
-import { Poppins, Roboto } from "next/font/google";
+import { Poppins, Roboto, Ubuntu } from "next/font/google";
+
+const ubuntu = Ubuntu({
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-ubuntu",
+  subsets: ["latin"],
+});
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,7 +24,9 @@ const roboto = Roboto({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${poppins.variable} font-sans`}>
+    <main
+      className={`${poppins.variable} font-sans ${ubuntu.className} ${roboto.className}`}
+    >
       <ThemeProvider theme={theme}>
         {" "}
         {/**Configuraciones de Material UI */}

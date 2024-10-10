@@ -21,8 +21,10 @@ const theme = createTheme({
       paper: "#FFFFFF", // Color de fondo de los componentes tipo "paper"
     },
     text: {
-      primary: "#000000", // Color de texto principal
-      secondary: "#000000", // Color de texto secundario
+      primary: "#000000", //
+      secondary: "#000000", //
+      description: "#667473", // Descripcion de card para menu
+      title: "#F01D06",
       disabled: "#ff6037", // 400
     },
 

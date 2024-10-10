@@ -6,35 +6,65 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
+import CounterButton from "../menu/buttonIncrease";
 
 export default function CardMenu() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card
+      sx={{
+        maxWidth: 170,
+        borderRadius: "16px",
+        border: "0.5px",
+      }}
+    >
       <CardActionArea>
         <CardMedia
-          sx={{
-            "& .MuiCardMedia-root": {
-              height: "100px",
-            },
-          }}
-          component="img"
+          component="svg"
           height="100"
+          width="170"
           image="/assets/DeliciousChicken.svg"
           alt="green iguana"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+        <CardContent
+          width="170"
+          sx={{
+            padding: 1, // Cambia el padding del CardContent
+          }}
+        >
+          <Typography
+            className="font-ubuntu font-bold text-sm  tracking-tight"
+            gutterBottom
+            color="textTitle"
+            variant="h5"
+            component="div"
+          >
+            Alitas
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography
+            variant="body2"
+            color="textDescription"
+            className="font-ubuntu text-[10px] font-normal"
+          >
+            Deliciosa orden de alitas empanizadas, aderezadas con...
+          </Typography>
+
+          <Typography
+            variant="body2"
+            color="textPrimary"
+            className="font-ubuntu"
+          >
+            $50 MXN
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
+      <CardActions sx={{ justifyContent: "space-evenly" }}>
+        <CounterButton></CounterButton>
+        <Button
+          variant="contained"
+          color="primary"
+          className="font-ubuntu font-medium text-[10px] p-1 "
+        >
+          Comprar ahora
         </Button>
       </CardActions>
     </Card>
