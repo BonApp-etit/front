@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import TarjetasPrimeras from './FirstCard';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
@@ -10,47 +10,57 @@ const tarjetasData = [
 ];
 
 const Second = () => {
-  const swiperContainerRef = useRef(null); // referencia para el contenedor de Swiper
+  const swiperContainerRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // Inicializar Swiper cuando el componente esté montado
-    const swiper = new Swiper(swiperContainerRef.current, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        // Cambia el número de slides según el ancho de la pantalla
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-      },
-    });
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
 
-    // Limpieza de Swiper cuando el componente se desmonte
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
     return () => {
-      if (swiper) swiper.destroy();
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
+  useEffect(() => {
+    let swiper = null;
+
+    if (!isDesktop) {
+      swiper = new Swiper(swiperContainerRef.current, {
+        slidesPerView: 1, // Ajuste para pantallas pequeñas
+        spaceBetween: 10,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        },
+      });
+    }
+
+    return () => {
+      if (swiper) swiper.destroy();
+    };
+  }, [isDesktop]);
+
   return (
     <section className="bg-white py-12 px-4 font-sans">
-      {/* Título Principal */}
       <div className="text-center mb-8">
         <p className="mb-4 text-[#FF441F] font-poppins">QUE HACEMOS</p>
         <h2 className="text-[48px] font-bold text-black font-poppins">
@@ -62,19 +72,30 @@ const Second = () => {
         </p>
       </div>
 
-      {/* Contenedor Swiper */}
-      <div ref={swiperContainerRef} className="swiper-container">
-        <div className="swiper-wrapper">
-          {/* Renderizar las tarjetas dentro del Swiper */}
+      {/* Contenedor Swiper para móviles */}
+      <div
+        ref={swiperContainerRef}
+        className={`swiper-container ${isDesktop ? 'hidden' : ''}`}
+      >
+        <div className="swiper-wrapper flex justify-start items-center">
           {tarjetasData.map((tarjeta, index) => (
-            <div key={index} className="swiper-slide">
+            <div key={index} className="swiper-slide w-[340px]">
               <TarjetasPrimeras texto={tarjeta.texto} src={tarjeta.src} />
             </div>
           ))}
         </div>
-        {/* Paginación y botones de navegación */}
-        
       </div>
+
+      {/* Tarjetas estáticas para desktop */}
+      {isDesktop && (
+        <div className="flex justify-center">
+          {tarjetasData.map((tarjeta, index) => (
+            <div key={index} className="w-[340px] mx-[100px]">
+              <TarjetasPrimeras texto={tarjeta.texto} src={tarjeta.src} />
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

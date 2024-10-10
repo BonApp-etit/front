@@ -10,7 +10,7 @@ export default function TestimonialCard ({ review, name })  {
         </p>
         
         {/* Estrellas */}
-        <div className="flex items-center mb-8">
+        <div className="flex items-center mb-6">
           {[...Array(5)].map((_, index) => (
             <svg
               key={index}

@@ -113,14 +113,17 @@ export default function Third() {
           
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-[120px]">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           {features.map((feature, index) => (
-            <TarjetasSegundas
+            <div className='flex items-center justify-center'>
+                <TarjetasSegundas
               key={index}
               image={feature.image}
               title={feature.title}
               description={feature.description}
             />
+            </div>
+            
           ))}
         </div>
       )}

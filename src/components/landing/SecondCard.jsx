@@ -2,9 +2,9 @@ import React from 'react';
 
 const FeatureCard = ({ image, title, description }) => {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6 relative w-full">
+      <div className="bg-white rounded-[40px] shadow-lg p-6 relative w-[375px] h-[495px] mb-[80px]">
         {/* Esquina de la tarjeta */}
-        <div className="absolute top-0 right-0 bg-[#FF441F] w-8 h-8 rounded-bl-lg"></div>
+        <div className="absolute top-0 right-0 bg-[#FF441F] w-[75px] h-[75px] rounded-bl-[60px] rounded-tr-[40px]"></div>
         
         {/* Imagen */}
         <div className="mb-4 flex justify-center">
