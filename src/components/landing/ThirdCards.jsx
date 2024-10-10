@@ -1,6 +1,6 @@
 export default function TestimonialCard ({ review, name })  {
     return (
-      <div className="bg-[#FFF1EE] p-6 rounded-lg shadow-md max-w-sm ">
+      <div className="bg-[#FFF1EE] p-6 shadow-md  w-[348px] h-[348px] rounded-[10px]">
         {/* Cita */}
         <div className="text-orange-500 text-5xl leading-none mb-4">“</div>
         

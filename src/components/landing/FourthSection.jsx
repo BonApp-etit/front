@@ -44,7 +44,7 @@ export default function Fourth() {
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 0,
         },
       },
     });
@@ -64,19 +64,15 @@ export default function Fourth() {
       </div>
 
       {/* Swiper para los comentarios */}
-      <div ref={swiperContainerRef} className="swiper-container mx-auto sm:mx-8 md:mx-16 lg:mx-[120px]">
-        <div className="swiper-wrapper">
+      <div ref={swiperContainerRef} className="swiper-container mx-auto sm:mx-8 md:mx-16">
+        <div className="swiper-wrapper flex items-center justify-center">
           {infoComments.map((info, index) => (
-            <div key={index} className="swiper-slide">
+            <div key={index} className="swiper-slide w-full max-w-[300px] mx-[100px]"> {/* Añade un max-w */}
               <TarjetasTerceras review={info.review} name={info.name} />
             </div>
           ))}
         </div>
 
-        {/* Paginación y botones de navegación */}
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
       </div>
     </section>
   );
