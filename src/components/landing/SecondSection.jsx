@@ -48,7 +48,7 @@ const Second = () => {
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 400,
           },
         },
       });
@@ -77,9 +77,9 @@ const Second = () => {
         ref={swiperContainerRef}
         className={`swiper-container ${isDesktop ? 'hidden' : ''}`}
       >
-        <div className="swiper-wrapper flex justify-start items-center">
+        <div className="swiper-wrapper">
           {tarjetasData.map((tarjeta, index) => (
-            <div key={index} className="swiper-slide w-[340px]">
+            <div key={index} className="swiper-slide w-[340px] ml-[120px]">
               <TarjetasPrimeras texto={tarjeta.texto} src={tarjeta.src} />
             </div>
           ))}

@@ -72,7 +72,7 @@ export default function Third() {
         breakpoints: {
           640: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 500,
           },
           768: {
             slidesPerView: 2,
@@ -98,7 +98,7 @@ export default function Third() {
 
       {/* Swiper para mobile o vista normal en desktop */}
       {isMobile ? (
-        <div ref={swiperContainerRef} className="swiper-container mx-[120px]">
+        <div ref={swiperContainerRef} className="swiper-container mx-[85px]">
           <div className="swiper-wrapper">
             {features.map((feature, index) => (
               <div key={index} className="swiper-slide">
