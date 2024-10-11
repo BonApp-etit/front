@@ -19,14 +19,14 @@ export default function CounterButton() {
         alignItems: "center",
         justifyContent: "space-between",
         border: "1px solid #FF441F",
-        padding: "6px 4px",
+        padding: 0.5,
         width: "60px",
         borderRadius: "8px",
       }}
     >
       <IconButton
         variant="text"
-        onClick={handleDecrement}
+        onClick={handleIncrement}
         color="secondary"
         sx={{
           minWidth: "auto",
@@ -41,7 +41,7 @@ export default function CounterButton() {
       </Typography>
       <IconButton
         color="secondary"
-        onClick={handleIncrement}
+        onClick={handleDecrement}
         sx={{ minWidth: "auto", padding: "0" }}
       >
         <Remove
