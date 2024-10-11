@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <footer className="bg-[#FFF1EE] text-white h-[24px] mt-[27px] flex flex-row justify-between items-center p-1 md:h-[48px]">
+      <footer className="bg-[#FFF1EE] text-white h-[24px] mt-[27px] flex flex-row justify-between items-center p-1 md:h-[48px] lg:mt-10 lg:p-4">
         
           {/* Texto de Copyright */}
           <div className="text-[8px] md:text-[16px] font-roboto text-[#FF441F]">

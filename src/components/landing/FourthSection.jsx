@@ -46,8 +46,9 @@ export default function Fourth() {
           spaceBetween: 20, // Espacio entre tarjetas en pantallas medianas
         },
         1024: {
-          slidesPerView: 3,
-          spaceBetween: 30, // Espacio entre tarjetas en pantallas grandes
+          slidesPerView: 2.1,
+          spaceBetween: 0,
+          centeredSlides: true,
         },
       },
     });
@@ -60,10 +61,10 @@ export default function Fourth() {
   }, []);
 
   return (
-    <section className="bg-white mt-[40px]">
+    <section className="bg-white mt-[40px] lg:mx-[120px]">
       {/* Título Principal */}
       <div className="text-center">
-        <h2 className="text-[24px] font-bold text-black font-poppins mb-[34px] md:text-[32px]">
+        <h2 className="text-[24px] font-bold text-black font-poppins mb-[34px] md:text-[32px] lg:text-[30px]">
           ¿Qué dicen nuestros <br /> clientes de nosotros?
         </h2>
       </div>
@@ -81,9 +82,8 @@ export default function Fourth() {
           ))}
         </div>
 
-         
-
-
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
 
       </div>
     </section>

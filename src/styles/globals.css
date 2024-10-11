@@ -17,31 +17,16 @@
 }
 
 /* Estilo para las flechas de navegación */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #FF441F; /* Color de las flechas */
-  width: 20px; /* Ancho del botón */
-  height: 20px; /* Alto del botón */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%; /* Para que sean redondos */
-  z-index: 10; /* Para asegurarse de que están por encima de otros elementos */
+.swiper-button-next, .swiper-button-prev {
+  color: #FF441F !important;
+  width: 20px !important; 
+  height: 20px !important; 
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  z-index: 10;
 }
-
-/* Posicionamiento de las flechas */
-.swiper-button-next {
-  right: 10px; /* Posición a la derecha */
-  top: 50%; /* Centrado verticalmente */
-  transform: translateY(-50%); /* Ajuste para centrar */
-}
-
-.swiper-button-prev {
-  left: 10px; /* Posición a la izquierda */
-  top: 50%; /* Centrado verticalmente */
-  transform: translateY(-50%); /* Ajuste para centrar */
-}
-
 /* Estilos generales para las tarjetas */
 .swiper-slide {
   display: flex;

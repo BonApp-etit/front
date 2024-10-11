@@ -42,7 +42,7 @@ export default function Third() {
 
   useEffect(() => {
     const swiper = new Swiper(swiperContainerRef.current, {
-      slidesPerView: 1.3, // 1 tarjeta por vista en pantallas pequeñas
+      slidesPerView: 1.3,
       spaceBetween:10,
       initialSlide: 0,
       pagination: {
@@ -64,8 +64,10 @@ export default function Third() {
           initialSlide: 2,
         },
         1024: {
-          slidesPerView: 3, // 3 tarjetas en pantallas grandes
-          spaceBetween: 30,
+          slidesPerView: 2.5, // 3 tarjetas en pantallas grandes
+          spaceBetween: 0,
+          initialSlide: 3,
+          centeredSlides: true,
         },
       },
     });
@@ -78,10 +80,10 @@ export default function Third() {
   }, []);
 
   return (
-    <section className="mt-[45px]">
+    <section className="mt-[45px] lg:mx-[120px]">
       {/* Título Principal */}
       <div className="text-center mb-8">
-        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px]">
+        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px] lg:text-[30px]">
           Funciones destacadas que facilitan tu <br /> experiencia
         </h2>
       </div>
@@ -99,7 +101,7 @@ export default function Third() {
           ))}
         </div>
 
-         {/* Botones de navegación de Swiper */}
+        
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
       </div>
