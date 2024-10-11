@@ -16,15 +16,15 @@ const infoComments = [
 ]
 export default function fourth (){
     return(
-        <section className="bg-white">
-            <div className="text-center mb-12">
-                <h2 className="text-[48px] font-bold text-black font-poppins">
+        <section className="bg-white mt-[40px]">
+            <div className="text-center">
+                <h2 className="text-[24px] font-bold text-black font-poppins mb-[34px]">
                 ¿Que dicen nuestros <br /> clientes de nosotros?
                 </h2>
             </div>
 
             {/* Sección de Tarjetas */}
-            <div className="mx-auto sm:mx-8 md:mx-16 lg:mx-[120px] flex flex-wrap justify-center gap-4">
+            <div className="">
                 {infoComments.map((info, index) => (
                     <TarjetasTerceras
                     key={index}

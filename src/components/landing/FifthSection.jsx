@@ -1,29 +1,26 @@
 export default function Fifth() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-center bg-white p-6 rounded-lg shadow-lg">
-        {/* Columna de la imagen */}
-        <div className="flex-none mb-6 lg:mb-0 lg:mr-8">
-          <img
-            src="/assets/chef.svg"
-            alt="Chef"
-            className="object-cover"
-          />
-        </div>
-
-        {/* Columna de texto */}
+      <div className="flex flex-col lg:flex-row items-center justify-center bg-white p-6 rounded-lg ">
         <div className="text-center lg:text-left">
-          <h4 className="text-[20px] text-red-500 font-roboto uppercase">
+          <h4 className="hidden text-[20px] text-red-500 font-roboto uppercase">
             Testimonio
           </h4>
-          <h2 className="text-[50px] font-poppins text-gray-900 mt-2">
+          <h2 className="text-[24px] font-bold font-poppins text-gray-900 mt-2">
             Descubre la forma más <br /> fácil de disfrutar tus <br /> platos
             favoritos, sin complicaciones ni <br /> esperas.
           </h2>
 
-          <button className="mt-6 bg-[#FF441F] text-white py-3 px-6 rounded-full transition w-[235px] h-[65px] text-[27px] font-roboto">
+          <button className="mt-[14px] bg-[#FF441F] text-white rounded-full transition w-[132px] h-[37px] text-[15px] font-roboto font-bold">
             Únete ahora
           </button>
+          <div className="flex-none mt-[65px] lg:mb-0 lg:mr-8 flex justify-center">
+          <img
+            src="/assets/chef.svg"
+            alt="Chef"hh
+            className="object-cover w-[190px] h-[280px]"
+          />
+        </div>
         </div>
       </div>
     </>

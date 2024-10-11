@@ -41,13 +41,13 @@ export default function Third(){
       <section className="mt-[45px]">
         {/* Título Principal */}
         <div className="text-center mb-8">
-          <h2 className="text-[48px] font-bold text-black font-poppins">
+          <h2 className="text-[24px] font-bold text-black font-poppins">
             Funciones destacadas que facilitan tu <br /> experiencia
           </h2>
         </div>
   
         {/* Sección de Tarjetas */}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center items-center">
           {features.map((feature, index) => (
             <TarjetasSegundas
               key={index}
