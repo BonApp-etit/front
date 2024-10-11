@@ -32,8 +32,9 @@ const Second = () => {
           spaceBetween: 10,
         },
         768: {
-          slidesPerView: 2, // Mostrar 2 tarjetas a la vez en pantallas medianas
-          spaceBetween: 10,
+          slidesPerView: 2.7,
+          initialSlide: 1,
+          spaceBetween: 30,
         },
         1024: {
           slidesPerView: 3, // Mostrar 3 tarjetas a la vez en pantallas grandes
@@ -54,7 +55,7 @@ const Second = () => {
       {/* Título Principal */}
       <div className="text-center mb-8">
         <p className="mb-4 text-[#FF441F] text-[16px] font-poppins">QUE HACEMOS</p>
-        <h2 className="text-[24px] font-bold text-black font-poppins">
+        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px]">
           Facilitamos el proceso de ordenar comida en <br /> restaurantes.
         </h2>
         <p className="text-[16px] mt-4 text-gray-500 font-roboto">

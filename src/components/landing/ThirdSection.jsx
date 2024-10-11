@@ -59,8 +59,9 @@ export default function Third() {
           spaceBetween: 0,
         },
         768: {
-          slidesPerView: 2, // 2 tarjetas en pantallas medianas
+          slidesPerView: 2.7, // 2 tarjetas en pantallas medianas
           spaceBetween: 20,
+          initialSlide: 2,
         },
         1024: {
           slidesPerView: 3, // 3 tarjetas en pantallas grandes
@@ -80,7 +81,7 @@ export default function Third() {
     <section className="mt-[45px]">
       {/* Título Principal */}
       <div className="text-center mb-8">
-        <h2 className="text-[24px] font-bold text-black font-poppins">
+        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px]">
           Funciones destacadas que facilitan tu <br /> experiencia
         </h2>
       </div>

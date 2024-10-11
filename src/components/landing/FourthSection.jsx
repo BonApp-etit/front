@@ -63,7 +63,7 @@ export default function Fourth() {
     <section className="bg-white mt-[40px]">
       {/* Título Principal */}
       <div className="text-center">
-        <h2 className="text-[24px] font-bold text-black font-poppins mb-[34px]">
+        <h2 className="text-[24px] font-bold text-black font-poppins mb-[34px] md:text-[32px]">
           ¿Qué dicen nuestros <br /> clientes de nosotros?
         </h2>
       </div>

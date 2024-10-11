@@ -5,10 +5,10 @@ export default function First() {
         
         {/* Left Side: Text and Button */}
         <div className="text-center">
-          <h1 className="text-[32px]  font-bold text-gray-800 font-roboto">
+          <h1 className="text-[32px]  font-bold text-black font-roboto md:text-[50px]">
             Ordena fácilmente, <br /> disfruta rápidamente
           </h1>
-          <p className="text-gray-600 text-[16px] font-roboto mt-[16px] mb-[16px]">
+          <p className="text-gray-600 text-[16px] font-roboto mt-[16px] mb-[16px] md:text-[20px]">
             Ordena lo que te gusta en pocos pasos y disfruta de <br/>tu comida sin esperar.
           </p>
           <button className="bg-[#FF441F] hover:bg-orange-600 text-white py-2 px-4 rounded-full font-bold font-poppins text-[16px]">
@@ -40,7 +40,7 @@ export default function First() {
         </div>
   
         {/* Right Side: Chef Image */}
-        <div className="mt-[40px] lg:mt-0 md:mt-10">
+        <div className="mt-[40px] md:ml-[100px]">
           <img
             src="/assets/first.svg" // Cambia esta ruta con tu imagen
             alt="Chef"
