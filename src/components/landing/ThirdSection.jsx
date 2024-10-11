@@ -38,7 +38,7 @@ export default function Third(){
     
   return (
     <>
-      <section className="bg-white py-12 px-4">
+      <section className="mt-[45px]">
         {/* Título Principal */}
         <div className="text-center mb-8">
           <h2 className="text-[48px] font-bold text-black font-poppins">
@@ -47,7 +47,7 @@ export default function Third(){
         </div>
   
         {/* Sección de Tarjetas */}
-        <div className="mx-[120px] grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col justify-center">
           {features.map((feature, index) => (
             <TarjetasSegundas
               key={index}
