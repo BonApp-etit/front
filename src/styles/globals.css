@@ -7,3 +7,8 @@
     text-wrap: balance;
   }
 }
+
+.swiper-container {
+  overflow: hidden; /* Evita que el contenido desborde el contenedor */
+  max-width: 100vw; /* Asegura que el swiper no crezca más allá del viewport */
+}

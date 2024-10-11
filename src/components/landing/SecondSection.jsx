@@ -1,5 +1,7 @@
-import React from 'react';
-import TarjetasPrimeras from './FirstCard'
+import React, { useEffect, useRef, useState } from 'react';
+import TarjetasPrimeras from './FirstCard';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
 const tarjetasData = [
   { texto: "Recetas de calidad", src: "/assets/secondFirst.svg" },
@@ -7,7 +9,45 @@ const tarjetasData = [
   { texto: "Sabor garantizado", src: "/assets/secondThird.svg" },
 ];
 
-const second = () => {
+const Second = () => {
+  const swiperContainerRef = useRef(null);
+  const [swiperInstance, setSwiperInstance] = useState(null);
+
+  useEffect(() => {
+    const swiper = new Swiper(swiperContainerRef.current, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2, // Mostrar 2 tarjetas a la vez en pantallas medianas
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 3, // Mostrar 3 tarjetas a la vez en pantallas grandes
+          spaceBetween: 20,
+        },
+      },
+    });
+
+    setSwiperInstance(swiper); // Guardar la instancia de Swiper
+
+    return () => {
+      swiper.destroy(); // Limpiar la instancia al desmontar
+    };
+  }, []);
+
   return (
     <section className="bg-white mt-[40px]">
       {/* Título Principal */}
@@ -21,18 +61,26 @@ const second = () => {
           sus pedidos de manera rápida y sencilla.
         </p>
       </div>
-  
-      {/* Sección de Iconos */}
-      <div className="">
-        {/* Recetas de Calidad */}
-        {tarjetasData.map((tarjeta, index) => (
-          <TarjetasPrimeras key={index} texto={tarjeta.texto} src={tarjeta.src} />
-        ))}
+
+      {/* Swiper para las tarjetas */}
+      <div ref={swiperContainerRef} className="swiper-container">
+        <div className="swiper-wrapper">
+          {tarjetasData.map((tarjeta, index) => (
+            <div key={index} className="swiper-slide">
+              <TarjetasPrimeras texto={tarjeta.texto} src={tarjeta.src} />
+            </div>
+          ))}
+        </div>
+
+        {/* Paginación del Swiper */}
+        <div className="swiper-pagination"></div>
+
+        {/* Botones de navegación */}
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
       </div>
     </section>
   );
-  
-
 };
 
-export default second;
+export default Second;
