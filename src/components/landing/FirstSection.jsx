@@ -2,12 +2,12 @@ export default function First() {
   return (
     <section className="bg-[#FFFFFF] lg:bg-[#FFF1ED]
     "> {/* Contenedor exterior que extiende el fondo */}
-      <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center lg:mx-[120px]">
+      <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center lg:mx-[120px] xxl:p-10">
         
         {/* Left Side: Text and Button */}
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-[32px]  font-bold text-black font-roboto md:text-[50px] lg:text-[32px] xxl:text-[64px]">
-            Ordena fácilmente, <br /> disfruta rápidamente
+            Ordena fácilmente, disfruta rápidamente
           </h1>
           <h1 className="text-gray-600 text-[16px] font-roboto mt-[16px] mb-[16px] md:text-[20px] lg:text-[18px] xxl:text-[24px]">
             Ordena lo que te gusta en pocos pasos y disfruta de tu comida sin esperar.
@@ -15,7 +15,7 @@ export default function First() {
           <button className="bg-[#FF441F] hover:bg-orange-600 text-white py-2 px-4 rounded-full font-bold font-poppins text-[16px] lg:text-[14px]  xxl:w-[225px] xxl:h-[60px] ">
             ¡Solicita una demo!
           </button>
-          <div className="hidden items-center lg:flex lg:mt-4">
+          <div className="hidden items-center lg:flex lg:mt-4 xxl:mt-[30px]">
             <div className="flex flex-row -space-x-2">
               <img
                 src="/assets/pp1.svg"
@@ -41,11 +41,11 @@ export default function First() {
         </div>
   
         {/* Right Side: Chef Image */}
-        <div className="mt-[40px] md:ml-[100px] lg:ml-[0px]">
+        <div className="mt-[40px] md:ml-[100px] lg:ml-[0px] lg:mt-[0px]">
           <img
             src="/assets/first.svg" 
             alt="Chef"
-            className="rounded-lg md:mt-10 lg:mt-0 lg:h-[440px] lg:w-[550px]"
+            className="rounded-lg md:mt-10 lg:mt-0 lg:h-[440px] lg:w-[550px] "
           />
         </div>
       

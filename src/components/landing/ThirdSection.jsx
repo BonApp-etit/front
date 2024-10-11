@@ -64,7 +64,7 @@ export default function Third() {
           initialSlide: 2,
         },
         1024: {
-          slidesPerView: 2.5, // 3 tarjetas en pantallas grandes
+          slidesPerView: 2.7, // 3 tarjetas en pantallas grandes
           spaceBetween: 0,
           initialSlide: 3,
           centeredSlides: true,
@@ -83,12 +83,12 @@ export default function Third() {
     <section className="mt-[45px] lg:mx-[120px]">
       {/* Título Principal */}
       <div className="text-center mb-8">
-        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px] lg:text-[30px]">
+        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px] lg:text-[30px] xxl:text-[48px]">
           Funciones destacadas que facilitan tu <br /> experiencia
         </h2>
       </div>
 
-      <div ref={swiperContainerRef} className="swiper-container">
+      <div ref={swiperContainerRef} className="xxl:hidden swiper-container">
         <div className="swiper-wrapper">
           {features.map((feature, index) => (
             <div key={index} className="swiper-slide">
@@ -101,9 +101,25 @@ export default function Third() {
           ))}
         </div>
 
+       
+
         
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
+      </div>
+
+      <div className="hidden xxl:flex">
+        <div className="xxl:flex xxl:flex-wrap xxl:gap-10">
+          {features.map((feature, index) => (
+            <div key={index} className="flex justify-center xxl:flex">
+              <TarjetasSegundas
+                image={feature.image}
+                title={feature.title}
+                description={feature.description}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

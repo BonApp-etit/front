@@ -41,6 +41,7 @@ const Second = () => {
           initialSlide: 1,
           spaceBetween: 20,
           centeredSlides: true,
+          loop: false,
         },
       },
     });
@@ -57,7 +58,7 @@ const Second = () => {
       {/* Título Principal */}
       <div className="text-center mb-8">
         <p className="mb-4 text-[#FF441F] text-[16px] font-poppins">QUE HACEMOS</p>
-        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px] lg:text-[30px]">
+        <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px] lg:text-[30px] xxl:text-[48px]">
           Facilitamos el proceso de ordenar comida en <br /> restaurantes.
         </h2>
         <p className="text-[16px] mt-4 text-gray-500 font-roboto">

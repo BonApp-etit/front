@@ -64,13 +64,13 @@ export default function Fourth() {
     <section className="bg-white mt-[40px] lg:mx-[120px]">
       {/* Título Principal */}
       <div className="text-center">
-        <h2 className="text-[24px] font-bold text-black font-poppins mb-[34px] md:text-[32px] lg:text-[30px]">
+        <h2 className="text-[24px] font-bold text-black font-poppins mb-[34px] md:text-[32px] lg:text-[30px] xxl:text-[48px]">
           ¿Qué dicen nuestros <br /> clientes de nosotros?
         </h2>
       </div>
 
       {/* Swiper para las Tarjetas Terceras */}
-      <div ref={swiperContainerRef} className="swiper-container">
+      <div ref={swiperContainerRef} className="flex xxl:hidden swiper-container">
         <div className="swiper-wrapper">
           {infoComments.map((info, index) => (
             <div key={index} className="swiper-slide">
@@ -80,12 +80,27 @@ export default function Fourth() {
               />
             </div>
           ))}
-        </div>
+      </div>
 
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
 
       </div>
+
+      <div className="hidden xxl:flex xxl:justify-center">
+          <div className="xxl:flex xxl:flex-row xxl:gap-10">
+            {infoComments.map((info, index) => (
+              <div key={index} className="">
+                <TarjetasTerceras
+                  review={info.review}
+                  name={info.name}
+                />
+              </div>
+            ))}
+          </div>
+      </div>
+
+     
     </section>
   );
 }
