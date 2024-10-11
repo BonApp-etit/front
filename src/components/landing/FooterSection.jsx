@@ -7,7 +7,7 @@ export default function Footer() {
             Copyright © 2024 Bonappetit. All rights reserved
           </div>
           {/* Links */}
-            <a href="#" className="font-roboto text-[#FF441F] hover:underline  md:text-[16px]">Privacy Policy</a>
+            <a href="#" className="text-[8px] font-roboto text-[#FF441F] hover:underline  md:text-[16px]">Privacy Policy</a>
             <a href="#" className="font-roboto text-[#FF441F] hover:underline text-[8px] md:text-[16px]">Term of Use</a>
             <a href="#" className="font-roboto text-[#FF441F] hover:underline text-[8px] md:text-[16px]">Partner</a>
       </footer>

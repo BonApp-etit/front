@@ -2,7 +2,7 @@ export default function First() {
   return (
     <section className="bg-[#FFFFFF] lg:bg-[#FFF1ED]
     "> {/* Contenedor exterior que extiende el fondo */}
-      <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center lg:mx-[120px] xxl:p-10">
+      <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center lg:mx-[120px] xxl:p-0">
         
         {/* Left Side: Text and Button */}
         <div className="text-center lg:text-left lg:w-1/2">

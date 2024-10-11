@@ -57,7 +57,7 @@ const Second = () => {
     <section className="bg-white mt-[40px] lg:mx-[120px]">
       {/* Título Principal */}
       <div className="text-center mb-8">
-        <p className="mb-4 text-[#FF441F] text-[16px] font-poppins">QUE HACEMOS</p>
+        <p className="mb-4 text-[#FF441F] text-[16px] font-semibold font-poppins">QUE HACEMOS</p>
         <h2 className="text-[24px] font-bold text-black font-poppins md:text-[32px] lg:text-[30px] xxl:text-[48px]">
           Facilitamos el proceso de ordenar comida en <br /> restaurantes.
         </h2>

@@ -45,6 +45,7 @@ export default function Third() {
       slidesPerView: 1.3,
       spaceBetween:10,
       initialSlide: 0,
+      centeredSlides: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -57,6 +58,7 @@ export default function Third() {
         640: {
           slidesPerView: 1,
           spaceBetween: 0,
+          centeredSlides: true,
         },
         768: {
           slidesPerView: 2.7, // 2 tarjetas en pantallas medianas
