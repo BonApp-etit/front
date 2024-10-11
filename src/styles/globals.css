@@ -8,7 +8,49 @@
   }
 }
 
+/* Estilo para el contenedor de Swiper */
 .swiper-container {
+  position: relative; /* Necesario para posicionar los botones de navegación */
   overflow: hidden; /* Evita que el contenido desborde el contenedor */
-  max-width: 100vw; /* Asegura que el swiper no crezca más allá del viewport */
+  max-width: 100%; /* Asegura que el swiper no crezca más allá del viewport */
+  margin: auto; /* Centrar el swiper en la pantalla */
+}
+
+/* Estilo para las flechas de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FF441F; /* Color de las flechas */
+  width: 20px; /* Ancho del botón */
+  height: 20px; /* Alto del botón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Para que sean redondos */
+  z-index: 10; /* Para asegurarse de que están por encima de otros elementos */
+}
+
+/* Posicionamiento de las flechas */
+.swiper-button-next {
+  right: 10px; /* Posición a la derecha */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Ajuste para centrar */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Posición a la izquierda */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Ajuste para centrar */
+}
+
+/* Estilos generales para las tarjetas */
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Centrar el contenido de la tarjeta */
+  align-items: center; /* Centrar el contenido de la tarjeta */
+}
+
+/* Opcional: Estilo para la paginación */
+.swiper-pagination {
+  bottom: 10px; /* Espacio desde la parte inferior */
+  text-align: center; /* Centrar la paginación */
 }

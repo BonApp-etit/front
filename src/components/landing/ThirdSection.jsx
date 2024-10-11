@@ -42,8 +42,9 @@ export default function Third() {
 
   useEffect(() => {
     const swiper = new Swiper(swiperContainerRef.current, {
-      slidesPerView: 1, // 1 tarjeta por vista en pantallas pequeñas
-      spaceBetween: 10,
+      slidesPerView: 1.3, // 1 tarjeta por vista en pantallas pequeñas
+      spaceBetween:10,
+      initialSlide: 0,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -97,10 +98,7 @@ export default function Third() {
           ))}
         </div>
 
-        {/* Paginación de Swiper */}
-        <div className="swiper-pagination"></div>
-
-        {/* Botones de navegación de Swiper */}
+         {/* Botones de navegación de Swiper */}
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
       </div>

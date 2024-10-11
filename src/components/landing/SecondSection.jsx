@@ -16,7 +16,8 @@ const Second = () => {
   useEffect(() => {
     const swiper = new Swiper(swiperContainerRef.current, {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 30,
+      initialSlide: 1,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -72,12 +73,8 @@ const Second = () => {
           ))}
         </div>
 
-        {/* Paginación del Swiper */}
-        <div className="swiper-pagination"></div>
-
-        {/* Botones de navegación */}
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
+       <div className="swiper-button-next"></div>
+       <div className="swiper-button-prev"></div>
       </div>
     </section>
   );
