@@ -24,6 +24,10 @@ module.exports = {
         cs900: "#7f110f",
         cs950: "#450507",
       },
+      screens: {
+        xxl: '1440px',
+         
+      },
     },
   },
   plugins: [],
