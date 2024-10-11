@@ -14,7 +14,7 @@ export default function CardMenu() {
   return (
     <Card
       sx={{
-        maxWidth: 170,
+        maxWidth: { xs: 170, sm: 170, md: 230, lg: 280 },
         borderRadius: "16px",
         border: "0.5px",
       }}
@@ -25,7 +25,12 @@ export default function CardMenu() {
           height="80"
           width="170"
           image="/assets/DeliciousChicken.svg"
-          alt="green iguana"
+          alt="food"
+          sx={{
+            width: { xs: "100%", sm: "170px", md: "230px", lg: "280px" },
+            objectFit: "cover",
+            height: { xs: "80px", sm: "80px", md: "135px", lg: "164px" },
+          }}
         />
         <CardContent
           width="170"
@@ -39,7 +44,7 @@ export default function CardMenu() {
             sx={{
               fontFamily: "Ubuntu, sans-serif",
               fontWeight: "700",
-              fontSize: "14px",
+              fontSize: { xs: "14px", sm: "14px", md: "16px", lg: "20px" },
             }}
             gutterBottom
             color="textTitle"
@@ -52,13 +57,23 @@ export default function CardMenu() {
             sx={{
               fontFamily: "Ubuntu, sans-serif",
               fontWeight: "400",
-              fontSize: "10px",
+              fontSize: { xs: "10px", sm: "10px", md: "10px", lg: "12px" },
+              width: "100%", // Ocupa el ancho completo
+              height: { xs: "33px", sm: "33px", md: "33px", lg: "42px" }, // Altura fija según el breakpoint
+              overflow: "hidden", // Oculta el desbordamiento
+              textOverflow: "ellipsis", // Añade puntos suspensivos si el texto no cabe
+              display: "-webkit-box", // Para limitar el número de líneas
+              WebkitLineClamp: 3, // Limita a 3 líneas visibles (puedes ajustar según el caso)
+              WebkitBoxOrient: "vertical", // Requerido para el corte de líneas
+              lineHeight: 1.2,
+              mb: "4px",
             }}
             variant="body2"
             color="textDescription"
             className="  font-normal"
           >
-            Deliciosa orden de alitas empanizadas, aderezadas con...
+            Deliciosa orden de alitas empanizadas, aderezadas con un toque de
+            salsa especial de la casa. Y aderezada de queso chedar y...
           </Typography>
 
           <Box display="flex" alignItems="center">
@@ -80,7 +95,7 @@ export default function CardMenu() {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "0.875rem", // Equivalente a text-sm
+                fontSize: { xs: "14px", sm: "14px", md: "16px", lg: "20px" }, // Equivalente a text-sm
                 fontWeight: "bold",
                 letterSpacing: "-0.015em", // tracking-tight
                 color: "#242828",
@@ -95,7 +110,7 @@ export default function CardMenu() {
             <Typography
               variant="body2"
               sx={{
-                fontSize: "0.625rem", // Equivalente a text-[10px]
+                fontSize: { xs: "10px", sm: "10px", md: "12px", lg: "12px" }, // Equivalente a text-[10px]
                 color: "#424949",
                 fontWeight: "medium",
                 fontFamily: "Ubuntu, sans-serif",
@@ -114,9 +129,9 @@ export default function CardMenu() {
           sx={{
             fontWeight: "medium",
             fontFamily: "Ubuntu, sans-serif",
-            fontSize: "10px",
+            fontSize: { xs: "10px", sm: "10px", md: "12px", lg: "16px" },
+            padding: { xs: "4px", sm: "4px", md: "8px 16px", lg: "8px 16px" },
           }}
-          className=" p-1 "
         >
           Comprar ahora
         </Button>
@@ -136,7 +151,7 @@ export default function CardMenu() {
           sx={{
             backgroundColor: "#FFD1C1",
             color: "#7f110f",
-            fontSize: "10px",
+            fontSize: { xs: "10px", sm: "10px", md: "10px", lg: "12px" },
             width: "100%",
             height: "20px",
           }}
@@ -148,3 +163,5 @@ export default function CardMenu() {
     </Card>
   );
 }
+
+//height: { xs: "33px", sm: "33px", md: "33px", lg: "42px" },

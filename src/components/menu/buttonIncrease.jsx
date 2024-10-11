@@ -19,8 +19,8 @@ export default function CounterButton() {
         alignItems: "center",
         justifyContent: "space-between",
         border: "1px solid #FF441F",
-        padding: 0.5,
-        width: "60px",
+        padding: { xs: 0.5, sm: 0.5, md: "7px 6px", lg: "8px 8px" },
+        width: { xs: "60px", sm: "60px", md: "80px", lg: "91px" },
         borderRadius: "8px",
       }}
     >
@@ -33,10 +33,22 @@ export default function CounterButton() {
           padding: "0",
         }}
       >
-        <Add fontSize="small" sx={{ strokeWidth: 1, stroke: "currentColor" }} />
+        <Add
+          sx={{
+            strokeWidth: 1,
+            stroke: "currentColor",
+            fontSize: { xs: "10px", sm: "10px", md: "12px", lg: "20px" },
+          }}
+        />
       </IconButton>
 
-      <Typography variant="h6" sx={{ color: "333", fontSize: "10px" }}>
+      <Typography
+        variant="h6"
+        sx={{
+          color: "333",
+          fontSize: { xs: "10px", sm: "10px", md: "12px", lg: "16px" },
+        }}
+      >
         {count}
       </Typography>
       <IconButton
@@ -45,8 +57,11 @@ export default function CounterButton() {
         sx={{ minWidth: "auto", padding: "0" }}
       >
         <Remove
-          fontSize="small"
-          sx={{ strokeWidth: 1, stroke: "currentColor" }}
+          sx={{
+            strokeWidth: 1,
+            stroke: "currentColor",
+            fontSize: { xs: "10px", sm: "10px", md: "12px", lg: "20px" },
+          }}
         />
       </IconButton>
     </Box>
