@@ -42,7 +42,7 @@ export default function First() {
         </div>
   
         {/* Right Side: Chef Image */}
-        <div className="mt-[40px] md:ml-[100px] lg:ml-[0px] lg:mt-[0px]">
+        <div className="mt-[40px] p-5 md:ml-[100px] lg:ml-[0px] lg:mt-[0px]">
           <img
             src="/assets/first.svg" 
             alt="Chef"
