@@ -111,7 +111,7 @@ export default function Third() {
       </div>
 
       <div className="hidden xxl:flex">
-        <div className="xxl:flex xxl:flex-wrap xxl:gap-10">
+        <div className="xxl:flex xxl:flex-wrap xxl:gap-10 xxl:justify-between">
           {features.map((feature, index) => (
             <div key={index} className="flex justify-center xxl:flex">
               <TarjetasSegundas

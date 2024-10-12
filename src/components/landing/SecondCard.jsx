@@ -8,7 +8,7 @@ const FeatureCard = ({ image, title, description }) => {
         
         {/* Imagen */}
         <div className=" mb-[1px] flex justify-center">
-          <img src={image} alt={title} className="h-[150px] w-[100px] xxl:w-[255px] xxl:h-[280px]" />
+          <img src={image} alt={title} className="h-[175px] w-[185px] xxl:w-[255px] xxl:h-[280px]" />
         </div>
   
         {/* Contenedor para centrar título y descripción */}

@@ -5,7 +5,7 @@ import 'swiper/css/bundle';
 
 const tarjetasData = [
   { texto: "Recetas de calidad", src: "/assets/secondFirst.svg" },
-  { texto: "Entrega rápida", src: "/assets/secondSecond.svg" },
+  { texto: "Facil de Usar", src: "/assets/secondSecond.svg" },
   { texto: "Sabor garantizado", src: "/assets/secondThird.svg" },
 ];
 

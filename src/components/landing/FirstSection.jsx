@@ -16,7 +16,7 @@ export default function First() {
           <button className="bg-[#FF441F] hover:bg-orange-600 text-white py-2 px-4 rounded-full font-bold font-poppins text-[16px] lg:text-[14px]  xxl:w-[225px] xxl:h-[60px] ">
             ¡Solicita una demo!
           </button>
-          <div className="hidden items-center lg:flex lg:mt-4 xxl:mt-[30px]">
+          <div className="hidden items-center lg:flex lg:mt-4 xxl:mt-[30px] xxl:mb-4">
             <div className="flex flex-row -space-x-2">
               <img
                 src="/assets/pp1.svg"
