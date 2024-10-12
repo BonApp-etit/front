@@ -2,14 +2,15 @@ export default function First() {
   return (
     <section className="bg-[#FFFFFF] lg:bg-[#FFF1ED]
     "> {/* Contenedor exterior que extiende el fondo */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:ml-[120px] xxl:p-0">
+      <div className="flex flex-col lg:flex-row  lg:items-center lg:mx-[120px] xxl:p-0 xxl:ml-[120px] xxl:mr-0">
         
         {/* Left Side: Text and Button */}
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-[32px]  font-bold text-black font-roboto md:text-[50px] lg:text-[32px] xxl:text-[64px]">
             Ordena fácilmente, disfruta rápidamente
           </h1>
-          <h1 className="text-black text-[16px] font-roboto mt-[16px] mb-[16px] md:text-[20px] lg:text-[18px] xxl:text-[24px]">
+          <h1 className="text-black
+           text-[16px] font-roboto mt-[16px] mb-[16px] md:text-[20px] lg:text-[18px] xxl:text-[24px]">
             Ordena lo que te gusta en pocos pasos y disfruta de tu comida sin esperar.
           </h1>
           <button className="bg-[#FF441F] hover:bg-orange-600 text-white py-2 px-4 rounded-full font-bold font-poppins text-[16px] lg:text-[14px]  xxl:w-[225px] xxl:h-[60px] ">
