@@ -1,16 +1,16 @@
 export default function TestimonialCard ({ review, name })  {
     return (
-      <div className="bg-[#FFF1EE] p-6 rounded-[7px]  h-[260px] w-[260px] xxl:h-[350px] xxl:w-[350px] relative ">
+      <div className="bg-[#FFF1EE] p-6 rounded-[7px]  h-[260px] w-[260px] xxl:h-[350px] xxl:w-[350px] relative">
         {/* Cita */}
         <div className="absolute -top-[80px] left-5 text-[#FF441F] text-[180px] font-sans">"</div>
         
         {/* Texto de la reseña */}
-        <p className="text-gray-700 mb-11 mt-11 text-[20px] font-robot">
+        <p className="text-gray-700 mb-[16px] mt-11 text-[15px] md:text-[20px] font-robot">
           {review}
         </p>
         
         {/* Estrellas */}
-        <div className="flex items-center mb-8">
+        <div className="flex items-center mb-[16px]">
           {[...Array(5)].map((_, index) => (
             <svg
               key={index}
@@ -26,7 +26,7 @@ export default function TestimonialCard ({ review, name })  {
         </div>
   
         {/* Nombre de la persona */}
-        <p className="text-gray-900 font-semibold text-[20px] font-roboto">-{name}</p>
+        <p className="text-gray-900 font-semibold text-[15px] lg:text-[20px] font-roboto">-{name}</p>
       </div>
     );
   };
