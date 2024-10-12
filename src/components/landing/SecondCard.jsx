@@ -4,7 +4,7 @@ const FeatureCard = ({ image, title, description }) => {
     return (
       <div className="bg-white rounded-[42px] shadow-lg p-6 relative w-[223px] h-[260px] xxl:w-[370px] xxl:h-[495px]">
         {/* Esquina de la tarjeta */}
-        <div className="absolute top-0 right-0 bg-[#FF441F] w-[43px] h-[37px] rounded-bl-[42px] rounded-tr-[42px]"></div>
+        <div className="absolute top-0 right-0 bg-[#FF441F] w-[43px] h-[37px] rounded-bl-[42px] rounded-tr-[42px] xxl:w-[75px] xxl:h-[75px]"></div>
         
         {/* Imagen */}
         <div className=" mb-[1px] flex justify-center">
