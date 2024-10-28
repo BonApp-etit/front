@@ -1,12 +1,9 @@
-import NavBar from "@/components/common_components/NavBar";
+import NavBar from "@/components/NavBar/NavBar";
 
-export default function Components (){
-    return (
-        <section>
-            <NavBar></NavBar>
-            
-
-        </section>
-        
-    )
+export default function Components() {
+  return (
+    <section>
+      <NavBar />
+    </section>
+  );
 }
