@@ -1,5 +1,5 @@
-import React from 'react';
-import TarjetasPrimeras from './FirstCard'
+import React from "react";
+import TarjetasPrimeras from "./FirstCard";
 
 const tarjetasData = [
   { texto: "Recetas de calidad", src: "/assets/secondFirst.svg" },
@@ -7,32 +7,34 @@ const tarjetasData = [
   { texto: "Sabor garantizado", src: "/assets/secondThird.svg" },
 ];
 
-const second = () => {
+const AboutSection = () => {
   return (
-    <section className="bg-white py-12 px-4 font-sans">
+    <section className="bg-white px-4 py-12 font-sans">
       {/* Título Principal */}
-      <div className="text-center mb-8">
-        <p className="mb-4 text-[#FF441F] font-poppins">QUE HACEMOS</p>
-        <h2 className="text-[48px] font-bold text-black font-poppins">
+      <div className="mb-8 text-center">
+        <p className="mb-4 font-poppins text-[#FF441F]">QUE HACEMOS</p>
+        <h2 className="font-poppins text-[48px] font-bold text-black">
           Facilitamos el proceso de ordenar comida en <br /> restaurantes.
         </h2>
-        <p className="text-[16px] mt-4 text-gray-500 font-poppins">
+        <p className="mt-4 font-poppins text-[16px] text-gray-500">
           Hacemos que tus usuarios seleccionen sus platos favoritos y realicen
           sus pedidos de manera rápida y sencilla.
         </p>
       </div>
-  
+
       {/* Sección de Iconos */}
-      <div className="mx-[120px] grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="mx-[120px] grid grid-cols-1 gap-8 md:grid-cols-3">
         {/* Recetas de Calidad */}
         {tarjetasData.map((tarjeta, index) => (
-          <TarjetasPrimeras key={index} texto={tarjeta.texto} src={tarjeta.src} />
+          <TarjetasPrimeras
+            key={index}
+            texto={tarjeta.texto}
+            src={tarjeta.src}
+          />
         ))}
       </div>
     </section>
   );
-  
-
 };
 
-export default second;
+export default AboutSection;
