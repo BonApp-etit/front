@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FeaturesCards from "./FeaturesCards";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -42,7 +42,22 @@ const features = [
   },
 ];
 
+const useIsDesktop = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1200);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return isDesktop;
+};
+
 export default function Features() {
+  const isDesktop = useIsDesktop();
   return (
     <>
       <section className="bg-white px-4">
@@ -56,36 +71,53 @@ export default function Features() {
 
         {/* Sección de Tarjetas */}
         <div className="">
-          <Swiper
-            pagination={{ clickable: true }}
-            breakpoints={{
-              360: {
-                slidesPerView: 1.4,
-                centeredSlides: true,
-                spaceBetween: 20, //40
-              },
-              744: {
-                slidesPerView: 1.5,
-                spaceBetween: 20,
-                centeredSlides: true,
-              },
-              1200: {
-                slidesPerView: 4,
-                spaceBetween: 390,
-                centeredSlides: false,
-              },
-            }}
-          >
-            {features.map((feature, index) => (
-              <SwiperSlide key={index}>
-                <FeaturesCards
-                  image={feature.image}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          {isDesktop ? (
+            // Diseño de 3x3 para desktop usando grid
+            <div className="flex justify-center">
+              <div className="grid w-[1200px] grid-cols-3 gap-6">
+                {features.map((feature, index) => (
+                  <FeaturesCards
+                    key={index}
+                    image={feature.image}
+                    title={feature.title}
+                    description={feature.description}
+                  />
+                ))}
+              </div>
+            </div>
+          ) : (
+            // Swiper para mobile y tablet
+            <Swiper
+              pagination={{ clickable: true }}
+              breakpoints={{
+                360: {
+                  slidesPerView: 1.4,
+                  centeredSlides: true,
+                  spaceBetween: 20,
+                },
+                744: {
+                  slidesPerView: 1.5,
+                  spaceBetween: 20,
+                  centeredSlides: true,
+                },
+                1200: {
+                  slidesPerView: 4,
+                  spaceBetween: 390,
+                  centeredSlides: false,
+                },
+              }}
+            >
+              {features.map((feature, index) => (
+                <SwiperSlide key={index}>
+                  <FeaturesCards
+                    image={feature.image}
+                    title={feature.title}
+                    description={feature.description}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
       </section>
     </>
