@@ -4,7 +4,7 @@ import "swiper/css"; // Importa los estilos básicos de Swiper
 
 //import { Pagination, Navigation, EffectFade } from "swiper/modules";
 
-const TarjetasPrimeras = () => {
+const AboutCards = () => {
   const tarjetasData = [
     { texto: "Recetas de calidad", src: "/assets/secondFirst.svg" },
     { texto: "Facil de usar", src: "/assets/secondSecond.svg" },
@@ -57,4 +57,4 @@ const TarjetasPrimeras = () => {
   );
 };
 
-export default TarjetasPrimeras;
+export default AboutCards;

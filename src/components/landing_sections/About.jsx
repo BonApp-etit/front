@@ -1,5 +1,5 @@
 import React from "react";
-import TarjetasPrimeras from "./FirstCard";
+import AboutCards from "./AboutCards";
 
 const AboutSection = () => {
   return (
@@ -21,7 +21,7 @@ const AboutSection = () => {
 
       {/* Sección de Iconos */}
       <div>
-        <TarjetasPrimeras />
+        <AboutCards />
       </div>
     </section>
   );
