@@ -6,6 +6,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    content: [
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+    ],
     extend: {
       screens: {
         xs: "0px", //
@@ -29,9 +33,9 @@ module.exports = {
         cs800: "#9e0f0e",
         cs900: "#7f110f",
         cs950: "#450507",
-        cstext: "#272727"
+        cstext: "#272727",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
