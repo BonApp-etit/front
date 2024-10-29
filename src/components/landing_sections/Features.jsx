@@ -65,8 +65,8 @@ export default function Features() {
                 spaceBetween: 20, //40
               },
               744: {
-                slidesPerView: 4,
-                spaceBetween: 25,
+                slidesPerView: 1.5,
+                spaceBetween: 20,
                 centeredSlides: true,
               },
               1200: {
