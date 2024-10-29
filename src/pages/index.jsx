@@ -1,20 +1,19 @@
-import First from "../components/landing/FirstSection";
-import Second from "../components/landing/SecondSection";
-import Third from "../components/landing/ThirdSection";
-import Fourth from "../components/landing/FourthSection";
-import Fifth from "../components/landing/FifthSection";
-import Footer from "../components/landing/FooterSection";
+import HeroSection from "../components/landing_sections/Hero";
+import AboutSection from "../components/landing_sections/About";
+import Features from "../components/landing_sections/Features";
+import Testimonials from "../components/landing_sections/Testimonials";
+import CTA from "../components/landing_sections/CTA";
 import NavBar from "@/components/NavBar/NavBar";
-
+import Footer from "../components/landing_sections/FooterSection";
 export default function landing() {
   return (
     <main>
       <NavBar />
-      <First />
-      <Second />
-      <Third />
-      <Fourth />
-      <Fifth />
+      <HeroSection />
+      <AboutSection />
+      <Features />
+      <Testimonials />
+      <CTA />
       <Footer />
     </main>
   );
