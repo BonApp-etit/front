@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         roboto: ["var(--font-roboto)"],
+        sans: ["var(--font-work-sans)", "sans-serif"],
       },
       colors: {
         cs50: "#fff3ed",

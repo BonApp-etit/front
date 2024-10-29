@@ -2,7 +2,7 @@ import * as React from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import theme from "../styles/theme";
 import "@/styles/globals.css";
-import { Poppins, Roboto } from "next/font/google";
+import { Poppins, Roboto, Work_Sans } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,10 +15,17 @@ const roboto = Roboto({
   variable: "--font-roboto",
   weight: ["100", "300", "400", "500", "700", "900"],
 });
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  variable: "--font-work-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${poppins.variable} ${roboto.variable} font-sans`}>
+    <main
+      className={`${poppins.variable} ${roboto.variable} ${workSans.variable} font-sans`}
+    >
       <ThemeProvider theme={theme}>
         {" "}
         {/**Configuraciones de Material UI */}
