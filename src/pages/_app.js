@@ -18,7 +18,7 @@ const roboto = Roboto({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${poppins.variable} font-sans`}>
+    <main className={`${poppins.variable} ${roboto.variable} font-sans`}>
       <ThemeProvider theme={theme}>
         {" "}
         {/**Configuraciones de Material UI */}
