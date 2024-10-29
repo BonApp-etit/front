@@ -6,9 +6,15 @@ import "swiper/css"; // Importa los estilos básicos de Swiper
 
 const AboutCards = () => {
   const tarjetasData = [
-    { texto: "Recetas de calidad", src: "/assets/secondFirst.svg" },
-    { texto: "Facil de usar", src: "/assets/secondSecond.svg" },
-    { texto: "Procesos Faciles", src: "/assets/secondThird.svg" },
+    {
+      texto: "Recetas de calidad",
+      src: "/assets/AboutCardsImages/Quality-recipes.svg",
+    },
+    { texto: "Facil de usar", src: "/assets/AboutCardsImages/Easy-to-use.svg" },
+    {
+      texto: "Procesos Faciles",
+      src: "/assets/AboutCardsImages/Easy-processes.svg",
+    },
   ];
   return (
     <>
