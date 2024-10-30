@@ -2,21 +2,21 @@ import Image from "next/image";
 import { Button } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
-export default function Fifth() {
+export default function CTA() {
   const theme = useTheme();
   return (
     <>
       <div className="flex justify-center">
-        <div className="flex flex-col items-center sm:p-8 md:p-4 text-center w-full  sm:max-w-md  md:max-w-3xl lg:flex-row-reverse lg:max-w-7xl   lg:justify-between lg:text-start lg:p-10">
+        <div className="flex w-full flex-col items-center text-center sm:max-w-md sm:p-8 md:max-w-3xl md:p-4 lg:max-w-7xl lg:flex-row-reverse lg:justify-between lg:p-10 lg:text-start">
           <div className="lg:w-1/2">
-            <h2 className=" text-black text-2xl font-bold font-poppins mb-4    md:text-3xl lg:text-5xl  lg:mb-12 ">
+            <h2 className="mb-4 font-poppins text-2xl font-bold text-black md:text-3xl lg:mb-12 lg:text-5xl">
               Descubre la forma más fácil de disfrutar tus platos favoritos, sin
               complicaciones ni esperas.
             </h2>
 
             <Button
               variant="contained"
-              className=" mb-12 font-roboto md:mb-8"
+              className="mb-12 font-roboto md:mb-8"
               sx={{
                 [theme.breakpoints.up("lg")]: {
                   borderRadius: "45px",
@@ -48,7 +48,7 @@ export default function Fifth() {
             </Button>
           </div>
 
-          <div className="w-full sm:w-48 md:w-96 lg:w-[512px]  h-auto lg:mr-24">
+          <div className="h-auto w-full sm:w-48 md:w-96 lg:mr-24 lg:w-[512px]">
             <Image
               src="/assets/chef.svg"
               width="190"
