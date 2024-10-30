@@ -60,11 +60,11 @@ export default function Testimonials() {
             360: {
               slidesPerView: 1.2,
               centeredSlides: true,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
             744: {
               slidesPerView: 1.8,
-              spaceBetween: 0,
+              spaceBetween: 20,
               centeredSlides: true,
             },
           }}
