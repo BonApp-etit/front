@@ -1,4 +1,7 @@
-import TarjetasTerceras from "./ThirdCards";
+import TestimonialCards from "./TestimonialCards";
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 const infoComments = [
   {
     name: "Jessica",
@@ -16,21 +19,67 @@ const infoComments = [
       "La experiencia de pedir comida nunca ha sido tan sencilla. La interfaz es amigable",
   },
 ];
-export default function Testimonials() {
-  return (
-    <section className="bg-white px-4 py-12">
-      <div className="mb-12 text-center">
-        <h2 className="font-poppins text-[48px] font-bold text-black">
-          ¿Que dicen nuestros <br /> clientes de nosotros?
-        </h2>
-      </div>
 
-      {/* Sección de Tarjetas */}
-      <div className="mx-auto flex flex-wrap justify-center gap-4 sm:mx-8 md:mx-16 lg:mx-[120px]">
-        {infoComments.map((info, index) => (
-          <TarjetasTerceras key={index} review={info.review} name={info.name} />
-        ))}
-      </div>
+const useIsDesktop = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1200);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return isDesktop;
+};
+export default function Testimonials() {
+  const isDesktop = useIsDesktop();
+  return (
+    <section className="px-4 py-12">
+      <h2 className="text-center font-poppins text-2xl font-bold text-black md:mx-auto md:mb-12 md:w-[632px] md:text-[32px] md:leading-normal lg:w-[650px] lg:text-5xl lg:leading-[70px]">
+        ¿Que dicen nuestros clientes de nosotros?
+      </h2>
+
+      {isDesktop ? (
+        <div className="flex justify-center">
+          <div className="flex w-[1200px] justify-between">
+            {infoComments.map((info, index) => (
+              <TestimonialCards
+                key={index}
+                review={info.review}
+                name={info.name}
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <Swiper
+          pagination={{ clickable: true }}
+          breakpoints={{
+            360: {
+              slidesPerView: 1.2,
+              centeredSlides: true,
+              spaceBetween: 10,
+            },
+            744: {
+              slidesPerView: 1.8,
+              spaceBetween: 0,
+              centeredSlides: true,
+            },
+          }}
+        >
+          {infoComments.map((info, index) => (
+            <SwiperSlide key={index}>
+              <TestimonialCards
+                key={index}
+                review={info.review}
+                name={info.name}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </section>
   );
 }
