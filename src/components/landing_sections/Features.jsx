@@ -63,8 +63,8 @@ export default function Features() {
       <section className="bg-white px-4">
         {/* Título Principal */}
 
-        <div className="mb-8 text-center">
-          <h2 className="font-poppins text-2xl font-bold text-black md:text-3xl md:leading-10 lg:text-5xl lg:leading-[63px]">
+        <div className="mb-8 flex justify-center text-center">
+          <h2 className="font-poppins text-2xl font-bold text-black md:w-[632px] md:text-3xl md:leading-10 lg:w-[1200px] lg:text-5xl lg:leading-[63px]">
             Funciones destacadas que facilitan tu experiencia
           </h2>
         </div>
