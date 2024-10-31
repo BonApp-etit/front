@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import useIsDesktop from "@/hooks/useIsDesktop";
+import Rating from "./Rating";
+import useIsMobile from "@/hooks/useIsMobile";
+import useIsTablet from "@/hooks/useIsTablet";
+
 const infoComments = [
   {
     name: "Jessica",
@@ -23,6 +27,8 @@ const infoComments = [
 
 export default function Testimonials() {
   const isDesktop = useIsDesktop();
+  const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
   return (
     <section className="py-12">
       <h2 className="text-center font-poppins text-2xl font-bold text-black md:mx-auto md:mb-12 md:w-[632px] md:text-[32px] md:leading-normal lg:w-[650px] lg:text-5xl lg:leading-[70px]">
@@ -68,6 +74,7 @@ export default function Testimonials() {
           ))}
         </Swiper>
       )}
+      {(isMobile || isTablet) && <Rating />}
     </section>
   );
 }
