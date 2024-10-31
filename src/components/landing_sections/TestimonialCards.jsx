@@ -1,6 +1,6 @@
 export default function TestimonialCard({ review, name }) {
   return (
-    <div className="relative mt-10 h-[270px] w-[260px] rounded-xl bg-[#FFF1EE] px-8 pb-8 pt-[70px] shadow-md md:h-[370px] md:w-[350px] md:px-6 md:pb-11 md:pt-[93px]">
+    <div className="relative mb-2 mt-10 h-[270px] w-[260px] rounded-xl bg-[#FFF1EE] px-8 pb-8 pt-[70px] shadow-md md:h-[370px] md:w-[350px] md:px-6 md:pb-11 md:pt-[93px]">
       {/* Cita */}
       <div className="absolute left-0 top-0 font-sans text-[190px] leading-[100px] text-cs500 md:text-[352px] md:leading-[180px] lg:text-[252px] lg:leading-[130px]">
         “

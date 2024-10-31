@@ -1,19 +1,21 @@
 export default function Footer() {
-    return (
-      <footer className="bg-[#FFF1EE] text-white py-4 h-[50px] flex">
-        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-          {/* Texto de Copyright */}
-          <p className="text-[16px] font-roboto text-[#FF441F]">
-            Copyright © 2024 Bonappetit. All rights reserved
-          </p>
-          
-          {/* Links */}
-          <div className="flex space-x-4 mt-2 sm:mt-0 text-[16px] font-roboto text-[#FF441F]">
-            <a href="#" className="text-sm hover:underline">Privacy Policy</a>
-            <a href="#" className="text-sm hover:underline">Term of Use</a>
-            <a href="#" className="text-sm hover:underline">Partner</a>
-          </div>
+  return (
+    <section className="flex justify-center bg-cs500">
+      <footer className="flex w-[328px] justify-between py-2 font-roboto text-[8px] text-white md:w-[632px] md:py-3 md:text-base md:leading-normal lg:w-[1200px] lg:py-5 lg:text-lg">
+        <p>Copyright © 2024 Bonappetit. All rights reserved</p>
+
+        <div className="flex gap-1 md:gap-2 lg:gap-5">
+          <a href="#" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:underline">
+            Term of Use
+          </a>
+          <a href="#" className="hover:underline">
+            Partner
+          </a>
         </div>
       </footer>
-    );
-  }
+    </section>
+  );
+}

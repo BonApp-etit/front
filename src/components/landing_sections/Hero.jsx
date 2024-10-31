@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
+import Rating from "./Rating";
 export default function HeroSection() {
   const theme = useTheme();
   const recomendations = useMediaQuery("(min-width:1200px)");
@@ -61,41 +62,7 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          {recomendations && (
-            <div className="flex justify-start">
-              <div className="flex -space-x-6">
-                <Image
-                  src="/assets/pp1.svg"
-                  alt="User1"
-                  width={63}
-                  height={63}
-                  className="rounded-full border-2 border-white"
-                />
-                <Image
-                  src="/assets/pp2.svg"
-                  alt="User2"
-                  width={63}
-                  height={63}
-                  className="rounded-full border-2 border-white"
-                />
-                <Image
-                  src="/assets/pp3.svg"
-                  alt="User3"
-                  width={63}
-                  height={63}
-                  className="rounded-full border-2 border-white"
-                />
-              </div>
-              <div className="ext-xl flex flex-col items-center font-roboto">
-                <span className="font-bold text-black">
-                  Nuestros usuarios felices
-                </span>
-                <span className="font-normal text-black/50">
-                  ⭐ 4.8 (450+ reviews)
-                </span>
-              </div>
-            </div>
-          )}
+          {recomendations && <Rating />}
         </div>
 
         {/* Right Side: Chef Image */}

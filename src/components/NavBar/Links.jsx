@@ -1,7 +1,7 @@
 export default function Links() {
   const links = ["Iniciar sesion", "Registrate", "Beneficios", "Servicios"];
   return (
-    <section className="hidden space-x-6 lg:flex">
+    <section className="hidden space-x-6 scroll-smooth lg:flex">
       {links.map((link, index) => (
         <a
           key={index}
