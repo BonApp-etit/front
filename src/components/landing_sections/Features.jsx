@@ -48,7 +48,7 @@ export default function Features() {
 
   return (
     <>
-      <section className="bg-white">
+      <section className="bg-white" id="Servicios">
         {/* Título Principal */}
 
         <div className="mb-8 flex justify-center text-center">
