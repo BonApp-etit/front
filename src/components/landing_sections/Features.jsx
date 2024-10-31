@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import FeaturesCards from "./FeaturesCards";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import useIsDesktop from "@/hooks/useIsDesktop";
 
 const features = [
   {
@@ -42,29 +43,16 @@ const features = [
   },
 ];
 
-const useIsDesktop = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1200);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  return isDesktop;
-};
-
 export default function Features() {
   const isDesktop = useIsDesktop();
+
   return (
     <>
-      <section className="bg-white px-4">
+      <section className="bg-white" id="Servicios">
         {/* Título Principal */}
 
-        <div className="mb-8 text-center">
-          <h2 className="font-poppins text-2xl font-bold text-black md:text-3xl md:leading-10 lg:text-5xl lg:leading-[63px]">
+        <div className="mb-8 flex justify-center text-center">
+          <h2 className="font-poppins text-2xl font-bold text-black md:w-[632px] md:text-3xl md:leading-10 lg:w-[1200px] lg:text-5xl lg:leading-[63px]">
             Funciones destacadas que facilitan tu experiencia
           </h2>
         </div>
@@ -91,7 +79,7 @@ export default function Features() {
             pagination={{ clickable: true }}
             breakpoints={{
               360: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.5,
                 centeredSlides: true,
                 spaceBetween: 20,
               },
@@ -99,11 +87,6 @@ export default function Features() {
                 slidesPerView: 1.5,
                 spaceBetween: 20,
                 centeredSlides: true,
-              },
-              1200: {
-                slidesPerView: 4,
-                spaceBetween: 390,
-                centeredSlides: false,
               },
             }}
           >
