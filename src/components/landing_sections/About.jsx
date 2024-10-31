@@ -3,7 +3,7 @@ import AboutCards from "./AboutCards";
 
 const AboutSection = () => {
   return (
-    <section className="bg-white px-4 py-12">
+    <section className="bg-white py-12">
       {/* Título Principal */}
       <div className="mb-8 flex flex-col items-center text-center">
         <p className="mb-2 font-poppins text-base font-semibold text-[#d52100]">

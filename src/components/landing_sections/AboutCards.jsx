@@ -49,9 +49,9 @@ const AboutCards = () => {
           pagination={{ clickable: true }}
           breakpoints={{
             360: {
-              slidesPerView: 1,
+              slidesPerView: 1.05,
               centeredSlides: true,
-              spaceBetween: 25,
+              spaceBetween: 20,
             },
             744: {
               slidesPerView: 2,

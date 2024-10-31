@@ -48,7 +48,7 @@ export default function Features() {
 
   return (
     <>
-      <section className="bg-white px-4">
+      <section className="bg-white">
         {/* Título Principal */}
 
         <div className="mb-8 flex justify-center text-center">
@@ -79,7 +79,7 @@ export default function Features() {
             pagination={{ clickable: true }}
             breakpoints={{
               360: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.5,
                 centeredSlides: true,
                 spaceBetween: 20,
               },
@@ -87,11 +87,6 @@ export default function Features() {
                 slidesPerView: 1.5,
                 spaceBetween: 20,
                 centeredSlides: true,
-              },
-              1200: {
-                slidesPerView: 4,
-                spaceBetween: 390,
-                centeredSlides: false,
               },
             }}
           >
