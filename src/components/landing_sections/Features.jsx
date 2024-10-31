@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import FeaturesCards from "./FeaturesCards";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import useIsDesktop from "@/hooks/useIsDesktop";
 
 const features = [
   {
@@ -42,22 +43,9 @@ const features = [
   },
 ];
 
-const useIsDesktop = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1200);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  return isDesktop;
-};
-
 export default function Features() {
   const isDesktop = useIsDesktop();
+
   return (
     <>
       <section className="bg-white px-4">

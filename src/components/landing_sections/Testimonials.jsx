@@ -2,6 +2,7 @@ import TestimonialCards from "./TestimonialCards";
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import useIsDesktop from "@/hooks/useIsDesktop";
 const infoComments = [
   {
     name: "Jessica",
@@ -20,19 +21,6 @@ const infoComments = [
   },
 ];
 
-const useIsDesktop = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1200);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  return isDesktop;
-};
 export default function Testimonials() {
   const isDesktop = useIsDesktop();
   return (
