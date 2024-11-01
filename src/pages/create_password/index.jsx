@@ -1,7 +1,6 @@
 import Form from "../../components/common_components/Form";
-import InputTailwind from "@/components/common_components/InputTailwind";
-import ButtonTailwind from "@/components/common_components/ButtonTailwind";
-
+import InputContained from "@/components/common_components/InputContained";
+import ButtonContained from "@/components/common_components/ButtonContained";
 import NavBar from "@/components/NavBar/NavBar";
 
 export default function SignUp() {
@@ -16,19 +15,19 @@ export default function SignUp() {
         src="/assets/CreatePassword/createPassword.svg"
         alt="SignUp"
       >
-        <InputTailwind
+        <InputContained
           label="Nueva contraseña"
           placeholder="Ingresa tu nueva contraseña"
           type="password"
         />
-        <InputTailwind
+        <InputContained
           label="Confirma tu contraseña"
           placeholder="Confirma tu nueva contraseña"
           type="password"
         />
 
         <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-          <ButtonTailwind text="Guardar y entrar"></ButtonTailwind>
+          <ButtonContained text="Guardar y entrar"></ButtonContained>
         </div>
       </Form>
     </main>

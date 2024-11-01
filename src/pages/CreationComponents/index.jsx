@@ -1,6 +1,6 @@
 import Form from "../../components/common_components/Form";
-import InputTailwind from "@/components/common_components/InputTailwind";
-import ButtonTailwind from "@/components/common_components/ButtonTailwind";
+import InputContained from "@/components/common_components/InputContained";
+import ButtonContained from "@/components/common_components/ButtonContained";
 import SignInOPtions from "@/components/common_components/SignUpOptions";
 
 import NavBar from "@/components/NavBar/NavBar";
@@ -17,24 +17,24 @@ export default function SignUp() {
         src="/assets/SignUp/SignUp.svg"
         alt="SignUp"
       >
-        <InputTailwind
+        <InputContained
           label="Nombre completo"
           placeholder="Ingresa tu nombre completo"
           type="text"
         />
-        <InputTailwind
+        <InputContained
           label="Correo electronico"
           placeholder="Ingresa tu correo electronico"
           type="text"
         />
 
-        <InputTailwind
+        <InputContained
           label="Contraseña"
           placeholder="Ingresa tu contraseña"
           type="text"
         />
         <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-          <ButtonTailwind text="Registrarse"></ButtonTailwind>
+          <ButtonContained text="Registrarse"></ButtonContained>
         </div>
 
         <SignInOPtions />

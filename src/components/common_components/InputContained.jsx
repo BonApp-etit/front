@@ -1,4 +1,4 @@
-export default function InputTailwind({ label, placeholder, type }) {
+export default function InputContained({ label, placeholder, type }) {
   return (
     <div className="mb-4">
       <label

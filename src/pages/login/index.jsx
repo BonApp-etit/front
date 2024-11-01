@@ -1,6 +1,6 @@
 import Form from "../../components/common_components/Form";
-import InputTailwind from "@/components/common_components/InputTailwind";
-import ButtonTailwind from "@/components/common_components/ButtonTailwind";
+import InputContained from "@/components/common_components/InputContained";
+import ButtonContained from "@/components/common_components/ButtonContained";
 
 import NavBar from "@/components/NavBar/NavBar";
 
@@ -16,7 +16,7 @@ export default function SignUp() {
         src="/assets/Login/chef.svg"
         alt="SignUp"
       >
-        <InputTailwind
+        <InputContained
           label="Correo electronico"
           placeholder="Ingresa tu correo electronico"
           type="text"
@@ -35,10 +35,10 @@ export default function SignUp() {
               Olvidaste tu contraseña?
             </a>
           </div>
-          <InputTailwind placeholder="Ingresa tu contraseña" type="password" />
+          <InputContained placeholder="Ingresa tu contraseña" type="password" />
         </div>
         <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-          <ButtonTailwind text="Entrar"></ButtonTailwind>
+          <ButtonContained text="Entrar"></ButtonContained>
         </div>
         <div className="flex justify-center gap-2">
           <p className="font-poppins text-xs font-normal leading-snug tracking-tight text-black/50 md:text-base">

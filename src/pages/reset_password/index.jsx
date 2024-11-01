@@ -1,6 +1,6 @@
 import Form from "../../components/common_components/Form";
-import InputTailwind from "@/components/common_components/InputTailwind";
-import ButtonTailwind from "@/components/common_components/ButtonTailwind";
+import InputContained from "@/components/common_components/InputContained";
+import ButtonContained from "@/components/common_components/ButtonContained";
 import useIsTablet from "@/hooks/useIsTablet";
 
 import NavBar from "@/components/NavBar/NavBar";
@@ -18,37 +18,37 @@ export default function ResetPassword() {
         src="/assets/ResetPassword/resetPassword.svg"
         alt="SignUp"
       >
-        <InputTailwind
+        <InputContained
           label="Correo"
           placeholder="Ingresa tu correo electronico"
           type="text"
         />
 
         <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-          <ButtonTailwind text="Enviar codigo de verificacion"></ButtonTailwind>
+          <ButtonContained text="Enviar codigo de verificacion"></ButtonContained>
         </div>
         {isTablet ? (
           <div className="flex items-center gap-2">
-            <InputTailwind
+            <InputContained
               label="Ingresa tu codigo de verificacion"
               placeholder="Ingresa tu codigo de verificacion"
               type="text"
             />
 
             <div className="mb-0">
-              <ButtonTailwind text="Verificar"></ButtonTailwind>
+              <ButtonContained text="Verificar"></ButtonContained>
             </div>
           </div>
         ) : (
           <div>
-            <InputTailwind
+            <InputContained
               label="Ingresa tu codigo de verificacion"
               placeholder="Ingresa tu codigo de verificacion"
               type="text"
             />
 
             <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-              <ButtonTailwind text="Verificar"></ButtonTailwind>
+              <ButtonContained text="Verificar"></ButtonContained>
             </div>
           </div>
         )}
