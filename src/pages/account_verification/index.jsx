@@ -12,7 +12,7 @@ export default function SignUp() {
     <main>
       <NavBar />
       <Formik
-        initialValues={{ email: "", password: "" }}
+        initialValues={{ email: "", verificationCode: "" }}
         validationSchema={verificationCodeSchema}
         onSubmit={(values) => {
           console.log("Datos del formulario", values);
