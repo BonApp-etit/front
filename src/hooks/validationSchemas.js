@@ -15,3 +15,11 @@ export const registerSchema = Yup.object({
     .min(6, "La contraseña debe tener al menos 6 caracteres")
     .required("Contraseña requerida"),
 });
+
+export const verificationCode = Yup.object({
+  email: Yup.string().email("Correo invalido").required("Correo requerido"),
+  verificationCode: Yup.string()
+    .required("Codigo de verificacion requerido")
+    .min(5, "El codigo de verificacion debe ser de 5 digitos ")
+    .max(5, "El codigo de verificacion debe ser de 5 digitos"),
+});
