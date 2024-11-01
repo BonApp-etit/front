@@ -15,7 +15,7 @@ export default function SignUp() {
         tittle="Verifica tu cuenta"
         subtitleTop=""
         subtitleBottom="Ingresa tu correo electronico para recibir tu codigo de verificacion "
-        src="/assets/SignUp/SignUp.svg"
+        src="/assets/Authentication/Authentication.svg"
         alt="SignUp"
       >
         <InputTailwind
