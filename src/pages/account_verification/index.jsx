@@ -1,40 +1,58 @@
-import React from "react";
-import VerificationForm from "@/components/verification/VerificationForm";
-import Image from "next/image";
-import autenticationImage from "@/../public/assets/authenticationForm/Authentication.svg";
+import Form from "../../components/common_components/Form";
+import InputTailwind from "@/components/common_components/InputTailwind";
+import ButtonTailwind from "@/components/common_components/ButtonTailwind";
+import useIsTablet from "@/hooks/useIsTablet";
 
-import { useFormik } from "formik";
-import * as Yup from "yup";
+import NavBar from "@/components/NavBar/NavBar";
 
-const validationSchema = Yup.object({
-  email: Yup.string()
-    .email("El correo electronico no es valido")
-    .required("El correo es obligatorio"),
-  verificationCode: Yup.string()
-    .min(6, "El codigo debe tener al menos 6 caracteres")
-    .required("El codigo es obligatorio"),
-});
-export default function Verificacion_de_cuenta() {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      verificationCode: "",
-    },
-    validationSchema: validationSchema,
-    onSubmit: (values) => {
-      console.log("Datos enviados:", values);
-    },
-  });
-
+export default function SignUp() {
+  const isTablet = useIsTablet();
   return (
-    <main className="flex flex-col items-center lg:flex-row-reverse  lg:justify-center lg:mt-28 md:mt-14 ">
-      <VerificationForm />
+    <main>
+      <NavBar />
 
-      <Image
-        className="md:w-96 lg:w-[400px]"
-        src={autenticationImage}
-        alt="Imagen de autenticacion"
-      />
+      <Form
+        tittle="Verifica tu cuenta"
+        subtitleTop=""
+        subtitleBottom="Ingresa tu correo electronico para recibir tu codigo de verificacion "
+        src="/assets/SignUp/SignUp.svg"
+        alt="SignUp"
+      >
+        <InputTailwind
+          label="Correo"
+          placeholder="Ingresa tu correo electronico"
+          type="text"
+        />
+
+        <div className="mb-5 mt-5 flex justify-center lg:mb-10">
+          <ButtonTailwind text="Enviar codigo de verificacion"></ButtonTailwind>
+        </div>
+        {isTablet ? (
+          <div className="flex items-center gap-2">
+            <InputTailwind
+              label="Ingresa tu codigo de verificacion"
+              placeholder="Ingresa tu codigo de verificacion"
+              type="text"
+            />
+
+            <div className="mb-0">
+              <ButtonTailwind text="Verificar"></ButtonTailwind>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <InputTailwind
+              label="Ingresa tu codigo de verificacion"
+              placeholder="Ingresa tu codigo de verificacion"
+              type="text"
+            />
+
+            <div className="mb-5 mt-5 flex justify-center lg:mb-10">
+              <ButtonTailwind text="Verificar"></ButtonTailwind>
+            </div>
+          </div>
+        )}
+      </Form>
     </main>
   );
 }
