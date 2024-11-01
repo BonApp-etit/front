@@ -1,93 +1,58 @@
-import { Button } from "@mui/material";
-import StyledInput from "@/components/common_components/StyledInput";
-import { ArrowForward } from "@mui/icons-material";
-import Image from "next/image";
+import Form from "../../components/common_components/Form";
+import InputTailwind from "@/components/common_components/InputTailwind";
+import ButtonTailwind from "@/components/common_components/ButtonTailwind";
 
-export default function Login() {
+import NavBar from "@/components/NavBar/NavBar";
+
+export default function SignUp() {
   return (
-    <section className=" flex flex-col items-center w-full  lg:flex-row-reverse lg:justify-evenly lg:items-end">
-      <div className=" shadow-lg p-4 rounded-xl md:px-16 md:w-[600px] ">
-        <div className="mt-16 ">
-          <h6 className="text-black/50 text-xs font-normal font-poppins leading-3 tracking-tight md:text-base md:mb-3 ">
-            Bienvenido de vuelta!!
-          </h6>
-          <h1 className="text-black text-3xl font-semibold font-poppins md:text-6xl md:mb-7">
-            Iniciar sesion
-          </h1>
-        </div>
+    <main>
+      <NavBar />
 
-        {/**Form */}
-        <div className="">
-          <div className="flex flex-col ">
-            <label
-              htmlFor="email"
-              className="text-black  text-base font-poppins font-light" // verificar por que
-            >
-              Correo
-            </label>
-            <StyledInput
-              customWidth="100%"
-              customHeight="30px"
-              placeholder="Ingresa tu correo"
-              sx={{ mb: "15px" }}
-            />
-            <div className="flex justify-between  items-center ">
-              <label
-                htmlFor="Contraseña"
-                className="text-black  text-base font-poppins font-light " // verificar por que
-              >
-                Contraseña
-              </label>
-              <p className="text-black text-xs font-light font-poppins opacity-50 lg:text-sm">
-                ¿Ovidaste tu contraseña
-              </p>
-            </div>
-
-            <StyledInput
-              customWidth="100%"
-              customHeight="30px"
-              placeholder="************"
-              mb="20px"
-            />
-          </div>
-
-          <div className="flex justify-center mt-5 mb-5 lg:mb-10">
-            <Button
-              endIcon={<ArrowForward />}
-              sx={{
-                borderRadius: "12px",
-                py: { sm: "4px", md: "8px" },
-                px: "28px",
-                fontWeight: "700",
-                fontSize: "14px",
-              }}
-              variant="contained"
-            >
-              Entrar
-            </Button>
-          </div>
-
-          <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-3 md:mb-20">
-            <p className="text-black/20 text-sm font-normal font-poppins leading-3 tracking-wide">
-              ¿Aun no estas registrado?
-            </p>
-            <p className="text-cs500 text-sm font-normal font-poppins leading-3 tracking-wide">
-              Crear cuenta
-            </p>
-          </div>
-        </div>
-        {/**Fin form */}
-      </div>
-
-      <div className="w-72 md:w-[400px]">
-        <Image
-          width={550}
-          height={440}
-          src="/assets/login/chef.svg"
-          alt="Chef"
-          layout="responsive"
+      <Form
+        tittle="Iniciar sesion"
+        subtitleTop="Bienvenido de vuelta!!"
+        subtitleBottom=""
+        src="/assets/Login/chef.svg"
+        alt="SignUp"
+      >
+        <InputTailwind
+          label="Correo electronico"
+          placeholder="Ingresa tu correo electronico"
+          type="text"
         />
-      </div>
-    </section>
+
+        {/* Contenedor para el Input y el componente adicional */}
+        <div className="mb-4">
+          <div className="flex items-center justify-between">
+            <label className="font-poppins text-sm font-light text-black md:text-base lg:text-lg">
+              Contraseña
+            </label>
+            <a
+              href="#"
+              className="font-poppins text-xs text-black/50 hover:underline md:text-base lg:text-base"
+            >
+              Olvidaste tu contraseña?
+            </a>
+          </div>
+          <InputTailwind placeholder="Ingresa tu contraseña" type="text" />
+        </div>
+        <div className="mb-5 mt-5 flex justify-center lg:mb-10">
+          <ButtonTailwind text="Entrar"></ButtonTailwind>
+        </div>
+        <div className="flex justify-center gap-2">
+          <p className="font-poppins text-xs font-normal leading-snug tracking-tight text-black/50 md:text-base">
+            ¿Aun no estas registrado?
+          </p>{" "}
+          <a
+            className="font-poppins text-xs font-normal leading-snug tracking-tight text-cs500 hover:underline md:text-base"
+            href="#"
+          >
+            {" "}
+            Crear cuenta
+          </a>
+        </div>
+      </Form>
+    </main>
   );
 }

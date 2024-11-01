@@ -5,17 +5,17 @@ import useIsTablet from "@/hooks/useIsTablet";
 
 import NavBar from "@/components/NavBar/NavBar";
 
-export default function SignUp() {
+export default function ResetPassword() {
   const isTablet = useIsTablet();
   return (
     <main>
       <NavBar />
 
       <Form
-        tittle="Verifica tu cuenta"
+        tittle="Recuperacion de contraseña"
         subtitleTop=""
         subtitleBottom="Ingresa tu correo electronico para recibir tu codigo de verificacion "
-        src="/assets/Authentication/Authentication.svg"
+        src="/assets/ResetPassword/ForgotPassword.svg"
         alt="SignUp"
       >
         <InputTailwind
