@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function SignInOPtions() {
+export default function SignUpOptions() {
   return (
     <div className="flex justify-center">
       <section className="flex w-[246px] flex-col gap-1 md:w-[260px]">
