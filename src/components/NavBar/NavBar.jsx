@@ -4,8 +4,8 @@ import Links from "./Links";
 
 const MenuMaterial = () => {
   return (
-    <nav className="flex justify-center bg-white shadow-md">
-      <section className="mb-1 flex w-[328px] items-center justify-between py-4 md:w-[632px] lg:w-[1200px]">
+    <nav className="flex justify-center bg-white p-4 shadow-md">
+      <section className="mb-1 flex w-full min-w-[328px] max-w-[400px] items-center justify-between md:min-w-[632px] md:max-w-[700px] lg:max-w-[1200px]">
         <Logo />
         <Links />
         <MenuHamburguer
