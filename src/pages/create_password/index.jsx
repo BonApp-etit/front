@@ -28,7 +28,7 @@ export default function SignUp() {
         />
 
         <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-          <ButtonTailwind text="Entrar"></ButtonTailwind>
+          <ButtonTailwind text="Guardar y entrar"></ButtonTailwind>
         </div>
       </Form>
     </main>

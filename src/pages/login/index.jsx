@@ -35,7 +35,7 @@ export default function SignUp() {
               Olvidaste tu contraseña?
             </a>
           </div>
-          <InputTailwind placeholder="Ingresa tu contraseña" type="text" />
+          <InputTailwind placeholder="Ingresa tu contraseña" type="password" />
         </div>
         <div className="mb-5 mt-5 flex justify-center lg:mb-10">
           <ButtonTailwind text="Entrar"></ButtonTailwind>
