@@ -6,7 +6,7 @@ import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { verificationCodeSchema } from "@/hooks/validationSchemas";
 import NavBar from "@/components/NavBar/NavBar";
 
-export default function SignUp() {
+export default function AccountVerification() {
   const isTablet = useIsTablet();
   return (
     <main>
