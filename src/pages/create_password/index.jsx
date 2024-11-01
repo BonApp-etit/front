@@ -13,7 +13,7 @@ export default function SignUp() {
         tittle="Crear nueva contraseña"
         subtitleTop=""
         subtitleBottom=""
-        src="/assets/CreatePassword/ResetPassword-bro.svg"
+        src="/assets/CreatePassword/createPassword.svg"
         alt="SignUp"
       >
         <InputTailwind

@@ -1,7 +1,7 @@
 import Form from "../../components/common_components/Form";
 import InputTailwind from "@/components/common_components/InputTailwind";
 import ButtonTailwind from "@/components/common_components/ButtonTailwind";
-import SignInOPtions from "@/components/common_components/SignInOptions";
+import SignInOPtions from "@/components/common_components/SignUpOptions";
 
 import NavBar from "@/components/NavBar/NavBar";
 

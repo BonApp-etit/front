@@ -15,7 +15,7 @@ export default function ResetPassword() {
         tittle="Recuperacion de contraseña"
         subtitleTop=""
         subtitleBottom="Ingresa tu correo electronico para recibir tu codigo de verificacion "
-        src="/assets/ResetPassword/ForgotPassword.svg"
+        src="/assets/ResetPassword/resetPassword.svg"
         alt="SignUp"
       >
         <InputTailwind
