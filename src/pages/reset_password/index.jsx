@@ -25,7 +25,7 @@ export default function ResetPassword() {
             subtitleTop=""
             subtitleBottom="Ingresa tu correo electronico para recibir tu codigo de verificacion "
             src="/assets/ResetPassword/resetPassword.svg"
-            alt="SignUp"
+            alt="resetPasswordImage"
           >
             <FormikForm onSubmit={handleSubmit}>
               <div>
@@ -34,7 +34,7 @@ export default function ResetPassword() {
                   as={InputContained}
                   label="Correo electrónico"
                   placeholder="Ingresa tu correo electrónico"
-                  type="text"
+                  type="email"
                 />
                 <ErrorMessage
                   name="email"

@@ -23,7 +23,7 @@ export default function CreatePassword() {
             subtitleTop=""
             subtitleBottom=""
             src="/assets/CreatePassword/createPassword.svg"
-            alt="SignUp"
+            alt="createPasswordImage"
           >
             <FormikForm onSubmit={handleSubmit}>
               <div>

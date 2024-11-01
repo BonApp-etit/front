@@ -24,7 +24,7 @@ export default function AccountVerification() {
             subtitleTop=""
             subtitleBottom="Ingresa tu correo electronico para recibir tu codigo de verificacion "
             src="/assets/Authentication/Authentication.svg"
-            alt="SignUp"
+            alt="AuthenticationImage"
           >
             <FormikForm onSubmit={handleSubmit}>
               <div>

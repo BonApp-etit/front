@@ -23,16 +23,16 @@ export default function Login() {
             subtitleTop="Bienvenido de vuelta!!"
             subtitleBottom=""
             src="/assets/Login/chef.svg"
-            alt="SignUp"
+            alt="LoginChefImage"
           >
             <FormikForm onSubmit={handleSubmit}>
-              <div className="mb-4">
+              <div>
                 <Field
                   name="email"
                   as={InputContained}
                   label="Correo electrónico"
                   placeholder="Ingresa tu correo electrónico"
-                  type="text"
+                  type="email"
                 />
                 <ErrorMessage
                   name="email"
@@ -53,17 +53,19 @@ export default function Login() {
                     Olvidaste tu contraseña?
                   </a>
                 </div>
-                <Field
-                  name="password"
-                  as={InputContained}
-                  placeholder="Ingresa tu contraseña"
-                  type="password"
-                />
-                <ErrorMessage
-                  name="password"
-                  component="div"
-                  className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
-                />
+                <div>
+                  <Field
+                    name="password"
+                    as={InputContained}
+                    placeholder="Ingresa tu contraseña"
+                    type="password"
+                  />
+                  <ErrorMessage
+                    name="password"
+                    component="div"
+                    className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
+                  />
+                </div>
               </div>
 
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
