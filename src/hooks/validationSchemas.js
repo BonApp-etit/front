@@ -16,7 +16,7 @@ export const registerSchema = Yup.object({
     .required("Contraseña requerida"),
 });
 
-export const verificationCode = Yup.object({
+export const verificationCodeSchema = Yup.object({
   email: Yup.string().email("Correo invalido").required("Correo requerido"),
   verificationCode: Yup.string()
     .required("Codigo de verificacion requerido")

@@ -3,7 +3,7 @@ import InputContained from "@/components/common_components/InputContained";
 import ButtonContained from "@/components/common_components/ButtonContained";
 import useIsTablet from "@/hooks/useIsTablet";
 import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
-import { verificationCode } from "@/hooks/validationSchemas";
+import { verificationCodeSchema } from "@/hooks/validationSchemas";
 import NavBar from "@/components/NavBar/NavBar";
 
 export default function SignUp() {
@@ -13,7 +13,7 @@ export default function SignUp() {
       <NavBar />
       <Formik
         initialValues={{ email: "", password: "" }}
-        validationSchema={verificationCode}
+        validationSchema={verificationCodeSchema}
         onSubmit={(values) => {
           console.log("Datos del formulario", values);
         }}
