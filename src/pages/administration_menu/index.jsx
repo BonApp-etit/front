@@ -1,4 +1,4 @@
-import CardAdministration from "@/components/administration_menu/Card.Administration";
+import CardAdministration from "@/components/administration_menu/CardAdministration";
 export default function AdministrationMenu() {
   return (
     <main>
