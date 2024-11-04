@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 export default function CardAdministration() {
   return (
-    <section className="flex h-dvh items-center justify-center">
+    <section className="">
       <div className="w-[160px] transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:w-[230px] lg:w-[280px]">
         <section className="hover:bg-slate-100">
           <div className="w-full">
@@ -40,7 +40,7 @@ export default function CardAdministration() {
           </div>
         </section>
 
-        <div className="m-1 flex justify-center">
+        <div className="flex justify-center">
           <ButtonContained
             variant="generalUbuntu"
             text="Editar producto"
