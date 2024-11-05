@@ -5,7 +5,14 @@ import ButtonOutlined from "../ButtonOutlined";
 import LabelStatus from "./LabelStatus";
 import ButtonDeleted from "./ButtonDeleted";
 
-export default function CardAdministration({ variant }) {
+export default function CardAdministration({
+  variant,
+  isAvailable,
+  nameDish,
+  description,
+  price,
+  image,
+}) {
   return (
     <section className="m-3">
       {variant === "editCard" && (
@@ -17,31 +24,30 @@ export default function CardAdministration({ variant }) {
                 width={40}
                 height={40}
                 alt="chicken"
-                src={"/assets/AdministrationMenu/chicken.svg"}
+                src={image}
                 layout="responsive"
               />
               <div className="absolute top-3 w-full px-2 lg:top-4 lg:px-3">
                 <div className="flex justify-between">
-                  {" "}
-                  <LabelStatus></LabelStatus> <ButtonDeleted></ButtonDeleted>{" "}
+                  {isAvailable === "false" && <LabelStatus></LabelStatus>}
+                  <ButtonDeleted></ButtonDeleted>
                 </div>
               </div>
             </div>
 
             <div className="p-1 lg:p-2">
               <h6 className="mb-1 font-ubuntu text-sm font-bold text-cs600 md:text-base lg:text-xl">
-                Alitas
+                {nameDish}
               </h6>
               <p className="line-clamp-3 font-ubuntu text-[10px] font-normal leading-tight text-[#667473] md:text-xs lg:text-sm">
-                Deliciosa orden de alitas aderezadas con un toque de salsa
-                especial de la casa con un
+                {description}
               </p>
               <div className="flex h-[25px] items-center">
                 <span className="mr-1 font-ubuntu text-xs font-medium text-[#424949] lg:text-sm">
                   $
                 </span>
                 <span className="mr-1 font-ubuntu text-sm font-bold tracking-tight text-[#242828] md:text-sm lg:text-xl">
-                  50.50
+                  {price}
                 </span>
                 <span className="text-ce font-ubuntu text-[10px] font-medium text-[#424949] lg:text-sm">
                   MXN

@@ -3,12 +3,53 @@ import RestaurantName from "../../../public/assets/AdministrationMenu/Restaurant
 import Image from "next/image";
 import NavBar from "@/components/NavBar/NavBar";
 import CategoriesButton from "@/components/administration_menu/CategoriesButton";
-import ButtonContained from "@/components/common_components/ButtonContained";
-import SwiperConfiguration from "@/components/administration_menu/SwiperConfiguration";
 import { SwiperSlide } from "swiper/react";
 import ButtonOutlined from "@/components/ButtonOutlined";
-import Switch from "@/components/common_components/Switch";
 import SearchBar from "@/components/administration_menu/SearchBar";
+import Category from "@/components/administration_menu/Category";
+
+const DB = [
+  {
+    nameDish: "Alitas",
+    description:
+      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
+    price: "50.50",
+    isAvailable: "false",
+    image: "/assets/AdministrationMenu/chicken.svg",
+  },
+  {
+    nameDish: "Alitas",
+    description:
+      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
+    price: "50.50",
+    isAvailable: "true",
+    image: "/assets/AdministrationMenu/chicken.svg",
+  },
+  {
+    nameDish: "Alitas",
+    description:
+      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
+    price: "50.50",
+    isAvailable: "false",
+    image: "/assets/AdministrationMenu/chicken.svg",
+  },
+  {
+    nameDish: "Alitas",
+    description:
+      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
+    price: "50.50",
+    isAvailable: "true",
+    image: "/assets/AdministrationMenu/chicken.svg",
+  },
+  {
+    nameDish: "Alitas",
+    description:
+      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
+    price: "50.50",
+    isAvailable: "false",
+    image: "/assets/AdministrationMenu/chicken.svg",
+  },
+];
 
 export default function AdministrationMenu() {
   return (
@@ -16,8 +57,6 @@ export default function AdministrationMenu() {
       <NavBar />
       <section className="flex h-[60px] w-full justify-center rounded-lg bg-cs200 md:h-[115px] md:px-14 lg:h-[145px]">
         <div className="min-w-[328px] max-w-[400px] md:min-w-[632px] md:max-w-[700px] lg:max-w-[1200px]">
-          {" "}
-          {/** md:w-[632px] lg:w-[1200px] */}
           <section>
             <div className="mt-4 flex items-end space-x-1 md:mt-7 lg:mt-7">
               {/* Logo */}
@@ -30,12 +69,6 @@ export default function AdministrationMenu() {
                   layout="responsive"
                 />
               </div>
-
-              {/* Nombre del restaurante */}
-              {/* <RestaurantName
-                restauranName="Mr. Burguer"
-                userName="John Doue"
-              /> */}
               <section className="font-semibold">
                 <h1 className="font-poppins text-lg leading-7 tracking-tight text-cs900 md:text-[28px] lg:text-[40px]">
                   Mr. Burguer
@@ -57,112 +90,50 @@ export default function AdministrationMenu() {
               <CategoriesButton names={["Entradas", "Bebidas", "Postres"]} />
             </div>
           </div>
-          <section className="mb-4">
-            <div className="flex items-center justify-between">
-              <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
-                Entradas
-              </h3>
-
-              <div className="flex gap-1 md:gap-3">
-                <Switch label="Deshabilitar categoria"></Switch>
-                <ButtonContained
-                  text="Eliminar"
-                  tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
-                  variant="generalPoppins"
-                ></ButtonContained>
-              </div>
-            </div>
-
-            <div>
-              <SwiperConfiguration>
-                <SwiperSlide>
-                  <CardAdministration variant="AddCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-              </SwiperConfiguration>
-            </div>
-          </section>
-          <section className="mb-4">
-            <div className="flex items-center justify-between">
-              <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
-                Bebidas
-              </h3>
-              <div className="flex gap-1 md:gap-3">
-                <Switch label="Deshabilitar categoria"></Switch>
-                <ButtonContained
-                  text="Eliminar"
-                  tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
-                  variant="generalPoppins"
-                ></ButtonContained>
-              </div>
-            </div>
-
-            <div>
-              <SwiperConfiguration>
-                <SwiperSlide>
-                  <CardAdministration variant="AddCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-              </SwiperConfiguration>
-            </div>
-          </section>
-          <section className="mb-4">
-            <div className="flex items-center justify-between">
-              <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
-                Postres
-              </h3>
-              <div className="flex gap-1 md:gap-3">
-                <Switch label="Deshabilitar categoria"></Switch>
-                <ButtonContained
-                  text="Eliminar"
-                  tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
-                  variant="generalPoppins"
-                ></ButtonContained>
-              </div>
-            </div>
-
-            <div>
-              <SwiperConfiguration>
-                <SwiperSlide>
-                  <CardAdministration variant="AddCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <CardAdministration variant="editCard"></CardAdministration>
-                </SwiperSlide>
-              </SwiperConfiguration>
-            </div>
-          </section>
+          <Category isAdministration="true" title="Entradas">
+            {" "}
+            {DB.map((data, idx) => (
+              <SwiperSlide key={idx}>
+                <CardAdministration
+                  isAvailable={data.isAvailable}
+                  nameDish={data.nameDish}
+                  description={data.description}
+                  price={data.price}
+                  image={data.image}
+                  variant="editCard"
+                />
+              </SwiperSlide>
+            ))}
+          </Category>
+          <Category isAdministration="true" title="Bebidas">
+            {DB.map((data, idx) => (
+              <SwiperSlide key={idx}>
+                <CardAdministration
+                  isAvailable={data.isAvailable}
+                  nameDish={data.nameDish}
+                  description={data.description}
+                  price={data.price}
+                  image={data.image}
+                  variant="editCard"
+                />
+              </SwiperSlide>
+            ))}
+          </Category>
+          <Category isAdministration="true" title="Postres">
+            {" "}
+            {DB.map((data, idx) => (
+              <SwiperSlide key={idx}>
+                <CardAdministration
+                  isAvailable={data.isAvailable}
+                  nameDish={data.nameDish}
+                  description={data.description}
+                  price={data.price}
+                  image={data.image}
+                  variant="editCard"
+                />
+              </SwiperSlide>
+            ))}
+          </Category>
           <section className="mb-4">
             <div className="flex items-center justify-between">
               <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
