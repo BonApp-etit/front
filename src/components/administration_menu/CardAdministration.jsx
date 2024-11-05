@@ -3,6 +3,7 @@ import ButtonContained from "../common_components/ButtonContained";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import ButtonOutlined from "../ButtonOutlined";
 import LabelStatus from "./LabelStatus";
+import ButtonDeleted from "./ButtonDeleted";
 
 export default function CardAdministration({ variant }) {
   return (
@@ -19,8 +20,11 @@ export default function CardAdministration({ variant }) {
                 src={"/assets/AdministrationMenu/chicken.svg"}
                 layout="responsive"
               />
-              <div className="absolute left-1 top-4">
-                <LabelStatus></LabelStatus>
+              <div className="absolute top-3 w-full px-2 lg:top-4 lg:px-3">
+                <div className="flex justify-between">
+                  {" "}
+                  <LabelStatus></LabelStatus> <ButtonDeleted></ButtonDeleted>{" "}
+                </div>
               </div>
             </div>
 
