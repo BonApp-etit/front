@@ -4,14 +4,14 @@ import { SwiperSlide } from "swiper/react";
 import ButtonContained from "@/components/common_components/ButtonContained";
 import CardAdministration from "@/components/administration_menu/CardAdministration";
 
-export default function Category({ title, children, isAdministration }) {
+export default function Category({ title, children, variant }) {
   return (
     <section className="mb-4">
       <div className="flex items-center justify-between">
         <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
           {title}
         </h3>
-        {isAdministration === "true" && (
+        {variant === "administration" && (
           <div className="flex gap-1 md:gap-3">
             <Switch label="Deshabilitar categoria"></Switch>
             <ButtonContained
@@ -25,7 +25,7 @@ export default function Category({ title, children, isAdministration }) {
 
       <div>
         <SwiperConfiguration>
-          {isAdministration === "true" && (
+          {variant === "administration" && (
             <SwiperSlide>
               <CardAdministration variant="AddCard" />
             </SwiperSlide>
