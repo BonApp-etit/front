@@ -8,9 +8,7 @@ import SwiperConfiguration from "@/components/administration_menu/SwiperConfigur
 import { SwiperSlide } from "swiper/react";
 import ButtonOutlined from "@/components/ButtonOutlined";
 import Switch from "@/components/common_components/Switch";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import { Navigation } from "swiper/modules";
+import SearchBar from "@/components/administration_menu/SearchBar";
 
 export default function AdministrationMenu() {
   return (
@@ -50,6 +48,10 @@ export default function AdministrationMenu() {
             <div className="my-2 w-full border border-cs500 md:w-[632px] lg:w-[1200px]"></div>
           </section>
           <div className="mb-1 lg:mb-3">
+            <div className="mb-3">
+              <SearchBar></SearchBar>
+            </div>
+
             <CategoriesButton names={["Entradas", "Bebidas", "Postres"]} />
           </div>
 
