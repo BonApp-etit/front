@@ -60,7 +60,7 @@ export default function AdministrationMenu() {
               </h3>
 
               <div className="flex gap-1 md:gap-3">
-                <Switch></Switch>
+                <Switch label="Deshabilitar categoria"></Switch>
                 <ButtonContained
                   text="Eliminar"
                   tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
