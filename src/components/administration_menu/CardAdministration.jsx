@@ -2,6 +2,7 @@ import Image from "next/image";
 import ButtonContained from "../common_components/ButtonContained";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import ButtonOutlined from "../ButtonOutlined";
+import LabelStatus from "./LabelStatus";
 
 export default function CardAdministration({ variant }) {
   return (
@@ -9,7 +10,7 @@ export default function CardAdministration({ variant }) {
       {variant === "editCard" && (
         <div className="w-[160px] transform rounded-b-2xl shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:w-[230px] lg:w-[280px]">
           <section className="hover:bg-slate-100">
-            <div className="w-full">
+            <div className="relative w-full">
               <Image
                 className="rounded-t-2xl"
                 width={40}
@@ -18,6 +19,9 @@ export default function CardAdministration({ variant }) {
                 src={"/assets/AdministrationMenu/chicken.svg"}
                 layout="responsive"
               />
+              <div className="absolute left-1 top-4">
+                <LabelStatus></LabelStatus>
+              </div>
             </div>
 
             <div className="p-1 lg:p-2">
