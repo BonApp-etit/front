@@ -1,18 +1,21 @@
 import * as React from "react";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
+import useIsDesktop from "@/hooks/useIsDesktop";
 
-export default function SwitchLabels() {
+const label = { inputProps: { "aria-label": "Switch demo" } };
+
+export default function BasicSwitches() {
+  const isDesktop = useIsDesktop();
   return (
-    <FormGroup>
-      <FormControlLabel
-        control={<Switch defaultChecked size="small" />}
-        label="Deshabilitar"
-        sx={{
-          fontSize: "4rem",
-        }}
+    <div className="flex items-center">
+      <Switch
+        {...label}
+        defaultChecked
+        size={isDesktop ? "undefined" : "small"}
       />
-    </FormGroup>
+      <span className="font-poppins text-xs font-medium leading-5 tracking-tight text-black md:text-sm lg:text-base">
+        Deshabilitar categoria
+      </span>
+    </div>
   );
 }

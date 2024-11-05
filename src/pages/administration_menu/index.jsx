@@ -7,7 +7,7 @@ import ButtonContained from "@/components/common_components/ButtonContained";
 import SwiperConfiguration from "@/components/administration_menu/SwiperConfiguration";
 import { SwiperSlide } from "swiper/react";
 import ButtonOutlined from "@/components/ButtonOutlined";
-import SwitchLabels from "@/components/common_components/Switch";
+import Switch from "@/components/common_components/Switch";
 // import "swiper/css";
 // import "swiper/css/navigation";
 // import { Navigation } from "swiper/modules";
@@ -59,11 +59,8 @@ export default function AdministrationMenu() {
                 Entradas
               </h3>
 
-              <div className="flex">
-                {/* <h6 className="font-poppins text-xs font-medium leading-5 tracking-tight text-black">
-                  Deshabilitar categoria
-                </h6> */}
-                <SwitchLabels></SwitchLabels>
+              <div className="flex gap-1 md:gap-3">
+                <Switch></Switch>
                 <ButtonContained
                   text="Eliminar"
                   tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
