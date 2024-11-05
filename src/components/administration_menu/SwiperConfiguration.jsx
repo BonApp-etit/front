@@ -1,35 +1,44 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Arrow from "./Arrow";
 
 export default function SwiperConfiguration({ children }) {
   return (
-    <div>
-      <Swiper
-        navigation
-        modules={[Navigation]}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          360: {
-            slidesPerView: 2,
-            centeredSlides: false,
-            spaceBetween: 2,
-          },
-          744: {
-            slidesPerView: 2.6,
-            spaceBetween: 24,
-            centeredSlides: false,
-          },
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 22,
-            centeredSlides: false,
-          },
-        }}
-      >
-        {children}
-      </Swiper>
-    </div>
+    <Swiper
+      modules={[Navigation]}
+      pagination={{ clickable: true }}
+      breakpoints={{
+        320: {
+          slidesPerView: 2,
+          centeredSlides: false,
+          spaceBetween: 0,
+        },
+        360: {
+          slidesPerView: 2,
+          centeredSlides: false,
+          spaceBetween: 2,
+        },
+        744: {
+          slidesPerView: 2.6,
+          spaceBetween: 24,
+          centeredSlides: false,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          centeredSlides: false,
+        },
+      }}
+    >
+      <div className="absolute left-0 top-1/2 z-10 -translate-y-1/2">
+        <Arrow variant="left" />
+      </div>
+      <div className="absolute right-0 top-1/2 z-10 -translate-y-1/2">
+        <Arrow variant="right" />
+      </div>
+      {children}
+    </Swiper>
   );
 }

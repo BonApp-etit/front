@@ -14,8 +14,10 @@ export default function AdministrationMenu() {
   return (
     <main className="">
       <NavBar />
-      <section className="flex h-[60px] w-full justify-center rounded-lg bg-cs200 md:h-[115px] lg:h-[145px]">
-        <div className="w-[328px] md:w-[632px] lg:w-[1200px]">
+      <section className="flex h-[60px] w-full justify-center rounded-lg bg-cs200 md:h-[115px] md:px-14 lg:h-[145px]">
+        <div className="min-w-[328px] max-w-[400px] md:min-w-[632px] md:max-w-[700px] lg:max-w-[1200px]">
+          {" "}
+          {/** md:w-[632px] lg:w-[1200px] */}
           <section>
             <div className="mt-4 flex items-end space-x-1 md:mt-7 lg:mt-7">
               {/* Logo */}
@@ -45,16 +47,16 @@ export default function AdministrationMenu() {
             </div>
 
             {/* Línea divisoria */}
-            <div className="my-2 w-full border border-cs500 md:w-[632px] lg:w-[1200px]"></div>
+            <div className="my-2 border border-cs500 md:w-[632px] lg:w-[1200px]"></div>
           </section>
           <div className="mb-1 lg:mb-3">
-            <div className="mb-3">
-              <SearchBar></SearchBar>
+            <div className="md:flex md:flex-row-reverse md:gap-4">
+              <div className="mb-3 w-full">
+                <SearchBar></SearchBar>
+              </div>
+              <CategoriesButton names={["Entradas", "Bebidas", "Postres"]} />
             </div>
-
-            <CategoriesButton names={["Entradas", "Bebidas", "Postres"]} />
           </div>
-
           <section className="mb-4">
             <div className="flex items-center justify-between">
               <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
@@ -91,17 +93,19 @@ export default function AdministrationMenu() {
               </SwiperConfiguration>
             </div>
           </section>
-
           <section className="mb-4">
             <div className="flex items-center justify-between">
               <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
                 Bebidas
               </h3>
-              <ButtonContained
-                text="Eliminar"
-                tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
-                variant="generalPoppins"
-              ></ButtonContained>
+              <div className="flex gap-1 md:gap-3">
+                <Switch label="Deshabilitar categoria"></Switch>
+                <ButtonContained
+                  text="Eliminar"
+                  tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
+                  variant="generalPoppins"
+                ></ButtonContained>
+              </div>
             </div>
 
             <div>
@@ -124,17 +128,19 @@ export default function AdministrationMenu() {
               </SwiperConfiguration>
             </div>
           </section>
-
           <section className="mb-4">
             <div className="flex items-center justify-between">
               <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
                 Postres
               </h3>
-              <ButtonContained
-                text="Eliminar"
-                tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
-                variant="generalPoppins"
-              ></ButtonContained>
+              <div className="flex gap-1 md:gap-3">
+                <Switch label="Deshabilitar categoria"></Switch>
+                <ButtonContained
+                  text="Eliminar"
+                  tailwindClasses=" bg-red-600 !px-2 !py-1  text-xs"
+                  variant="generalPoppins"
+                ></ButtonContained>
+              </div>
             </div>
 
             <div>
@@ -157,7 +163,6 @@ export default function AdministrationMenu() {
               </SwiperConfiguration>
             </div>
           </section>
-
           <section className="mb-4">
             <div className="flex items-center justify-between">
               <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
