@@ -4,6 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import ButtonOutlined from "../ButtonOutlined";
 import LabelStatus from "./LabelStatus";
 import ButtonDeleted from "./ButtonDeleted";
+import ButtonIncrease from "./ButtonIncrease";
 
 export default function CardAdministration({
   variant,
@@ -137,7 +138,8 @@ export default function CardAdministration({
             </div>
           </section>
 
-          <div className="flex justify-center">
+          <div className="flex items-center justify-evenly">
+            <ButtonIncrease></ButtonIncrease>
             <ButtonContained
               variant="generalUbuntu"
               text="Editar platillo"
