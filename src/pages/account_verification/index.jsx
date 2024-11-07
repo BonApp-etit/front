@@ -5,12 +5,15 @@ import useIsTablet from "@/hooks/useIsTablet";
 import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { verificationCodeSchema } from "@/hooks/validationSchemas";
 import NavBar from "@/components/NavBar/NavBar";
+import DashboardLayoutBasic from "@/components/common_components/Drawer";
 
 export default function AccountVerification() {
   const isTablet = useIsTablet();
   return (
     <main>
       <NavBar />
+      <DashboardLayoutBasic></DashboardLayoutBasic>
+
       <Formik
         initialValues={{ email: "", verificationCode: "" }}
         validationSchema={verificationCodeSchema}

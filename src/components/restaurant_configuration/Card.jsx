@@ -26,7 +26,6 @@ export default function Card({ titleInfo, info, children }) {
           />
         </button>
       </div>
-
       <section
         className={`transform overflow-hidden transition-all duration-300 ease-in-out ${
           isExpanded ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
