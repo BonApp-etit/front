@@ -47,6 +47,7 @@ export default function AccountVerification() {
 
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
                 <ButtonContained
+                  variant="generalPoppins"
                   type="submit"
                   text="Enviar codigo de verificacion"
                 ></ButtonContained>
@@ -70,6 +71,7 @@ export default function AccountVerification() {
 
                   <div className="mb-0">
                     <ButtonContained
+                      variant="generalPoppins"
                       type="submit"
                       text="Verificar"
                     ></ButtonContained>
@@ -93,6 +95,7 @@ export default function AccountVerification() {
                   </div>
                   <div className="mb-5 mt-5 flex justify-center lg:mb-10">
                     <ButtonContained
+                      variant="generalPoppins"
                       type="submit"
                       text="Verificar"
                     ></ButtonContained>

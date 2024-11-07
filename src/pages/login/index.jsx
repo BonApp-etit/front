@@ -69,7 +69,11 @@ export default function Login() {
               </div>
 
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-                <ButtonContained text="Entrar" type="submit" />
+                <ButtonContained
+                  variant="generalPoppins"
+                  text="Entrar"
+                  type="submit"
+                />
               </div>
             </FormikForm>
 
