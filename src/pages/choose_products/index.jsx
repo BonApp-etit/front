@@ -3,6 +3,12 @@ import MainLayout from "@/components/common_components/MainLayout";
 import LayoutCard from "@/components/common_components/LayoutCard";
 import CardContent from "@/components/UserOrder/CardContent";
 import ButtonContained from "@/components/common_components/ButtonContained";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Scrollbar } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import Arrow from "@/components/administration_menu/Arrow";
+import SwiperConfiguration from "@/components/administration_menu/SwiperConfiguration";
 
 export default function ChooseProducts(title, subtitle) {
   return (
@@ -17,10 +23,31 @@ export default function ChooseProducts(title, subtitle) {
             Hecha un vistazo, que todo este en orden
           </h4>
         </div>
+        <div className="flex h-[600px] flex-col gap-3 shadow-md lg:h-[650px] lg:w-[630px]">
+          <SwiperConfiguration variantDirection="vertical">
+            <SwiperSlide>
+              <LayoutCard>
+                <CardContent />
+              </LayoutCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <LayoutCard>
+                <CardContent />
+              </LayoutCard>
+            </SwiperSlide>
 
-        <LayoutCard>
-          <CardContent></CardContent>
-        </LayoutCard>
+            <SwiperSlide>
+              <LayoutCard>
+                <CardContent />
+              </LayoutCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <LayoutCard>
+                <CardContent />
+              </LayoutCard>
+            </SwiperSlide>
+          </SwiperConfiguration>
+        </div>
       </MainLayout>
     </main>
   );
