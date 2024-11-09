@@ -10,7 +10,7 @@ export default function SwiperConfiguration({ children, variantDirection }) {
       {variantDirection === "vertical" ? (
         <Swiper
           direction="vertical"
-          spaceBetween={5}
+          spaceBetween={20}
           slidesPerView={3}
           modules={[Navigation]} // Asegúrate de que el módulo esté aquí
         >

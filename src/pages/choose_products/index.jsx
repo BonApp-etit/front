@@ -39,7 +39,7 @@ export default function ChooseProducts(title, subtitle) {
             Hecha un vistazo, que todo este en orden
           </h4>
         </div>
-        <div className="flex h-[600px] flex-col gap-3 shadow-md lg:h-[650px] lg:w-[630px]">
+        <div className="flex h-[530px] flex-col gap-3 shadow-md md:h-[630px] lg:h-[630px] lg:w-[630px]">
           <SwiperConfiguration variantDirection="vertical">
             <SwiperSlide>
               <LayoutCard>
