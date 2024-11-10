@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/20/solid";
 
 export default function ButtonContained({
   text,
@@ -6,12 +6,14 @@ export default function ButtonContained({
   tailwindClasses,
   showIcon,
   variant,
+  ...props
 }) {
   return (
     <main>
       {variant === "generalPoppins" && (
         <button
           type={type}
+          {...props}
           className={`flex items-center justify-center rounded-lg bg-cs500 px-3 py-2 font-poppins text-sm font-semibold text-white shadow-md transition-all duration-150 ease-in-out hover:bg-cs700 hover:shadow-2xl active:bg-cs900 active:shadow-none md:text-base lg:text-lg ${tailwindClasses}`}
         >
           <span>{text}</span>
@@ -21,10 +23,11 @@ export default function ButtonContained({
       {variant === "text" && (
         <button
           type={type}
+          {...props}
           className={`flex items-center justify-center rounded-lg bg-white px-3 py-2 font-poppins text-sm font-semibold text-cs500 shadow-md transition-all duration-150 ease-in-out hover:bg-cs700 hover:shadow-2xl active:bg-cs900 active:shadow-none md:text-base lg:text-lg ${tailwindClasses}`}
         >
+          {showIcon && <ArrowLeftIcon className="ml-2 h-5 w-5" />}
           <span>{text}</span>
-          {showIcon && <ArrowRightIcon className="ml-2 h-5 w-5" />}
         </button>
       )}
       {variant === "generalUbuntu" && (

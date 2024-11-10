@@ -1,44 +1,26 @@
-import Form from "../../components/common_components/Form";
-import InputContained from "@/components/common_components/InputContained";
-import ButtonContained from "@/components/common_components/ButtonContained";
-import SignInOPtions from "@/components/common_components/SignUpOptions";
-
-import NavBar from "@/components/NavBar/NavBar";
-
+import LoadingButton from "@/components/common_components/LoadingButton";
+import React from "react";
 export default function SignUp() {
+  const [loading, setLoading] = React.useState(false);
+  const [isComplete, setIsComplete] = React.useState(false);
+
+  const handleClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setIsComplete(true);
+    }, 3000);
+  };
   return (
     <main>
-      <NavBar />
-
-      <Form
-        tittle="Registrate"
-        subtitleTop=""
-        subtitleBottom="Registrate y dile que si a miles de clientes satisfechos"
-        src="/assets/SignUp/SignUp.svg"
-        alt="SignUp"
+      <LoadingButton
+        isComplete={isComplete}
+        isLoading={loading}
+        onClick={handleClick}
       >
-        <InputContained
-          label="Nombre completo"
-          placeholder="Ingresa tu nombre completo"
-          type="text"
-        />
-        <InputContained
-          label="Correo electronico"
-          placeholder="Ingresa tu correo electronico"
-          type="text"
-        />
-
-        <InputContained
-          label="Contraseña"
-          placeholder="Ingresa tu contraseña"
-          type="text"
-        />
-        <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-          <ButtonContained text="Registrarse"></ButtonContained>
-        </div>
-
-        <SignInOPtions />
-      </Form>
+        {" "}
+        {isComplete ? "¡Completado!" : "Registrarse"}
+      </LoadingButton>
     </main>
   );
 }
