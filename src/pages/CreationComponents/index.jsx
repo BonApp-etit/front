@@ -1,5 +1,6 @@
 import LoadingButton from "@/components/common_components/LoadingButton";
 import React from "react";
+
 export default function SignUp() {
   const [loading, setLoading] = React.useState(false);
   const [isComplete, setIsComplete] = React.useState(false);
@@ -18,7 +19,6 @@ export default function SignUp() {
         isLoading={loading}
         onClick={handleClick}
       >
-        {" "}
         {isComplete ? "¡Completado!" : "Registrarse"}
       </LoadingButton>
     </main>

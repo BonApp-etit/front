@@ -5,7 +5,12 @@ import TotalCard from "./TotalCard";
 import Stepper from "../common_components/Stepper";
 import React, { useState } from "react";
 
-export default function LayoutOrder({ children, title, subtitle }) {
+export default function LayoutOrder({
+  children,
+  title,
+  subtitle,
+  showLoadingButton,
+}) {
   const [currentStep, setCurrentStep] = useState(1); // Paso inicial
 
   const totalSteps = 5; // Número total de pasos
@@ -31,6 +36,7 @@ export default function LayoutOrder({ children, title, subtitle }) {
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
             totalSteps={totalSteps}
+            showLoadingButton={showLoadingButton}
           ></TotalCard>
         </div>
       </div>
@@ -43,6 +49,7 @@ export default function LayoutOrder({ children, title, subtitle }) {
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
           totalSteps={totalSteps}
+          showLoadingButton={showLoadingButton}
         ></TotalCard>
       </div>
     </MainLayout>
