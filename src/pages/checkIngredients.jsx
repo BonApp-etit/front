@@ -6,13 +6,13 @@ import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import LayoutOrder from "@/components/UserOrder/LayoutOrder";
-export default function ChooseProducts() {
+export default function CheckIngredients() {
   return (
     <main>
       <NavBar></NavBar>
       <LayoutOrder
         title="¡Tu orden casi esta lista!"
-        subtitle="Hecha un vistazo, que todo este en orden"
+        subtitle="Estamos comprobando todos los ingredientes..."
       >
         <SwiperSlide>
           <LayoutCard>
