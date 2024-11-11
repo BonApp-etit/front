@@ -11,6 +11,7 @@ export default function LayoutOrder({
   subtitle,
   showLoadingButton,
   swiperContainer = true,
+  showSingleButton = false,
 }) {
   const [currentStep, setCurrentStep] = useState(1); // Paso inicial
 
@@ -55,6 +56,7 @@ export default function LayoutOrder({
           setCurrentStep={setCurrentStep}
           totalSteps={totalSteps}
           showLoadingButton={showLoadingButton}
+          showSingleButton={showSingleButton}
         ></TotalCard>
       </div>
     </MainLayout>
