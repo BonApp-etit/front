@@ -7,7 +7,7 @@ export default function ButtonContained({
   tailwindClasses,
   showIcon,
   variant,
-  isArrowLeft = "false",
+  isArrowLeft = false,
   ...props
 }) {
   return (
