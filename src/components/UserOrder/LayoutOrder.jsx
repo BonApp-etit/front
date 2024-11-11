@@ -10,6 +10,7 @@ export default function LayoutOrder({
   title,
   subtitle,
   showLoadingButton,
+  swiperContainer = true,
 }) {
   const [currentStep, setCurrentStep] = useState(1); // Paso inicial
 
@@ -26,10 +27,14 @@ export default function LayoutOrder({
       </div>
 
       <div className="lg:flex lg:items-center lg:gap-10">
-        <div className="flex h-[530px] flex-col gap-3 shadow-md md:h-[630px] lg:h-[630px] lg:w-[630px]">
-          <SwiperConfiguration variantDirection="vertical">
-            {children}
-          </SwiperConfiguration>
+        <div className="flex h-[530px] flex-col gap-3 md:h-[630px] lg:h-[630px] lg:w-[630px]">
+          {swiperContainer === true ? (
+            <SwiperConfiguration variantDirection="vertical">
+              {children}
+            </SwiperConfiguration>
+          ) : (
+            children
+          )}
         </div>
         <div className="hidden flex-1 lg:block lg:w-full">
           <TotalCard
