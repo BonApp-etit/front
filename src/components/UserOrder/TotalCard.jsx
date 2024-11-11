@@ -8,6 +8,7 @@ export default function TotalCard({
   setCurrentStep,
   totalSteps,
   showLoadingButton,
+  showSingleButton,
 }) {
   const handleNext = () => {
     if (currentStep < totalSteps) {
@@ -53,6 +54,16 @@ export default function TotalCard({
               onClick={handleClick}
             ></LoadingButton>
           </div>
+        ) : showSingleButton ? (
+          <div className="flex justify-center">
+            <ButtonContained
+              variant="generalPoppins"
+              showIcon={true}
+              isArrowLeft={true}
+              onClick={handleClick}
+              text="Regresar al menu"
+            ></ButtonContained>
+          </div>
         ) : (
           <div className="flex justify-evenly">
             <ButtonContained
@@ -65,6 +76,7 @@ export default function TotalCard({
             <ButtonContained
               onClick={handleNext}
               disabled={currentStep === totalSteps}
+              isArrowLeft={false}
               text="Siguiente"
               variant="generalPoppins"
               showIcon="true"
