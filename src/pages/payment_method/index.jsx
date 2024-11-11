@@ -6,7 +6,7 @@ import LayoutOrder from "@/components/UserOrder/LayoutOrder";
 import Card from "@/components/restaurant_configuration/Card";
 import InputContained from "@/components/common_components/InputContained";
 
-export default function CheckIngredients() {
+export default function PaymentMethod() {
   return (
     <main>
       <NavBar></NavBar>
