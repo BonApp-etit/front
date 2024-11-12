@@ -1,6 +1,10 @@
 import clsx from "clsx";
 
-export default function LayoutCard({ children, isConfiguration = false }) {
+export default function LayoutCard({
+  children,
+  isConfiguration = false,
+  tailwindClasses,
+}) {
   return (
     <div className="w-full">
       <section
@@ -9,6 +13,7 @@ export default function LayoutCard({ children, isConfiguration = false }) {
           {
             "px-[30px] md:px-[50px]": isConfiguration,
           },
+          tailwindClasses, // Aplica las clases adicionales recibidas por la prop
         )}
       >
         {children}
