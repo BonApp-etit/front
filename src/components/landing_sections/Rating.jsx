@@ -4,21 +4,21 @@ export default function Rating() {
     <div className="mt-7 flex flex-col items-center lg:flex-row lg:justify-start">
       <div className="flex -space-x-6">
         <Image
-          src="/assets/pp1.svg"
+          src="/assets/RatingImages/pp1.svg"
           alt="User1"
           width={63}
           height={63}
           className="rounded-full border-2 border-white"
         />
         <Image
-          src="/assets/pp2.svg"
+          src="/assets/RatingImages/pp2.svg"
           alt="User2"
           width={63}
           height={63}
           className="rounded-full border-2 border-white"
         />
         <Image
-          src="/assets/pp3.svg"
+          src="/assets/RatingImages/pp3.svg"
           alt="User3"
           width={63}
           height={63}

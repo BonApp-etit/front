@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function Logo() {
   return (
     <div className="flex items-center gap-1">
@@ -12,9 +13,12 @@ export default function Logo() {
         />
       </div>
 
-      <h1 className="font-poppins text-xl font-semibold text-cstext md:text-2xl lg:text-[28px]">
+      <Link
+        href={"/"}
+        className="font-poppins text-xl font-semibold text-cstext md:text-2xl lg:text-[28px]"
+      >
         Bon App-etit
-      </h1>
+      </Link>
     </div>
   );
 }

@@ -47,6 +47,9 @@ export default function ResetPassword() {
                 <ButtonContained
                   type="submit"
                   text="Enviar codigo de verificacion"
+                  variant={"generalPoppins"}
+                  showIcon={true}
+                  isArrowLeft={false}
                 ></ButtonContained>
               </div>
               {isTablet ? (
@@ -70,6 +73,9 @@ export default function ResetPassword() {
                     <ButtonContained
                       type="submit"
                       text="Verificar"
+                      variant={"generalPoppins"}
+                      showIcon={true}
+                      isArrowLeft={false}
                     ></ButtonContained>
                   </div>
                 </div>
@@ -93,6 +99,9 @@ export default function ResetPassword() {
                     <ButtonContained
                       type="submit"
                       text="Verificar"
+                      variant={"generalPoppins"}
+                      showIcon={true}
+                      isArrowLeft={false}
                     ></ButtonContained>
                   </div>
                 </div>

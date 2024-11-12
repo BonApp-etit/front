@@ -1,15 +1,23 @@
+import Link from "next/link";
+
 export default function Links() {
-  const links = ["Iniciar sesion", "Registrate", "Beneficios", "Servicios"];
+  const links = [
+    { name: "Iniciar sesion", href: "/login" },
+    { name: "Registrate", href: "/sign_up" },
+    { name: "Beneficios", href: "/#beneficios" },
+    { name: "Servicios", href: "/#servicios" },
+  ];
+
   return (
     <section className="hidden space-x-6 scroll-smooth lg:flex">
       {links.map((link, index) => (
-        <a
+        <Link
           key={index}
-          href={`#${link}`}
+          href={link.href}
           className="font-poppins text-base font-medium text-cstext hover:text-cs500"
         >
-          {link}
-        </a>
+          {link.name}
+        </Link>
       ))}
     </section>
   );

@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import Rating from "./Rating";
+import Link from "next/link";
 export default function HeroSection() {
   const theme = useTheme();
   const recomendations = useMediaQuery("(min-width:1200px)");
@@ -25,41 +26,43 @@ export default function HeroSection() {
           {/** Button and recomendations */}
 
           <div className="mb-10 flex justify-center lg:justify-start">
-            <Button
-              variant="contained"
-              sx={{
-                [theme.breakpoints.up("lg")]: {
-                  borderRadius: "45px",
-                  py: "18px",
-                  px: "32px",
-                  fontSize: "1rem",
-                  fontWeight: "700",
-                },
-                [theme.breakpoints.between("md", "lg")]: {
-                  py: "12px",
-                  px: "32px",
-                  borderRadius: "45px",
-                  fontSize: "1rem",
-                  fontWeight: "700",
-                },
-                [theme.breakpoints.between("sm", "md")]: {
-                  py: "12px",
-                  px: "32px",
-                  borderRadius: "45px",
-                  fontSize: "1rem",
-                  fontWeight: "700",
-                },
-                [theme.breakpoints.down("sm")]: {
-                  py: "12px",
-                  px: "32px",
-                  borderRadius: "45px",
-                  fontSize: "1rem",
-                  fontWeight: "700",
-                },
-              }}
-            >
-              ¡Solicita una demo!
-            </Button>
+            <Link href="/sign_up" passHref>
+              <Button
+                variant="contained"
+                sx={{
+                  [theme.breakpoints.up("lg")]: {
+                    borderRadius: "45px",
+                    py: "18px",
+                    px: "32px",
+                    fontSize: "1rem",
+                    fontWeight: "700",
+                  },
+                  [theme.breakpoints.between("md", "lg")]: {
+                    py: "12px",
+                    px: "32px",
+                    borderRadius: "45px",
+                    fontSize: "1rem",
+                    fontWeight: "700",
+                  },
+                  [theme.breakpoints.between("sm", "md")]: {
+                    py: "12px",
+                    px: "32px",
+                    borderRadius: "45px",
+                    fontSize: "1rem",
+                    fontWeight: "700",
+                  },
+                  [theme.breakpoints.down("sm")]: {
+                    py: "12px",
+                    px: "32px",
+                    borderRadius: "45px",
+                    fontSize: "1rem",
+                    fontWeight: "700",
+                  },
+                }}
+              >
+                ¡Solicita una demo!
+              </Button>
+            </Link>
           </div>
 
           {recomendations && <Rating />}

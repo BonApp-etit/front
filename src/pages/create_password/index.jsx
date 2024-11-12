@@ -57,7 +57,12 @@ export default function CreatePassword() {
               </div>
 
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-                <ButtonContained text="Guardar y entrar"></ButtonContained>
+                <ButtonContained
+                  variant={"generalPoppins"}
+                  showIcon={true}
+                  isArrowLeft={false}
+                  text="Guardar y entrar"
+                ></ButtonContained>
               </div>
             </FormikForm>
           </Form>
