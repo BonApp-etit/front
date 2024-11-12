@@ -1,7 +1,15 @@
 import LayoutCard from "../common_components/LayoutCard";
 import ButtonContained from "../common_components/ButtonContained";
+import LoadingButton from "../common_components/LoadingButton";
+import React from "react";
 
-export default function TotalCard({ currentStep, setCurrentStep, totalSteps }) {
+export default function TotalCard({
+  currentStep,
+  setCurrentStep,
+  totalSteps,
+  showLoadingButton,
+  showSingleButton,
+}) {
   const handleNext = () => {
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
@@ -14,6 +22,16 @@ export default function TotalCard({ currentStep, setCurrentStep, totalSteps }) {
     }
   };
 
+  const [loading, setLoading] = React.useState(false);
+  const [isComplete, setIsComplete] = React.useState(false);
+
+  const handleClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setIsComplete(true);
+    }, 3000);
+  };
   return (
     <LayoutCard>
       <div className="mb-3 flex flex-col gap-4 lg:mb-4">
@@ -28,22 +46,43 @@ export default function TotalCard({ currentStep, setCurrentStep, totalSteps }) {
           </div>
         </div>
 
-        <div className="flex justify-evenly">
-          <ButtonContained
-            onClick={handlePrev}
-            disabled={currentStep === 1}
-            text="Volver"
-            variant="text"
-            showIcon="true"
-          />
-          <ButtonContained
-            onClick={handleNext}
-            disabled={currentStep === totalSteps}
-            text="Siguiente"
-            variant="generalPoppins"
-            showIcon="true"
-          />
-        </div>
+        {showLoadingButton ? (
+          <div className="flex justify-center">
+            <LoadingButton
+              isComplete={isComplete}
+              isLoading={loading}
+              onClick={handleClick}
+            ></LoadingButton>
+          </div>
+        ) : showSingleButton ? (
+          <div className="flex justify-center">
+            <ButtonContained
+              variant="generalPoppins"
+              showIcon={true}
+              isArrowLeft={true}
+              onClick={handleClick}
+              text="Regresar al menu"
+            ></ButtonContained>
+          </div>
+        ) : (
+          <div className="flex justify-evenly">
+            <ButtonContained
+              onClick={handlePrev}
+              disabled={currentStep === 1}
+              text="Volver"
+              variant="text"
+              showIcon="true"
+            />
+            <ButtonContained
+              onClick={handleNext}
+              disabled={currentStep === totalSteps}
+              isArrowLeft={false}
+              text="Siguiente"
+              variant="generalPoppins"
+              showIcon="true"
+            />
+          </div>
+        )}
       </div>
     </LayoutCard>
   );

@@ -6,14 +6,20 @@ import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import LayoutOrder from "@/components/UserOrder/LayoutOrder";
+
 export default function CheckIngredients() {
   return (
     <main>
       <NavBar></NavBar>
       <LayoutOrder
-        title="¡Tu orden casi esta lista!"
-        subtitle="Estamos comprobando todos los ingredientes..."
+        title="Orden incompleta"
+        subtitle="Algunos platillos no se encuentran disponibles, disculpa las molestias."
       >
+        <SwiperSlide>
+          <LayoutCard>
+            <CardContent isAvailable={false} />
+          </LayoutCard>
+        </SwiperSlide>
         <SwiperSlide>
           <LayoutCard>
             <CardContent />
