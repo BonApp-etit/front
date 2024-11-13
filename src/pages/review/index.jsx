@@ -17,6 +17,8 @@ export default function Review() {
         subtitle="Revisa que los productos y el metodo de pago sean correctos."
         showLoadingButton={false}
         swiperContainer={false}
+        linkBackward={"/payment_method"}
+        linkForward={"/purchase_made"}
       >
         <LayoutCard>
           <CardContent />

@@ -142,7 +142,7 @@ export default function CardAdministration({
             <ButtonIncrease></ButtonIncrease>
             <ButtonContained
               variant="generalUbuntu"
-              text="Editar platillo"
+              text="Comprar ahora"
               type="submit"
             ></ButtonContained>
           </div>

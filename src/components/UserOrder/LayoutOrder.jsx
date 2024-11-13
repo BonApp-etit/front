@@ -12,6 +12,8 @@ export default function LayoutOrder({
   showLoadingButton,
   swiperContainer = true,
   showSingleButton = false,
+  linkForward,
+  linkBackward,
 }) {
   const [currentStep, setCurrentStep] = useState(1); // Paso inicial
 
@@ -57,6 +59,8 @@ export default function LayoutOrder({
           totalSteps={totalSteps}
           showLoadingButton={showLoadingButton}
           showSingleButton={showSingleButton}
+          linkForward={linkForward}
+          linkBackward={linkBackward}
         ></TotalCard>
       </div>
     </MainLayout>

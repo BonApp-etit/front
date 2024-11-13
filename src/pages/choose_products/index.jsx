@@ -13,6 +13,8 @@ export default function ChooseProducts() {
       <LayoutOrder
         title="¡Tu orden casi esta lista!"
         subtitle="Hecha un vistazo, que todo este en orden"
+        linkForward="/check_Ingredients"
+        linkBackward="/customer_menu"
       >
         <SwiperSlide>
           <LayoutCard>

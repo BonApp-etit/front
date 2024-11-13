@@ -2,6 +2,7 @@ import LayoutCard from "../common_components/LayoutCard";
 import ButtonContained from "../common_components/ButtonContained";
 import LoadingButton from "../common_components/LoadingButton";
 import React from "react";
+import Link from "next/link";
 
 export default function TotalCard({
   currentStep,
@@ -9,6 +10,8 @@ export default function TotalCard({
   totalSteps,
   showLoadingButton,
   showSingleButton,
+  linkForward = "",
+  linkBackward = "",
 }) {
   const handleNext = () => {
     if (currentStep < totalSteps) {
@@ -56,31 +59,37 @@ export default function TotalCard({
           </div>
         ) : showSingleButton ? (
           <div className="flex justify-center">
-            <ButtonContained
-              variant="generalPoppins"
-              showIcon={true}
-              isArrowLeft={true}
-              onClick={handleClick}
-              text="Regresar al menu"
-            ></ButtonContained>
+            <Link href={linkForward} passHref>
+              <ButtonContained
+                variant="generalPoppins"
+                showIcon={true}
+                isArrowLeft={true}
+                onClick={handleClick}
+                text="Regresar al menu"
+              ></ButtonContained>
+            </Link>
           </div>
         ) : (
           <div className="flex justify-evenly">
-            <ButtonContained
-              onClick={handlePrev}
-              disabled={currentStep === 1}
-              text="Volver"
-              variant="text"
-              showIcon="true"
-            />
-            <ButtonContained
-              onClick={handleNext}
-              disabled={currentStep === totalSteps}
-              isArrowLeft={false}
-              text="Siguiente"
-              variant="generalPoppins"
-              showIcon="true"
-            />
+            <Link href={linkBackward} passHref>
+              <ButtonContained
+                onClick={handlePrev}
+                disabled={currentStep === 1}
+                text="Volver"
+                variant="text"
+                showIcon="true"
+              />
+            </Link>
+            <Link href={linkForward} passHref>
+              <ButtonContained
+                onClick={handleNext}
+                disabled={currentStep === totalSteps}
+                isArrowLeft={false}
+                text="Siguiente"
+                variant="generalPoppins"
+                showIcon="true"
+              />
+            </Link>
           </div>
         )}
       </div>
