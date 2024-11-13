@@ -4,6 +4,7 @@ import ButtonContained from "@/components/common_components/ButtonContained";
 import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { loginSchema } from "@/hooks/validationSchemas";
 import NavBar from "@/components/NavBar/NavBar";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -46,12 +47,12 @@ export default function Login() {
                   <label className="font-poppins text-sm font-light text-black md:text-base lg:text-lg">
                     Contraseña
                   </label>
-                  <a
-                    href="#"
+                  <Link
+                    href="/reset_password"
                     className="font-poppins text-xs text-black/50 hover:underline md:text-base lg:text-base"
                   >
                     Olvidaste tu contraseña?
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <Field
@@ -69,7 +70,13 @@ export default function Login() {
               </div>
 
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
-                <ButtonContained text="Entrar" type="submit" />
+                <ButtonContained
+                  variant={"generalPoppins"}
+                  text="Entrar"
+                  type="submit"
+                  showIcon={true}
+                  isArrowLeft={false}
+                />
               </div>
             </FormikForm>
 
@@ -77,12 +84,12 @@ export default function Login() {
               <p className="font-poppins text-xs font-normal leading-snug tracking-tight text-black/50 md:text-base">
                 ¿Aun no estás registrado?
               </p>
-              <a
+              <Link
                 className="font-poppins text-xs font-normal leading-snug tracking-tight text-cs500 hover:underline md:text-base"
-                href="#"
+                href="/sign_up"
               >
                 Crear cuenta
-              </a>
+              </Link>
             </div>
           </Form>
         )}

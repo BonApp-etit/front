@@ -14,6 +14,8 @@ export default function PaymentMethod() {
         swiperContainer="false"
         title="Metodo de pago "
         subtitle="Escoge tu metodo de pago."
+        linkForward={"/review"}
+        linkBackward={"/choose_products"}
       >
         <div className="flex flex-col gap-4">
           <div className="gap flex">

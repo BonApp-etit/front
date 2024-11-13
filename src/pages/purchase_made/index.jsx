@@ -18,6 +18,7 @@ export default function PurchaseMade() {
         showLoadingButton={false}
         swiperContainer={false}
         showSingleButton={true}
+        linkForward={"/customer_menu"}
       >
         <LayoutCard>
           <CardContent />

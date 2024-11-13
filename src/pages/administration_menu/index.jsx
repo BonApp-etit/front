@@ -57,48 +57,57 @@ export default function AdministrationMenu() {
         userName="Jhon Doue"
         restauranName="Mr.Burguer"
       >
-        <Category variant="administration" title="Entradas">
-          {DB.map((data, idx) => (
-            <SwiperSlide key={idx}>
-              <CardAdministration
-                isAvailable={data.isAvailable}
-                nameDish={data.nameDish}
-                description={data.description}
-                price={data.price}
-                image={data.image}
-                variant="editCard"
-              />
-            </SwiperSlide>
-          ))}
-        </Category>
-        <Category variant="administration" title="Bebidas">
-          {DB.map((data, idx) => (
-            <SwiperSlide key={idx}>
-              <CardAdministration
-                isAvailable={data.isAvailable}
-                nameDish={data.nameDish}
-                description={data.description}
-                price={data.price}
-                image={data.image}
-                variant="editCard"
-              />
-            </SwiperSlide>
-          ))}
-        </Category>
-        <Category variant="administration" title="Postres">
-          {DB.map((data, idx) => (
-            <SwiperSlide key={idx}>
-              <CardAdministration
-                isAvailable={data.isAvailable}
-                nameDish={data.nameDish}
-                description={data.description}
-                price={data.price}
-                image={data.image}
-                variant="editCard"
-              />
-            </SwiperSlide>
-          ))}
-        </Category>
+        <div id="entradas">
+          <Category variant="administration" title="Entradas">
+            {DB.map((data, idx) => (
+              <SwiperSlide key={idx}>
+                <CardAdministration
+                  isAvailable={data.isAvailable}
+                  nameDish={data.nameDish}
+                  description={data.description}
+                  price={data.price}
+                  image={data.image}
+                  variant="editCard"
+                />
+              </SwiperSlide>
+            ))}
+          </Category>
+        </div>
+
+        <div id="bebidas">
+          <Category variant="administration" title="Bebidas">
+            {DB.map((data, idx) => (
+              <SwiperSlide key={idx}>
+                <CardAdministration
+                  isAvailable={data.isAvailable}
+                  nameDish={data.nameDish}
+                  description={data.description}
+                  price={data.price}
+                  image={data.image}
+                  variant="editCard"
+                />
+              </SwiperSlide>
+            ))}
+          </Category>
+        </div>
+
+        <div id="postres">
+          <Category variant="administration" title="Postres">
+            {DB.map((data, idx) => (
+              <SwiperSlide key={idx}>
+                <CardAdministration
+                  isAvailable={data.isAvailable}
+                  nameDish={data.nameDish}
+                  description={data.description}
+                  price={data.price}
+                  image={data.image}
+                  variant="editCard"
+                />
+              </SwiperSlide>
+            ))}
+          </Category>
+        </div>
+
         <section className="mb-4">
           <div className="flex items-center justify-between">
             <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">

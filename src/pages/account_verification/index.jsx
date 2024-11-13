@@ -46,6 +46,9 @@ export default function AccountVerification() {
                 <ButtonContained
                   type="submit"
                   text="Enviar codigo de verificacion"
+                  showIcon={true}
+                  variant={"generalPoppins"}
+                  isArrowLeft={false}
                 ></ButtonContained>
               </div>
               {isTablet ? (
@@ -69,6 +72,9 @@ export default function AccountVerification() {
                     <ButtonContained
                       type="submit"
                       text="Verificar"
+                      showIcon={true}
+                      variant={"generalPoppins"}
+                      isArrowLeft={false}
                     ></ButtonContained>
                   </div>
                 </div>
@@ -92,6 +98,9 @@ export default function AccountVerification() {
                     <ButtonContained
                       type="submit"
                       text="Verificar"
+                      variant={"generalPoppins"}
+                      showIcon={true}
+                      isArrowLeft={false}
                     ></ButtonContained>
                   </div>
                 </div>
