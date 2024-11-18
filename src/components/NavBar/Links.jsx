@@ -4,8 +4,8 @@ export default function Links() {
   const links = [
     { name: "Iniciar sesion", href: "/login" },
     { name: "Registrate", href: "/sign_up" },
-    { name: "Beneficios", href: "/#beneficios" },
-    { name: "Servicios", href: "/#servicios" },
+    { name: "Beneficios", href: "/#Beneficios" },
+    { name: "Servicios", href: "/#Servicios" },
   ];
 
   return (

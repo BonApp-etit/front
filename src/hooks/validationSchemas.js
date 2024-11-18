@@ -16,12 +16,14 @@ export const registerSchema = Yup.object({
     .required("Contraseña requerida"),
 });
 
-export const verificationCodeSchema = Yup.object({
-  email: Yup.string().email("Correo invalido").required("Correo requerido"),
-  verificationCode: Yup.string()
+export const codeSchema = Yup.object({
+  code: Yup.string()
     .required("Codigo de verificacion requerido")
-    .min(5, "El codigo de verificacion debe ser de 5 digitos ")
-    .max(5, "El codigo de verificacion debe ser de 5 digitos"),
+    .length(6, "El codigo debe ser de 6 digitos"),
+});
+
+export const emailSchema = Yup.object({
+  email: Yup.string().email("Correo invalido").required("Correo requerido"),
 });
 
 export const passwordVerificationSchema = Yup.object({
