@@ -5,8 +5,51 @@ import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { loginSchema } from "@/hooks/validationSchemas";
 import NavBar from "@/components/NavBar/NavBar";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Login() {
+  const router = useRouter();
+  const handleLogin = async (values, { setSubmitting, setErrors }) => {
+    try {
+      const response = await fetch("http://localhost:8080/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        console.log("Sesion iniciada");
+        const token = data.message.data?.token;
+        if (token) {
+          localStorage.setItem("authToken", token);
+          console.log("Token guardado en local storage");
+          router.push("/administration_menu");
+        } else {
+          setErrors({ general: "Error de autenticacion" });
+        }
+
+        // Guardar token en el navegador
+      } else {
+        if (data.message === "Account not verified") {
+          setErrors({ general: "Cuenta no verificada. Redirigiendo..." });
+          router.push("/account_verification");
+        } else if (data.message === "Invalid data") {
+          setErrors({ general: "Correo o contraseña incorrectos" });
+        } else {
+          setErrors({ general: "Ocurrio un error inesperado" });
+        }
+      }
+      setSubmitting(false);
+    } catch (error) {
+      setSubmitting(false);
+      console.error("Error de conexion", error);
+      console.log("Catch del cliente");
+      setErrors({ general: "Ocurrio un error inesperado" });
+    }
+  };
   return (
     <main>
       <NavBar />
@@ -14,11 +57,9 @@ export default function Login() {
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={loginSchema}
-        onSubmit={(values) => {
-          console.log("Datos del formulario", values);
-        }}
+        onSubmit={handleLogin}
       >
-        {({ handleSubmit }) => (
+        {({ errors, isSubmitting }) => (
           <Form
             tittle="Iniciar sesión"
             subtitleTop="Bienvenido de vuelta!!"
@@ -26,7 +67,7 @@ export default function Login() {
             src="/assets/Login/chef.svg"
             alt="LoginChefImage"
           >
-            <FormikForm onSubmit={handleSubmit}>
+            <FormikForm>
               <div>
                 <Field
                   name="email"
@@ -68,14 +109,19 @@ export default function Login() {
                   />
                 </div>
               </div>
-
+              {errors.general && (
+                <p className="font-roboto text-sm text-red-500 md:text-base lg:text-lg">
+                  {errors.general}
+                </p>
+              )}
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
                 <ButtonContained
                   variant={"generalPoppins"}
-                  text="Entrar"
+                  text={isSubmitting ? "Enviando" : "Entrar"}
                   type="submit"
                   showIcon={true}
                   isArrowLeft={false}
+                  disabled={isSubmitting}
                 />
               </div>
             </FormikForm>

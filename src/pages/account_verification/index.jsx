@@ -6,8 +6,10 @@ import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { codeSchema, emailSchema } from "@/hooks/validationSchemas";
 import NavBar from "@/components/NavBar/NavBar";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function AccountVerification() {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const isTablet = useIsTablet();
 
@@ -35,7 +37,7 @@ export default function AccountVerification() {
           setStep(2);
         } else {
           console.log("Código de verificación validado");
-          // Redirigir a otra página después de validar
+          router.push("/administration_menu");
         }
       } else {
         setErrors({ general: data.error || "Ocurrió un error inesperado" });
@@ -86,7 +88,11 @@ export default function AccountVerification() {
                     <ButtonContained
                       type="submit"
                       disabled={isSubmitting}
-                      text="Enviar código de verificación"
+                      text={
+                        isSubmitting
+                          ? "Enviando..."
+                          : "Enviar código de verificación"
+                      }
                       showIcon={true}
                       variant="generalPoppins"
                       isArrowLeft={false}
@@ -118,7 +124,7 @@ export default function AccountVerification() {
                     <ButtonContained
                       type="submit"
                       disabled={isSubmitting}
-                      text="Verificar"
+                      text={isSubmitting ? "Verificando..." : "Verificar"}
                       variant="generalPoppins"
                       showIcon={true}
                       isArrowLeft={false}

@@ -30,14 +30,6 @@ export default function SignUp() {
         // Si hay un error, muestra el mensaje en el formulario
         setErrors({ general: data.message || "Ocurrió un error inesperado" });
       }
-
-      // if (data.success) {
-      //   const token = data.data.token;
-      //   localStorage.setItem("authToken", token);
-      //   console.log("Registro exitoso, token guardado en localStorage.");
-      // } else {
-      //   console.error("Error en el registro:", data.error);
-      // }
     } catch (error) {
       setSubmitting(false);
       console.error("Error de conexión:", error);
