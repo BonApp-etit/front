@@ -4,8 +4,46 @@ import ButtonContained from "@/components/common_components/ButtonContained";
 import NavBar from "@/components/NavBar/NavBar";
 import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { passwordVerificationSchema } from "@/hooks/validationSchemas";
+import { useRouter } from "next/router";
 
 export default function CreatePassword() {
+  const router = useRouter();
+  const handleCreatePassword = async (values, { setSubmitting, setErrors }) => {
+    const token = localStorage.getItem("resetToken");
+    if (!token) {
+      console.log("No se encontro un token valido, intenta de nuevo");
+      return;
+    }
+    try {
+      const response = await fetch(
+        "http://localhost:8080/verification/reset_password",
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`, // Pasar el token temporal
+          },
+          body: JSON.stringify({
+            password: values.password,
+          }),
+        },
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setErrors({ general: errorData.message || "Error desconocido" });
+        return;
+      }
+
+      // Redirigir al usuario después de cambiar la contraseña
+      router.push("/login");
+    } catch (error) {
+      console.error("Error cambiando la contraseña:", error);
+      setErrors({ general: "Hubo un problema, intenta de nuevo más tarde." });
+    } finally {
+      setSubmitting(false);
+    }
+  };
   return (
     <main>
       <NavBar />
@@ -13,11 +51,9 @@ export default function CreatePassword() {
       <Formik
         initialValues={{ password: "", passwordConfirmation: "" }}
         validationSchema={passwordVerificationSchema}
-        onSubmit={(values) => {
-          console.log("Datos del formulario", values);
-        }}
+        onSubmit={handleCreatePassword}
       >
-        {({ handleSubmit }) => (
+        {({ isSubmitting, errors }) => (
           <Form
             tittle="Crear nueva contraseña"
             subtitleTop=""
@@ -25,7 +61,7 @@ export default function CreatePassword() {
             src="/assets/CreatePassword/createPassword.svg"
             alt="createPasswordImage"
           >
-            <FormikForm onSubmit={handleSubmit}>
+            <FormikForm>
               <div>
                 <Field
                   label="Contraseña"
@@ -56,12 +92,19 @@ export default function CreatePassword() {
                 />
               </div>
 
+              {errors.general && (
+                <p className="font-roboto text-sm text-red-500 md:text-base lg:text-lg">
+                  {errors.general}
+                </p>
+              )}
+
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
                 <ButtonContained
                   variant={"generalPoppins"}
                   showIcon={true}
+                  type="submit"
                   isArrowLeft={false}
-                  text="Guardar y entrar"
+                  text={isSubmitting ? "Guardando..." : "Guardar y entrar"}
                 ></ButtonContained>
               </div>
             </FormikForm>
