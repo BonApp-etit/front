@@ -6,8 +6,9 @@ import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { registerSchema } from "@/hooks/validationSchemas";
 import NavBar from "@/components/NavBar/NavBar";
 import { useRouter } from "next/router";
+import UploadImageCard from "@/components/common_components/UploadImageCard";
 
-export default function SignUp(userType = "comensal") {
+export default function RestaurantRegistration() {
   const router = useRouter();
   // Definición de la función handleSignUp
   const handleSignUp = async (values, { setSubmitting, setErrors }) => {
@@ -47,41 +48,37 @@ export default function SignUp(userType = "comensal") {
       >
         {({ handleSubmit, isSubmitting, errors }) => (
           <Form
-            tittle="Regístrate"
+            tittle="Registra tu restaurante"
             subtitleTop=""
-            subtitleBottom={
-              userType === "restaurant"
-                ? "Regístrate y dile que sí a miles de clientes satisfechos"
-                : "Nunca hubo una forma mas facil de ordenar tu comida favorita"
-            }
+            subtitleBottom=""
             src="/assets/SignUp/SignUp.svg"
             alt="SignUp"
           >
             <FormikForm onSubmit={handleSubmit}>
               <div>
                 <Field
-                  name="name"
+                  name="restaurantName"
                   as={InputContained}
-                  label="Nombre*"
-                  placeholder="Ingresa tu nombre"
+                  label="Nombre del restaurante o marca*"
+                  placeholder="Ingresa el nombre de tu restaurante "
                   type="text"
                 />
                 <ErrorMessage
-                  name="name"
+                  name="restaurantName"
                   component="p"
                   className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
                 />
               </div>
               <div>
                 <Field
-                  name="lastName"
+                  name="restaurantAdress"
                   as={InputContained}
-                  label="Apellido*"
-                  placeholder="Ingresa tu apellido"
+                  label="Direccion"
+                  placeholder="Ingresa la direccion de tu restaurante"
                   type="text"
                 />
                 <ErrorMessage
-                  name="lastName"
+                  name="restaurantAdress"
                   component="p"
                   className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
                 />
@@ -89,14 +86,14 @@ export default function SignUp(userType = "comensal") {
 
               <div>
                 <Field
-                  name="email"
+                  name="restaurantPhone"
                   as={InputContained}
-                  label="Correo electrónico*"
-                  placeholder="Ingresa tu correo electrónico"
-                  type="email"
+                  label="Telefono"
+                  placeholder="Ingresa el numero de telefono de tu restaurante"
+                  type="text"
                 />
                 <ErrorMessage
-                  name="email"
+                  name="restaurantPhone"
                   component="p"
                   className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
                 />
@@ -104,18 +101,22 @@ export default function SignUp(userType = "comensal") {
 
               <div>
                 <Field
-                  name="password"
+                  name="restaurantTables"
                   as={InputContained}
-                  label="Contraseña*"
-                  placeholder="Ingresa tu contraseña"
+                  label="No.mesas (QR code)"
+                  placeholder="Ingresa el numero de mesas que tiene tu restaurante"
                   type="password"
                 />
                 <ErrorMessage
-                  name="password"
+                  name="restaurantTables"
                   component="p"
                   className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
                 />
               </div>
+              <div className="mb-2 mt-2">
+                <UploadImageCard text="Sube el logo de tu restaurante"></UploadImageCard>
+              </div>
+
               <p className="font-poppins text-xs font-light text-black">
                 Campos obligatorios *
               </p>
@@ -127,7 +128,7 @@ export default function SignUp(userType = "comensal") {
                 </p>
               )}
 
-              <div className="mb-5 mt-5 flex justify-center lg:mb-10">
+              <div className="mb-5 mt-5 flex justify-center lg:mb-3">
                 <ButtonContained
                   variant="generalPoppins"
                   type="submit"

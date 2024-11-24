@@ -45,7 +45,7 @@ export default function RestauranConfiguration() {
             </Card>
           ))}
           <Card titleInfo="Logo del restaurant" info="Image">
-            <UploadImageCard></UploadImageCard>
+            <UploadImageCard text="Dale una nueva imagen a tu restaurante"></UploadImageCard>
           </Card>
         </section>
       </MainLayout>
