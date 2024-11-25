@@ -42,7 +42,12 @@ export default function RestaurantRegistration() {
     <main>
       <NavBar />
       <Formik
-        initialValues={{ email: "", password: "", name: "", lastName: "" }}
+        initialValues={{
+          restaurantName: "",
+          restaurantAdress: "",
+          name: "",
+          lastName: "",
+        }}
         validationSchema={registerSchema}
         onSubmit={handleSignUp} // Asegúrate de que handleSignUp está bien definido y pasado correctamente
       >
@@ -51,8 +56,8 @@ export default function RestaurantRegistration() {
             tittle="Registra tu restaurante"
             subtitleTop=""
             subtitleBottom=""
-            src="/assets/SignUp/SignUp.svg"
-            alt="SignUp"
+            src="/assets/RestaurantRegistration/Restaurant.svg"
+            alt="Restaurant"
           >
             <FormikForm onSubmit={handleSubmit}>
               <div>
