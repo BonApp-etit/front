@@ -6,7 +6,7 @@ import Category from "@/components/administration_menu/Category";
 import TemplateMenu from "../../components/TemplateMenu";
 import React, { useState } from "react";
 import Modal from "@/components/common_components/Modal";
-
+import InputContained from "@/components/common_components/InputContained";
 const DB = [
   {
     nameDish: "Alitas",
@@ -39,6 +39,8 @@ const DB = [
 
 export default function AdministrationMenu() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [isInputVisible, setInputVisible] = useState(false);
 
   return (
     <main className="">
@@ -77,6 +79,10 @@ export default function AdministrationMenu() {
             <p className="font-roboto text-xs font-medium leading-tight tracking-wide text-cs950 md:text-base">
               ¡Comienza aqui agregando tu primer platillo!
             </p>
+
+            <div>
+              <InputContained variant="outlined" />
+            </div>
 
             <ButtonOutlined text="Agregar categoria" variant="dashed" />
           </div>
