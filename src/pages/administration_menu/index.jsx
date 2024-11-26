@@ -40,8 +40,6 @@ const DB = [
 export default function AdministrationMenu() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [isInputVisible, setInputVisible] = useState(false);
-
   return (
     <main className="">
       <NavBar />
@@ -79,7 +77,6 @@ export default function AdministrationMenu() {
             <p className="font-roboto text-xs font-medium leading-tight tracking-wide text-cs950 md:text-base">
               ¡Comienza aqui agregando tu primer platillo!
             </p>
-
             <div>
               <InputContained variant="outlined" />
             </div>
