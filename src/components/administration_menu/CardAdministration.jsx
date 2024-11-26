@@ -66,7 +66,7 @@ export default function CardAdministration({
             <ButtonContained
               variant="generalUbuntu"
               text="Editar platillo"
-              type="submit"
+              type="button"
               onClick={openModal}
             ></ButtonContained>
           </div>
@@ -97,9 +97,9 @@ export default function CardAdministration({
               <ButtonOutlined
                 variant="dashed"
                 text="Agregar platillo"
-                type="submit"
+                type="button"
                 onClick={openModal}
-              ></ButtonOutlined>
+              />
             </div>
           </section>
         </div>
