@@ -12,6 +12,7 @@ export default function Card({
   showIcon = false,
   iconSrc,
   isCashCard = false,
+  tailwindClasses,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => {
@@ -21,7 +22,7 @@ export default function Card({
   };
   return (
     <LayoutCard>
-      <section className="px-[16px] md:px-[35px]">
+      <section className={`px-[16px] md:px-[35px] ${tailwindClasses}`}>
         <div className="flex items-center justify-between">
           {showIcon === true ? (
             <div className="flex items-center gap-3">
@@ -55,7 +56,7 @@ export default function Card({
             </div>
           )}
 
-          <button onClick={toggleExpand}>
+          <button type="button" onClick={toggleExpand}>
             <ArrowRightIcon
               strokeWidth={2}
               className={`h-7 w-7 text-cs500 transition-transform duration-300 ease-in-out md:h-8 md:w-8 lg:h-9 lg:w-9 ${isExpanded ? "rotate-90" : ""}`}
@@ -77,10 +78,15 @@ export default function Card({
             {!isCashCard && ( // Oculta botones en el caso especial
               <div className="my-3 flex w-full justify-between md:justify-end md:gap-7">
                 <ButtonContained
+                  type="button"
                   variant="generalPoppins"
                   text="Guardar cambios"
                 />
-                <ButtonContained variant="text" text="Descartar" />
+                <ButtonContained
+                  type="button"
+                  variant="text"
+                  text="Descartar"
+                />
               </div>
             )}
           </div>
