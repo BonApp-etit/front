@@ -31,7 +31,11 @@ export default function CardAdministration({
               />
               <div className="absolute top-3 w-full px-2 lg:top-4 lg:px-3">
                 <div className="flex justify-between">
-                  {isAvailable === "false" && <LabelStatus></LabelStatus>}
+                  {isAvailable === "false" ? (
+                    <LabelStatus isAvailable={false} />
+                  ) : (
+                    <LabelStatus isAvailable={true} />
+                  )}
                   <ButtonDeleted></ButtonDeleted>
                 </div>
               </div>
