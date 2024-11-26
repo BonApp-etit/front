@@ -4,6 +4,8 @@ import { SwiperSlide } from "swiper/react";
 import ButtonOutlined from "@/components/ButtonOutlined";
 import Category from "@/components/administration_menu/Category";
 import TemplateMenu from "../../components/TemplateMenu";
+import React, { useState } from "react";
+import Modal from "@/components/common_components/Modal";
 
 const DB = [
   {
@@ -49,6 +51,8 @@ const DB = [
 ];
 
 export default function AdministrationMenu() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="">
       <NavBar />
@@ -68,6 +72,7 @@ export default function AdministrationMenu() {
                   price={data.price}
                   image={data.image}
                   variant="editCard"
+                  openModal={() => setIsModalOpen(true)}
                 />
               </SwiperSlide>
             ))}
@@ -126,6 +131,34 @@ export default function AdministrationMenu() {
             ></ButtonOutlined>
           </div>
         </section>
+
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          {/* Contenido del modal */}
+          <p>Contenido del modal reutilizable</p>
+        </Modal>
+        {/* {isModalOpen && (
+          <div className="fixed left-0 right-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-50">
+            <div className="relative max-h-[80vh] w-full max-w-md overflow-y-auto rounded-lg bg-white p-4 shadow">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Nuevo producto
+              </h3>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute right-3 top-3"
+              >
+                Cerrar
+              </button>
+              <div>
+               
+                <p>Este es un modal único para esta página.</p>
+                <p>Contenido adicional...</p>
+                <p>Múltiples líneas de texto...</p>
+                <p>(Simulando mucho contenido)</p>
+                <p>(Más contenido aún)</p>
+              </div>
+            </div>
+          </div>
+        )} */}
       </TemplateMenu>
     </main>
   );

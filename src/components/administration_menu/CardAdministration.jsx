@@ -13,6 +13,7 @@ export default function CardAdministration({
   description,
   price,
   image,
+  openModal,
 }) {
   return (
     <section className="m-3">
@@ -30,7 +31,11 @@ export default function CardAdministration({
               />
               <div className="absolute top-3 w-full px-2 lg:top-4 lg:px-3">
                 <div className="flex justify-between">
-                  {isAvailable === "false" && <LabelStatus></LabelStatus>}
+                  {isAvailable === "false" ? (
+                    <LabelStatus isAvailable={false} />
+                  ) : (
+                    <LabelStatus isAvailable={true} />
+                  )}
                   <ButtonDeleted></ButtonDeleted>
                 </div>
               </div>
@@ -62,6 +67,7 @@ export default function CardAdministration({
               variant="generalUbuntu"
               text="Editar platillo"
               type="submit"
+              onClick={openModal}
             ></ButtonContained>
           </div>
           <div className="mt-2 flex h-[20px] items-center justify-center rounded-b-2xl bg-cs200 text-[10px] font-medium text-cs900 md:text-xs lg:h-[24px] lg:text-sm">
@@ -92,6 +98,7 @@ export default function CardAdministration({
                 variant="dashed"
                 text="Agregar platillo"
                 type="submit"
+                onClick={openModal}
               ></ButtonOutlined>
             </div>
           </section>
