@@ -2,7 +2,7 @@ import * as React from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import theme from "../styles/theme";
 import "@/styles/globals.css";
-import { Poppins, Roboto, Work_Sans } from "next/font/google";
+import { Poppins, Roboto, Work_Sans, Ubuntu } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,10 +21,16 @@ const workSans = Work_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  variable: "--font-ubuntu",
+  weight: ["300", "400", "500", "700"],
+});
+
 export default function App({ Component, pageProps }) {
   return (
     <main
-      className={`${poppins.variable} ${roboto.variable} ${workSans.variable} font-sans`}
+      className={`${poppins.variable} ${ubuntu.variable} ${roboto.variable} ${workSans.variable} font-sans`}
     >
       <ThemeProvider theme={theme}>
         {" "}

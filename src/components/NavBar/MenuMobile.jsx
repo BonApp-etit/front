@@ -1,8 +1,10 @@
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
+import clsx from "clsx";
+import { EllipsisVerticalIcon } from "@heroicons/react/24/solid";
 
-export default function MenuMobile({ items }) {
+export default function MenuMobile({ items, variant }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const menuOpen = Boolean(anchorEl);
 
@@ -14,15 +16,21 @@ export default function MenuMobile({ items }) {
     setAnchorEl(null);
   };
   return (
-    <div className="lg:hidden">
-      <IconButton onClick={handleMenuOpen}>
-        <Image
-          width={24}
-          height={24}
-          src="/assets/NavBar/menuMobile.svg"
-          alt="Logo"
-        />
-      </IconButton>
+    <div className={clsx({ hidden: variant !== "table" })}>
+      {variant !== "table" ? (
+        <IconButton onClick={handleMenuOpen}>
+          <Image
+            width={24}
+            height={24}
+            src="/assets/NavBar/menuMobile.svg"
+            alt="Logo"
+          />
+        </IconButton>
+      ) : (
+        <IconButton onClick={handleMenuOpen}>
+          <EllipsisVerticalIcon className="h-7 w-7 text-black"></EllipsisVerticalIcon>
+        </IconButton>
+      )}
       <Menu
         anchorEl={anchorEl}
         open={menuOpen}
@@ -41,10 +49,10 @@ export default function MenuMobile({ items }) {
             key={index}
             onClick={handleMenuClose}
             component="a"
-            href={`#${item}`}
+            href={`#${item.text}`}
             className="hover:bg-cs50 hover:text-cs500 active:bg-cs100"
           >
-            {item}
+            {item.icon} <span className="ml-3">{item.text}</span>
           </MenuItem>
         ))}
       </Menu>

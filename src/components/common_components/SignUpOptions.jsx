@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SignUpOptions() {
   return (
@@ -8,12 +9,12 @@ export default function SignUpOptions() {
           <p className="font-poppins text-sm font-semibold text-black md:text-base">
             ¿Ya tienes cuenta?
           </p>
-          <a
+          <Link
             className="font-poppins text-sm font-semibold text-cs500 hover:underline md:text-base"
-            href="#"
+            href="/login"
           >
             Ingresar
-          </a>
+          </Link>
         </div>
         <p className="text-center font-poppins text-xs font-semibold text-cstext md:text-sm">
           O
