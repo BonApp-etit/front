@@ -3,6 +3,7 @@ import MainLayout from "@/components/common_components/MainLayout";
 import Order from "@/components/kitchen_order/Order";
 import StatusOrderCard from "@/components/kitchen_order/StatusOrderCard";
 import { useEffect, useState } from "react";
+import ModalKitchenOrder from "@/components/kitchen_order/ModalKitchenOrder";
 
 export default function KitchenOrders() {
   const [ordersData, setOrdersData] = useState([]);
@@ -19,6 +20,8 @@ export default function KitchenOrders() {
     };
     fetchOrders();
   }, []);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <main>
       <NavBar></NavBar>
@@ -34,12 +37,17 @@ export default function KitchenOrders() {
                     time={order.time}
                     baseIgredients={order.baseIngredients}
                     extraIngredients={order.extraIngredients}
+                    openModalKitchen={() => setIsModalOpen(true)}
                   />
                 </div>
               ))}
             </StatusOrderCard>
           ))}
         </div>
+        <ModalKitchenOrder
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </MainLayout>
     </main>
   );

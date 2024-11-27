@@ -7,9 +7,10 @@ export default function Order({
   time,
   table,
   dishName,
+  openModalKitchen,
 }) {
   return (
-    <LayoutCard>
+    <LayoutCard openModalKitchen={openModalKitchen}>
       <h6 className="text-end font-ubuntu text-base font-normal leading-none tracking-tight text-black md:text-xl">
         Mesa #{table}
       </h6>
