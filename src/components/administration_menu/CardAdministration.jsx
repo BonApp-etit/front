@@ -14,6 +14,7 @@ export default function CardAdministration({
   price,
   image,
   openModal,
+  openModalDetail,
 }) {
   return (
     <section className="m-3">
@@ -118,8 +119,8 @@ export default function CardAdministration({
               />
               <div className="absolute top-3 w-full px-2 lg:top-4 lg:px-3">
                 <div className="flex justify-between">
-                  {isAvailable === "false" && <LabelStatus></LabelStatus>}
-                  <ButtonDeleted></ButtonDeleted>
+                  {isAvailable === "false" && <LabelStatus />}
+                  <ButtonDeleted />
                 </div>
               </div>
             </div>
@@ -146,12 +147,13 @@ export default function CardAdministration({
           </section>
 
           <div className="flex items-center justify-evenly">
-            <ButtonIncrease></ButtonIncrease>
+            <ButtonIncrease />
             <ButtonContained
               variant="generalUbuntu"
               text="Comprar ahora"
               type="submit"
-            ></ButtonContained>
+              onClick={openModalDetail}
+            />
           </div>
           <div className="mt-2 flex h-[20px] items-center justify-center rounded-b-2xl bg-cs200 text-[10px] font-medium text-cs900 md:text-xs lg:h-[24px] lg:text-sm">
             <p>Detalles del producto</p>

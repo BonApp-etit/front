@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Checkbox({ labelText, onChange }) {
+export default function Checkbox({ labelText, onChange }) {
   const [checked, setChecked] = useState(false);
 
   const handleChange = () => {
@@ -31,5 +31,3 @@ function Checkbox({ labelText, onChange }) {
     </div>
   );
 }
-
-export default Checkbox;
