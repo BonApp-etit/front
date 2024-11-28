@@ -3,9 +3,12 @@ import MainLayout from "@/components/common_components/MainLayout";
 import Order from "@/components/kitchen_order/Order";
 import StatusOrderCard from "@/components/kitchen_order/StatusOrderCard";
 import { useEffect, useState } from "react";
+import ModalKitchenOrder from "@/components/kitchen_order/ModalKitchenOrder";
 
 export default function KitchenOrders() {
   const [ordersData, setOrdersData] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedOrder, setSelectedOrder] = useState(null);
   useEffect(() => {
     const fetchOrders = async () => {
       try {
@@ -19,6 +22,12 @@ export default function KitchenOrders() {
     };
     fetchOrders();
   }, []);
+
+  const handleCardClick = (order, status) => {
+    setSelectedOrder({ ...order, status });
+    setIsModalOpen(true);
+  };
+
   return (
     <main>
       <NavBar></NavBar>
@@ -27,19 +36,32 @@ export default function KitchenOrders() {
           {ordersData.map((statusData, index) => (
             <StatusOrderCard key={index} status={statusData.status}>
               {statusData.orders.map((order, idx) => (
-                <div className="mb-3" key={idx}>
+                <div
+                  onClick={() => handleCardClick(order, statusData.status)}
+                  className="mb-3"
+                  key={idx}
+                >
                   <Order
                     dishName={order.dishName}
                     table={order.table}
                     time={order.time}
-                    baseIgredients={order.baseIngredients}
-                    extraIngredients={order.extraIngredients}
+                    baseIgredients={order.baseIngredients
+                      .map((ingredient) => ingredient.ingredient)
+                      .join(", ")}
+                    extraIngredients={order.extraIngredients
+                      .map((ingredient) => ingredient.ingredient)
+                      .join(", ")}
                   />
                 </div>
               ))}
             </StatusOrderCard>
           ))}
         </div>
+        <ModalKitchenOrder
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          orderData={selectedOrder}
+        />
       </MainLayout>
     </main>
   );
