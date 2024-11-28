@@ -7,6 +7,8 @@ import ModalKitchenOrder from "@/components/kitchen_order/ModalKitchenOrder";
 
 export default function KitchenOrders() {
   const [ordersData, setOrdersData] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedOrder, setSelectedOrder] = useState(null);
   useEffect(() => {
     const fetchOrders = async () => {
       try {
@@ -21,7 +23,11 @@ export default function KitchenOrders() {
     fetchOrders();
   }, []);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleCardClick = (order, status) => {
+    setSelectedOrder({ ...order, status });
+    setIsModalOpen(true);
+  };
+
   return (
     <main>
       <NavBar></NavBar>
@@ -30,14 +36,21 @@ export default function KitchenOrders() {
           {ordersData.map((statusData, index) => (
             <StatusOrderCard key={index} status={statusData.status}>
               {statusData.orders.map((order, idx) => (
-                <div className="mb-3" key={idx}>
+                <div
+                  onClick={() => handleCardClick(order, statusData.status)}
+                  className="mb-3"
+                  key={idx}
+                >
                   <Order
                     dishName={order.dishName}
                     table={order.table}
                     time={order.time}
-                    baseIgredients={order.baseIngredients}
-                    extraIngredients={order.extraIngredients}
-                    openModalKitchen={() => setIsModalOpen(true)}
+                    baseIgredients={order.baseIngredients
+                      .map((ingredient) => ingredient.ingredient)
+                      .join(", ")}
+                    extraIngredients={order.extraIngredients
+                      .map((ingredient) => ingredient.ingredient)
+                      .join(", ")}
                   />
                 </div>
               ))}
@@ -47,6 +60,7 @@ export default function KitchenOrders() {
         <ModalKitchenOrder
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
+          orderData={selectedOrder}
         />
       </MainLayout>
     </main>

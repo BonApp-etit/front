@@ -4,10 +4,9 @@ export default function LayoutCard({
   children,
   isConfiguration = false,
   tailwindClasses,
-  openModalKitchen,
 }) {
   return (
-    <div onClick={openModalKitchen} className="w-full">
+    <div className="w-full">
       <section
         className={clsx(
           "rounded-[20px] bg-[#fcfcfc] px-[14px] py-4 shadow hover:bg-cs50",

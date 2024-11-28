@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import ButtonIncrease from "../administration_menu/ButtonIncrease";
 import CheckRounded from "../common_components/CheckRounded";
-import DescriptionBox from "../common_components/DescriptionBox";
 import ButtonContained from "../common_components/ButtonContained";
 import clsx from "clsx";
-import { FireIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 const DB = [
   {
     ingredientesBase: [
-      { ingredient: "Chile Jalapeño", isAvailable: false },
       { ingredient: "Queso", isAvailable: true },
-      { ingredient: "Pepinillos", isAvailable: true },
       { ingredient: "Mostaza", isAvailable: true },
       { ingredient: "Salsa catsup", isAvailable: true },
       { ingredient: "Papas a la francesa", isAvailable: false },
@@ -21,13 +16,11 @@ const DB = [
   {
     ingredientesExtra: [
       { ingredient: "Queso", isAvailable: true, price: "15" },
-      { ingredient: "Tocino", isAvailable: false, price: "25" },
-      { ingredient: "Aguacate", isAvailable: true, price: "5" },
     ],
   },
 ];
 
-const ModalKitchenOrder = ({ isOpen, onClose }) => {
+const ModalKitchenOrder = ({ isOpen, onClose, orderData }) => {
   if (!isOpen) return null;
 
   return (
@@ -38,7 +31,17 @@ const ModalKitchenOrder = ({ isOpen, onClose }) => {
     >
       <div className="relative max-h-[90vh] w-full max-w-[744px] overflow-y-auto rounded-lg bg-white p-4 shadow">
         {/* Modal header */}
-        <div className="flex items-center justify-end rounded-t border-b p-4">
+        <div className="flex items-center justify-between rounded-t border-b px-4 py-2">
+          <div className="rounded-[20px] bg-cs500 px-4 py-2">
+            <h3 className="font-poppins text-base font-semibold text-white">
+              {orderData.status === "active"
+                ? "Activo"
+                : orderData.status === "process"
+                  ? "En preparacion"
+                  : "Completado"}
+            </h3>
+          </div>
+
           <button
             type="button"
             onClick={onClose}
@@ -76,31 +79,16 @@ const ModalKitchenOrder = ({ isOpen, onClose }) => {
         <div className="p-4 md:p-5">
           <section className="flex justify-between">
             <h2 className="font-ubuntu text-2xl font-bold leading-tight tracking-tight text-black md:text-3xl">
-              Hambuguesa con papas
+              {orderData.dishName}
             </h2>
-            <ButtonIncrease />
+            <span className="shrink-0 font-ubuntu text-lg font-bold">
+              Mesa #{orderData.table}
+            </span>
           </section>
 
-          <section className="my-2 flex justify-evenly font-ubuntu font-normal tracking-tight text-[#667473]">
-            <div className="text-center">
-              <p className="text-base leading-relaxed">Preparacion</p>
-              <p className="flex items-center gap-1 text-sm leading-snug">
-                <ClockIcon className="h-5 w-5 text-cs500" /> 30min
-              </p>
-            </div>
-
-            <div className="text-center">
-              <p className="text-base leading-relaxed">Calorias</p>
-              <p className="flex items-center gap-1 text-sm leading-snug">
-                <FireIcon className="h-5 w-5 text-cs500" /> 145 Kcal
-              </p>
-            </div>
-          </section>
-
-          <p className="w-full font-ubuntu text-sm font-normal leading-relaxed tracking-tight text-[#667473] md:text-base">
-            Jugosa hamburguesa de res, servida en un pan suave con lechuga
-            fresca, tomate, cebolla y queso derretido. Acompañada de crujientes
-            papas fritas doradas al punto perfecto. ¡Un clásico irresistible!
+          <p className="w-full rounded-lg font-ubuntu text-sm font-normal leading-relaxed tracking-tight text-[#667473] md:text-base">
+            {orderData.description || "Sin comentarios"}
+            {/* Ajusta según tus datos */}
           </p>
 
           <section className="mt-3">
@@ -108,7 +96,7 @@ const ModalKitchenOrder = ({ isOpen, onClose }) => {
               Ingredientes base
             </h6>
             <div className="flex flex-col gap-1">
-              {DB[0].ingredientesBase.map((ingredient, idx) => {
+              {orderData.baseIngredients.map((ingredient, idx) => {
                 return (
                   <CheckRounded
                     key={idx}
@@ -120,14 +108,14 @@ const ModalKitchenOrder = ({ isOpen, onClose }) => {
             </div>
           </section>
 
-          <div className="my-3 w-full border border-cs600"></div>
+          <div className="my-3 w-full border border-cs500"></div>
 
-          <section className="mt-3">
+          <section className="my-3">
             <h6 className="font-ubuntu text-base font-medium leading-7 tracking-tight md:text-lg">
               Ingredientes extra
             </h6>
             <div className="flex flex-col gap-1">
-              {DB[1].ingredientesExtra.map((ingredient, idx) => {
+              {orderData.extraIngredients.map((ingredient, idx) => {
                 return (
                   <div key={idx} className="flex justify-between">
                     <CheckRounded
@@ -149,21 +137,22 @@ const ModalKitchenOrder = ({ isOpen, onClose }) => {
               })}
             </div>
           </section>
-          <div className="mt-4">
-            <DescriptionBox
-              tailwindClasses="border-cs600 "
-              labelText="Agregar notas"
-              placeholder="Notas adicionales para el personal de cocina"
+
+          <section className="flex justify-evenly">
+            <ButtonContained
+              variant="generalPoppins"
+              tailwindClasses=""
+              type="submit"
+              text="Preparar"
             />
-          </div>
-          <ButtonContained
-            variant="generalPoppins"
-            tailwindClasses="w-full bg-cs600 font-ubuntu"
-            showIcon={true}
-            isArrowLeft={false}
-            type="submit"
-            text="Agregar | $ 85"
-          />
+
+            <ButtonContained
+              variant="text"
+              tailwindClasses=""
+              type="submit"
+              text="Rechazar"
+            />
+          </section>
         </div>
       </div>
     </div>
