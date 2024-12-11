@@ -39,7 +39,6 @@ export default function SignUp(userType = "comensal") {
 
   return (
     <main>
-      <NavBar />
       <Formik
         initialValues={{ email: "", password: "", name: "", lastName: "" }}
         validationSchema={registerSchema}
