@@ -52,8 +52,6 @@ export default function Login() {
   };
   return (
     <main>
-      <NavBar />
-
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={loginSchema}

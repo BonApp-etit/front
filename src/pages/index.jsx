@@ -8,7 +8,6 @@ import Footer from "../components/landing_sections/FooterSection";
 export default function landing() {
   return (
     <main>
-      <NavBar />
       <HeroSection />
       <AboutSection />
       <Features />

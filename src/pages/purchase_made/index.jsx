@@ -11,7 +11,6 @@ import Card from "@/components/restaurant_configuration/Card";
 export default function PurchaseMade() {
   return (
     <main>
-      <NavBar></NavBar>
       <LayoutOrder
         title="¡Gracias por tu compra!"
         subtitle="En un momento un integrante de Mr. Burguer te llevara tu pedido"

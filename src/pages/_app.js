@@ -3,6 +3,7 @@ import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import theme from "../styles/theme";
 import "@/styles/globals.css";
 import { Poppins, Roboto, Work_Sans, Ubuntu } from "next/font/google";
+import NavBar from "@/components/NavBar/NavBar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }) {
         {" "}
         {/**Configuraciones de Material UI */}
         <CssBaseline />
+        <NavBar />
         <Component {...pageProps} />
       </ThemeProvider>
     </main>

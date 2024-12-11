@@ -7,6 +7,7 @@ import TemplateMenu from "../../components/TemplateMenu";
 import React, { useState } from "react";
 import Modal from "@/components/common_components/Modal";
 import InputContained from "@/components/common_components/InputContained";
+import OffCanvas from "@/components/common_components/OffCanvas";
 const DB = [
   {
     nameDish: "Alitas",
@@ -37,17 +38,27 @@ const DB = [
   },
 ];
 
+const menuItems = [
+  { href: "#", label: "Dashboard", icon: "DashboardIcon" },
+  { href: "#", label: "E-commerce" },
+  { href: "#", label: "Inbox" },
+  { href: "#", label: "Kanban" },
+];
+
 export default function AdministrationMenu() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <main className="">
-      <NavBar />
       <TemplateMenu
         restaurantLogo="/assets/AdministrationMenu/RestaurantLogo.svg"
         userName="Jhon Doue"
         restauranName="Mr.Burguer"
       >
+        <div>
+          <OffCanvas menuItems={menuItems} title="Navigation" />
+        </div>
+
         {DB.map((data, idx) => (
           <div key={idx} id={data.category}>
             <Category variant="administration" title={data.category}>
@@ -65,7 +76,6 @@ export default function AdministrationMenu() {
             </Category>
           </div>
         ))}
-
         <section className="mb-4">
           <div className="flex items-center justify-between">
             <h3 className="font-poppins text-xl font-medium leading-loose tracking-tight lg:text-4xl">
@@ -84,7 +94,6 @@ export default function AdministrationMenu() {
             <ButtonOutlined text="Agregar categoria" variant="dashed" />
           </div>
         </section>
-
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </TemplateMenu>
     </main>

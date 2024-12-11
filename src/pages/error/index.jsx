@@ -5,7 +5,6 @@ import ButtonContained from "@/components/common_components/ButtonContained";
 export default function Error() {
   return (
     <main>
-      <NavBar></NavBar>
       <MainLayout>
         <section className="flex justify-center">
           <div className="flex flex-col items-center">

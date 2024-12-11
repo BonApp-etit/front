@@ -17,7 +17,6 @@ const DB = [
 export default function RestauranConfiguration() {
   return (
     <main>
-      <NavBar></NavBar>
       <MainLayout>
         <section className="mb-5 flex items-center justify-start gap-4 lg:gap-8">
           <div className="w-[100px] md:w-[150px] lg:w-[150px]">
