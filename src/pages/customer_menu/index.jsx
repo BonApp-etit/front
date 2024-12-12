@@ -1,5 +1,4 @@
 import CardAdministration from "@/components/administration_menu/CardAdministration";
-import NavBar from "@/components/NavBar/NavBar";
 import { SwiperSlide } from "swiper/react";
 import Category from "@/components/administration_menu/Category";
 import TemplateMenu from "../../components/TemplateMenu";
@@ -49,7 +48,7 @@ const DB = [
   },
 ];
 
-export default function AdministrationMenu() {
+export default function CustomerMenu() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <main className="">
