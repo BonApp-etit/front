@@ -16,7 +16,7 @@ export default function MenuMobile({ items, variant }) {
     setAnchorEl(null);
   };
   return (
-    <div className={clsx({ hidden: variant !== "table" })}>
+    <div>
       {variant !== "table" ? (
         <IconButton onClick={handleMenuOpen}>
           <Image
