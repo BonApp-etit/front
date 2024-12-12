@@ -29,39 +29,37 @@ export default function KitchenOrders() {
   };
 
   return (
-    <main>
-      <MainLayout>
-        <div className="flex flex-col gap-4 lg:flex-row">
-          {ordersData.map((statusData, index) => (
-            <StatusOrderCard key={index} status={statusData.status}>
-              {statusData.orders.map((order, idx) => (
-                <div
-                  onClick={() => handleCardClick(order, statusData.status)}
-                  className="mb-3"
-                  key={idx}
-                >
-                  <Order
-                    dishName={order.dishName}
-                    table={order.table}
-                    time={order.time}
-                    baseIgredients={order.baseIngredients
-                      .map((ingredient) => ingredient.ingredient)
-                      .join(", ")}
-                    extraIngredients={order.extraIngredients
-                      .map((ingredient) => ingredient.ingredient)
-                      .join(", ")}
-                  />
-                </div>
-              ))}
-            </StatusOrderCard>
-          ))}
-        </div>
-        <ModalKitchenOrder
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          orderData={selectedOrder}
-        />
-      </MainLayout>
+    <main className="mt-2 px-2 md:mt-3 md:px-2">
+      <div className="flex flex-col gap-4 lg:flex-row">
+        {ordersData.map((statusData, index) => (
+          <StatusOrderCard key={index} status={statusData.status}>
+            {statusData.orders.map((order, idx) => (
+              <div
+                onClick={() => handleCardClick(order, statusData.status)}
+                className="mb-3"
+                key={idx}
+              >
+                <Order
+                  dishName={order.dishName}
+                  table={order.table}
+                  time={order.time}
+                  baseIgredients={order.baseIngredients
+                    .map((ingredient) => ingredient.ingredient)
+                    .join(", ")}
+                  extraIngredients={order.extraIngredients
+                    .map((ingredient) => ingredient.ingredient)
+                    .join(", ")}
+                />
+              </div>
+            ))}
+          </StatusOrderCard>
+        ))}
+      </div>
+      <ModalKitchenOrder
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        orderData={selectedOrder}
+      />
     </main>
   );
 }
