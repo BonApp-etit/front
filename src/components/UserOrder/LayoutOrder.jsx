@@ -17,7 +17,7 @@ export default function LayoutOrder({
 
   const totalSteps = 5; // Número total de pasos
   return (
-    <section>
+    <section className="mt-2 px-2 md:mt-3">
       <div class="inline-flex flex-col items-start justify-start gap-1">
         <h1 class="self-stretch font-poppins text-[28px] font-medium leading-7 text-[#191c1e] md:text-4xl">
           {title}

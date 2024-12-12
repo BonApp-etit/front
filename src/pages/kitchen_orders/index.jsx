@@ -29,7 +29,7 @@ export default function KitchenOrders() {
   };
 
   return (
-    <main className="mt-2 px-2 md:mt-3 md:px-2">
+    <main className="mt-2 px-2 md:mt-3">
       <div className="flex flex-col gap-4 lg:flex-row">
         {ordersData.map((statusData, index) => (
           <StatusOrderCard key={index} status={statusData.status}>
