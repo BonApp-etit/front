@@ -1,8 +1,23 @@
+import digitalMenu from "../../../public/assets/OffCanvas/digitalMenu.svg";
+import qrCode from "../../../public/assets/OffCanvas/qrCode.svg";
+import orders from "../../../public/assets/OffCanvas/Orders.svg";
+import myRestaurant from "../../../public/assets/OffCanvas/myRestaurant.svg";
+import Image from "next/image";
+import Logo from "../NavBar/Logo";
+
 const menuItems = [
-  { href: "#", label: "Dashboard", icon: "DashboardIcon" },
-  { href: "#", label: "E-commerce" },
-  { href: "#", label: "Inbox" },
-  { href: "#", label: "Kanban" },
+  {
+    label: "Menu Digital",
+    icon: digitalMenu,
+    href: "/administration_menu",
+  },
+  { label: "Mis Mesas QR", icon: qrCode, href: "/qr_generator" },
+  { label: "Pedidos", icon: orders, href: "/kitchen_orders" },
+  {
+    label: "Mi restaurante",
+    icon: myRestaurant,
+    href: "restaurant_configuration",
+  },
 ];
 
 const OffCanvas = ({ IsOpen, onClose }) => {
@@ -10,18 +25,15 @@ const OffCanvas = ({ IsOpen, onClose }) => {
     <>
       {/* Drawer */}
       <div
-        className={`fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto bg-white p-4 transition-transform dark:bg-gray-800 ${
+        className={`fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto bg-white p-4 transition-transform ${
           IsOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         tabIndex="-1"
         aria-labelledby="drawer-navigation-label"
       >
         {/* Encabezado */}
-        <h5
-          id="drawer-navigation-label"
-          className="text-base font-semibold uppercase text-gray-500 dark:text-gray-400"
-        >
-          Navigation
+        <h5 id="drawer-navigation-label">
+          <Logo tailwindClasses="!lg:text-2xl" />
         </h5>
         {/* Botón para cerrar el drawer */}
         <button
@@ -53,10 +65,18 @@ const OffCanvas = ({ IsOpen, onClose }) => {
               <li key={index}>
                 <a
                   href={item.href}
-                  className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="group flex items-center p-2 font-poppins text-gray-900 hover:bg-cs50 hover:text-cs700"
                 >
                   {item.icon && (
-                    <item.icon className="h-5 w-5 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+                    <div className="h-6 w-6">
+                      <Image
+                        alt={item.label}
+                        src={item.icon}
+                        height={100}
+                        width={100}
+                        layout="responsive"
+                      />
+                    </div>
                   )}
                   <span className="ml-3">{item.label}</span>
                 </a>
