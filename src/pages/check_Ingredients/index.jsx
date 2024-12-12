@@ -1,4 +1,3 @@
-import NavBar from "@/components/NavBar/NavBar";
 import LayoutCard from "@/components/common_components/LayoutCard";
 import CardContent from "@/components/UserOrder/CardContent";
 import { SwiperSlide } from "swiper/react";
