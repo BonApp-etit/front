@@ -33,7 +33,7 @@ const OffCanvas = ({ IsOpen, onClose }) => {
       >
         {/* Encabezado */}
         <h5 id="drawer-navigation-label">
-          <Logo tailwindClasses="!lg:text-2xl" />
+          <Logo />
         </h5>
         {/* Botón para cerrar el drawer */}
         <button
