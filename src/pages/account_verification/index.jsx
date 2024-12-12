@@ -51,7 +51,6 @@ export default function AccountVerification() {
 
   return (
     <main>
-      <NavBar />
       <Formik
         initialValues={{ email: "", code: "" }}
         validationSchema={step === 1 ? emailSchema : codeSchema}

@@ -10,7 +10,7 @@ export default function Form({
 }) {
   return (
     <section>
-      <div className="mx-auto lg:w-[1200px]">
+      <div className="mx-auto">
         <div className="flex w-full flex-col items-center justify-center px-4 md:px-14 lg:flex-row-reverse lg:gap-20 lg:px-0">
           <div className="my-4 w-full max-w-[400px] rounded-[20px] px-2 py-5 shadow-lg md:min-w-[500px] md:max-w-[700px] md:px-[70px] md:py-[50px]">
             <div className="mb-2 flex flex-col gap-1">
