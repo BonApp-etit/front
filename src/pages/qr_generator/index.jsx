@@ -7,7 +7,6 @@ import QRCard from "@/components/common_components/QRGenerator/QRCard";
 export default function QRGenerator() {
   return (
     <main>
-      <NavBar></NavBar>
       <MainLayout>
         <div>
           <h1 className="font-poppins text-[28px] font-semibold text-cstext md:text-4xl lg:text-5xl">

@@ -30,7 +30,6 @@ export default function KitchenOrders() {
 
   return (
     <main>
-      <NavBar></NavBar>
       <MainLayout>
         <div className="flex flex-col gap-4 lg:flex-row">
           {ordersData.map((statusData, index) => (

@@ -53,7 +53,6 @@ export default function AdministrationMenu() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <main className="">
-      <NavBar />
       <TemplateMenu
         restaurantLogo="/assets/AdministrationMenu/RestaurantLogo.svg"
         userName="Jhon Doue"

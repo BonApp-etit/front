@@ -11,7 +11,6 @@ import Card from "@/components/restaurant_configuration/Card";
 export default function Review() {
   return (
     <main>
-      <NavBar></NavBar>
       <LayoutOrder
         title="¡Estas a un paso de completar tu orden!"
         subtitle="Revisa que los productos y el metodo de pago sean correctos."

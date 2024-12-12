@@ -1,64 +1,14 @@
-import CardAdministration from "@/components/administration_menu/CardAdministration";
-import RestaurantName from "../../public/assets/AdministrationMenu/RestaurantName";
 import Image from "next/image";
-import NavBar from "@/components/NavBar/NavBar";
 import CategoriesButton from "@/components/administration_menu/CategoriesButton";
-import { SwiperSlide } from "swiper/react";
-import ButtonOutlined from "@/components/ButtonOutlined";
 import SearchBar from "@/components/administration_menu/SearchBar";
-import Category from "@/components/administration_menu/Category";
-
-const DB = [
-  {
-    nameDish: "Alitas",
-    description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "false",
-    image: "/assets/AdministrationMenu/chicken.svg",
-  },
-  {
-    nameDish: "Alitas",
-    description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "true",
-    image: "/assets/AdministrationMenu/chicken.svg",
-  },
-  {
-    nameDish: "Alitas",
-    description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "false",
-    image: "/assets/AdministrationMenu/chicken.svg",
-  },
-  {
-    nameDish: "Alitas",
-    description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "true",
-    image: "/assets/AdministrationMenu/chicken.svg",
-  },
-  {
-    nameDish: "Alitas",
-    description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "false",
-    image: "/assets/AdministrationMenu/chicken.svg",
-  },
-];
-// /assets/AdministrationMenu/RestaurantLogo.svg
-export default function AdministrationMenu({
+export default function TemplateMenu({
   userName,
   restaurantLogo,
   restauranName,
   children,
 }) {
   return (
-    <main className="">
+    <main>
       <section className="flex h-[60px] w-full justify-center rounded-lg bg-cs200 md:h-[115px] md:px-14 lg:h-[145px]">
         <div className="min-w-[328px] max-w-[400px] md:min-w-[632px] md:max-w-[700px] lg:max-w-[1200px]">
           <section>
@@ -89,7 +39,7 @@ export default function AdministrationMenu({
           <div className="mb-1 lg:mb-3">
             <div className="md:flex md:flex-row-reverse md:gap-4">
               <div className="mb-3 w-full">
-                <SearchBar></SearchBar>
+                <SearchBar />
               </div>
               <CategoriesButton names={["Entradas", "Bebidas", "Postres"]} />
             </div>

@@ -46,8 +46,6 @@ export default function CreatePassword() {
   };
   return (
     <main>
-      <NavBar />
-
       <Formik
         initialValues={{ password: "", passwordConfirmation: "" }}
         validationSchema={passwordVerificationSchema}
