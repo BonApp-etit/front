@@ -6,6 +6,7 @@ import { Poppins, Roboto, Work_Sans, Ubuntu } from "next/font/google";
 import NavBar from "@/components/NavBar/NavBar";
 import OffCanvas from "@/components/common_components/OffCanvas";
 import { useState } from "react";
+import MainLayout from "@/components/common_components/MainLayout";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -41,8 +42,11 @@ export default function App({ Component, pageProps }) {
         {/**Configuraciones de Material UI */}
         <CssBaseline />
         <NavBar onToggleCanvas={toggleCanvas} />
+
         <OffCanvas IsOpen={isOffCanvasOpen} onClose={toggleCanvas} />
-        <Component {...pageProps} />
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
       </ThemeProvider>
     </main>
   );
