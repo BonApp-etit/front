@@ -5,7 +5,6 @@ import ButtonUserTypeCard from "@/components/userType/ButtonUserTypeCard";
 export default function UserType() {
   return (
     <main>
-      <NavBar></NavBar>
       <MainLayout>
         <div className="lg:mx-auto lg:mt-8 lg:w-[1023px]">
           <UserTypeCard>

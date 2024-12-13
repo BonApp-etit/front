@@ -9,7 +9,6 @@ import InputContained from "@/components/common_components/InputContained";
 export default function PaymentMethod() {
   return (
     <main>
-      <NavBar></NavBar>
       <LayoutOrder
         swiperContainer="false"
         title="Metodo de pago "

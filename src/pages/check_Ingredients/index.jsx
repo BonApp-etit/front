@@ -10,7 +10,6 @@ import LayoutOrder from "@/components/UserOrder/LayoutOrder";
 export default function CheckIngredients() {
   return (
     <main>
-      <NavBar></NavBar>
       <LayoutOrder
         title="¡Tu orden casi esta lista!"
         subtitle="Estamos comprobando todos los ingredientes..."

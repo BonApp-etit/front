@@ -40,7 +40,6 @@ export default function RestaurantRegistration() {
 
   return (
     <main>
-      <NavBar />
       <Formik
         initialValues={{
           restaurantName: "",

@@ -3,8 +3,11 @@ import SwiperConfiguration from "@/components/administration_menu/SwiperConfigur
 import { SwiperSlide } from "swiper/react";
 import ButtonContained from "@/components/common_components/ButtonContained";
 import CardAdministration from "@/components/administration_menu/CardAdministration";
+import { useState } from "react";
+import Modal from "../common_components/Modal";
 
 export default function Category({ title, children, variant }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="mb-4">
       <div className="flex items-center justify-between">
@@ -27,13 +30,17 @@ export default function Category({ title, children, variant }) {
         <SwiperConfiguration>
           {variant === "administration" && (
             <SwiperSlide>
-              <CardAdministration variant="AddCard" />
+              <CardAdministration
+                openModal={() => setIsModalOpen(true)}
+                variant="AddCard"
+              />
             </SwiperSlide>
           )}
 
           {children}
         </SwiperConfiguration>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

@@ -9,7 +9,6 @@ import LayoutOrder from "@/components/UserOrder/LayoutOrder";
 export default function ChooseProducts() {
   return (
     <main>
-      <NavBar></NavBar>
       <LayoutOrder
         title="¡Tu orden casi esta lista!"
         subtitle="Hecha un vistazo, que todo este en orden"

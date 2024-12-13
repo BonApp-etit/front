@@ -15,7 +15,7 @@ export default function Logo() {
 
       <Link
         href={"/"}
-        className="font-poppins text-xl font-semibold text-cstext md:text-2xl lg:text-[28px]"
+        className={`font-poppins text-xl font-semibold text-cstext md:text-2xl`}
       >
         Bon App-etit
       </Link>

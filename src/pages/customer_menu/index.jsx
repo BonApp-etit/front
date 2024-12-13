@@ -1,9 +1,10 @@
 import CardAdministration from "@/components/administration_menu/CardAdministration";
 import NavBar from "@/components/NavBar/NavBar";
 import { SwiperSlide } from "swiper/react";
-import ButtonOutlined from "@/components/ButtonOutlined";
 import Category from "@/components/administration_menu/Category";
 import TemplateMenu from "../../components/TemplateMenu";
+import ModalDetails from "@/components/common_components/ModalDetails";
+import { useState } from "react";
 
 const DB = [
   {
@@ -49,9 +50,9 @@ const DB = [
 ];
 
 export default function AdministrationMenu() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <main className="">
-      <NavBar />
       <TemplateMenu
         restaurantLogo="/assets/AdministrationMenu/RestaurantLogo.svg"
         userName="Jhon Doue"
@@ -68,6 +69,7 @@ export default function AdministrationMenu() {
                   price={data.price}
                   image={data.image}
                   variant="customerCard"
+                  openModalDetail={() => setIsModalOpen(true)}
                 />
               </SwiperSlide>
             ))}
@@ -106,6 +108,11 @@ export default function AdministrationMenu() {
             ))}
           </Category>
         </div>
+
+        <ModalDetails
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        ></ModalDetails>
       </TemplateMenu>
     </main>
   );
