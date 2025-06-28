@@ -1,5 +1,3 @@
-import NavBar from "@/components/NavBar/NavBar";
-import MainLayout from "@/components/common_components/MainLayout";
 import Order from "@/components/kitchen_order/Order";
 import StatusOrderCard from "@/components/kitchen_order/StatusOrderCard";
 import { useEffect, useState } from "react";
@@ -29,7 +27,7 @@ export default function KitchenOrders() {
   };
 
   return (
-    <main className="mt-2 px-2 md:mt-3">
+    <main>
       <div className="flex flex-col gap-4 lg:flex-row">
         {ordersData.map((statusData, index) => (
           <StatusOrderCard key={index} status={statusData.status}>

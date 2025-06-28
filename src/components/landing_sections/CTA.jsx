@@ -48,15 +48,13 @@ export default function CTA() {
             </Button>
           </div>
 
-          <div className="h-auto w-full sm:w-48 md:w-96 lg:mr-24 lg:w-[512px]">
-            <Image
-              src="/assets/chef.svg"
-              width="190"
-              height="280"
-              layout="responsive"
-              alt="Chef"
-            />
-          </div>
+          <Image
+            src="/assets/chef.svg"
+            width="190"
+            height="280"
+            alt="Chef"
+            className="mx-auto h-auto sm:w-48 md:w-96 lg:mr-24 lg:w-[512px]"
+          />
         </div>
       </div>
     </>

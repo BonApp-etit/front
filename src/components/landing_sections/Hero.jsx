@@ -7,11 +7,12 @@ import Link from "next/link";
 export default function HeroSection() {
   const theme = useTheme();
   const recomendations = useMediaQuery("(min-width:1200px)");
+  //#FFF1ED Color Fix
   return (
     <section className="flex justify-center p-4 lg:bg-[#FFF1ED] lg:py-24">
       {/* Contenedor exterior que extiende el fondo */}
 
-      <div className="sm:max-w-96 md:max-w-3xl md:px-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-evenly lg:px-[40px]">
+      <div className="sm:max-w-xl md:max-w-3xl md:px-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-evenly lg:px-[40px]">
         <div className="lg:flex lg:flex-col">
           {/**Title and subtittle */}
           <div className="mb-8 flex flex-col gap-4 text-black xs:text-center sm:text-center md:mt-8 md:text-center lg:mb-12 lg:gap-4 lg:text-left">

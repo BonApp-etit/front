@@ -23,7 +23,7 @@ const NavBar = ({ onToggleCanvas }) => {
 
   return (
     <nav className="flex justify-center bg-white p-3 shadow-md md:px-14">
-      <section className="mb-1 flex w-full max-w-[400px] items-center justify-between gap-1 md:min-w-[632px] md:max-w-[700px] lg:max-w-[1200px]">
+      <section className="mb-1 flex w-full items-center justify-between gap-1 sm:max-w-xl md:max-w-2xl lg:max-w-[1200px]">
         <div className="flex items-center gap-5">
           {isAuthenticated && (
             <Bars3Icon

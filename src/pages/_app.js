@@ -7,6 +7,9 @@ import NavBar from "@/components/NavBar/NavBar";
 import OffCanvas from "@/components/common_components/OffCanvas";
 import { useState } from "react";
 import MainLayout from "@/components/common_components/MainLayout";
+import LayoutOrder from "@/components/UserOrder/LayoutOrder";
+import AdministrationMenu from "./administration_menu";
+import TemplateMenu from "@/components/TemplateMenu";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -44,9 +47,9 @@ export default function App({ Component, pageProps }) {
         <NavBar onToggleCanvas={toggleCanvas} />
 
         <OffCanvas IsOpen={isOffCanvasOpen} onClose={toggleCanvas} />
-        <MainLayout>
-          <Component {...pageProps} />
-        </MainLayout>
+        {/* <MainLayout appyDefaultConfiguration={Component.name != TemplateMenu}> */}
+        <Component {...pageProps} />
+        {/* </MainLayout> */}
       </ThemeProvider>
     </main>
   );

@@ -3,7 +3,6 @@ import InputContained from "@/components/common_components/InputContained";
 import ButtonContained from "@/components/common_components/ButtonContained";
 import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { loginSchema } from "@/hooks/validationSchemas";
-import NavBar from "@/components/NavBar/NavBar";
 import Link from "next/link";
 import { useRouter } from "next/router";
 

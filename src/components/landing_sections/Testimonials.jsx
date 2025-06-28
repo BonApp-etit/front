@@ -37,7 +37,7 @@ export default function Testimonials() {
 
       {isDesktop ? (
         <div className="flex justify-center">
-          <div className="flex w-[1200px] justify-between">
+          <div className="flex w-[980px] justify-between">
             {infoComments.map((info, index) => (
               <TestimonialCards
                 key={index}

@@ -4,16 +4,19 @@ import Features from "../components/landing_sections/Features";
 import Testimonials from "../components/landing_sections/Testimonials";
 import CTA from "../components/landing_sections/CTA";
 import NavBar from "@/components/NavBar/NavBar";
+import MainLayout from "@/components/common_components/MainLayout";
 import Footer from "../components/landing_sections/FooterSection";
 export default function landing() {
   return (
     <main>
       <HeroSection />
+      {/* <MainLayout> */}
       <AboutSection />
       <Features />
       <Testimonials />
       <CTA />
       <Footer />
+      {/* </MainLayout> */}
     </main>
   );
 }

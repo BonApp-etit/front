@@ -13,7 +13,7 @@ export default function TemplateMenu({
       <section className="flex h-[60px] w-full justify-center rounded-lg bg-cs200 md:h-[115px] lg:h-[145px]">
         <div className="w-full">
           <section>
-            <div className="mt-4 flex items-end space-x-1 md:mt-7 lg:mt-7">
+            <div className="mt-8 flex items-end space-x-1 md:mt-14 lg:mt-11">
               {/* Logo */}
               <div className="w-20 md:w-[150px] lg:w-[200px]">
                 <Image

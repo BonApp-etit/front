@@ -4,7 +4,6 @@ import ButtonContained from "@/components/common_components/ButtonContained";
 import useIsTablet from "@/hooks/useIsTablet";
 import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import { codeSchema, emailSchema } from "@/hooks/validationSchemas";
-import NavBar from "@/components/NavBar/NavBar";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
