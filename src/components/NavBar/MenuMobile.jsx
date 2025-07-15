@@ -1,23 +1,23 @@
-import { IconButton, Menu, MenuItem } from "@mui/material";
-import Image from "next/image";
-import React, { useState } from "react";
-import clsx from "clsx";
-import { EllipsisVerticalIcon } from "@heroicons/react/24/solid";
+import { IconButton, Menu, MenuItem } from '@mui/material'
+import Image from 'next/image'
+import React, { useState } from 'react'
+import clsx from 'clsx'
+import { EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 
 export default function MenuMobile({ items, variant }) {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const menuOpen = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = useState(null)
+  const menuOpen = Boolean(anchorEl)
 
   const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(event.currentTarget)
+  }
 
   const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
   return (
     <div>
-      {variant !== "table" ? (
+      {variant !== 'table' ? (
         <IconButton onClick={handleMenuOpen}>
           <Image
             width={24}
@@ -37,12 +37,12 @@ export default function MenuMobile({ items, variant }) {
         onClose={handleMenuClose}
         slotProps={{
           paper: {
-            sx: { width: "150px", padding: "4px" }, // Estilos personalizados para el menú flotante
+            sx: { width: '150px', padding: '4px' }, // Estilos personalizados para el menú flotante
             elevation: 3, // Sombra del menú
           },
         }}
-        transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         {items.map((item, index) => (
           <MenuItem
@@ -57,5 +57,5 @@ export default function MenuMobile({ items, variant }) {
         ))}
       </Menu>
     </div>
-  );
+  )
 }

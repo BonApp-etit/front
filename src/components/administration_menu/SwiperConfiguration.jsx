@@ -1,13 +1,13 @@
-import { Swiper } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import Arrow from "./Arrow";
+import { Swiper } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import Arrow from './Arrow'
 
 export default function SwiperConfiguration({ children, variantDirection }) {
   return (
     <>
-      {variantDirection === "vertical" ? (
+      {variantDirection === 'vertical' ? (
         <Swiper
           direction="vertical"
           spaceBetween={20}
@@ -59,5 +59,5 @@ export default function SwiperConfiguration({ children, variantDirection }) {
         </Swiper>
       )}
     </>
-  );
+  )
 }

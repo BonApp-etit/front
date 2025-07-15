@@ -1,10 +1,10 @@
-import Image from "next/image";
-import ButtonContained from "../common_components/ButtonContained";
-import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import ButtonOutlined from "../ButtonOutlined";
-import LabelStatus from "./LabelStatus";
-import ButtonDeleted from "./ButtonDeleted";
-import ButtonIncrease from "./ButtonIncrease";
+import Image from 'next/image'
+import ButtonContained from '../common_components/ButtonContained'
+import { ArrowRightIcon } from '@heroicons/react/20/solid'
+import ButtonOutlined from '../ButtonOutlined'
+import LabelStatus from './LabelStatus'
+import ButtonDeleted from './ButtonDeleted'
+import ButtonIncrease from './ButtonIncrease'
 
 export default function CardAdministration({
   variant,
@@ -18,7 +18,7 @@ export default function CardAdministration({
 }) {
   return (
     <section className="m-3">
-      {variant === "editCard" && (
+      {variant === 'editCard' && (
         <div className="w-[160px] transform rounded-b-2xl shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:w-[230px] lg:w-[280px]">
           <section className="hover:bg-slate-100">
             <div className="relative w-full">
@@ -32,7 +32,7 @@ export default function CardAdministration({
               />
               <div className="absolute top-3 w-full px-2 lg:top-4 lg:px-3">
                 <div className="flex justify-between">
-                  {isAvailable === "false" ? (
+                  {isAvailable === 'false' ? (
                     <LabelStatus isAvailable={false} />
                   ) : (
                     <LabelStatus isAvailable={true} />
@@ -78,7 +78,7 @@ export default function CardAdministration({
         </div>
       )}
 
-      {variant === "AddCard" && (
+      {variant === 'AddCard' && (
         <div className="h-[224px] w-[160px] transform rounded-lg border-2 border-dashed border-cs300 shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:h-[276px] md:w-[230px] lg:h-[331px] lg:w-[280px]">
           <section className="hover:bg-slate-100">
             <div className="flex w-full items-center justify-center rounded-lg border-b-2 border-dashed border-cs300 bg-cs50 py-5 lg:py-8">
@@ -88,7 +88,7 @@ export default function CardAdministration({
                   width={40}
                   height={40}
                   alt="chicken"
-                  src={"/assets/AdministrationMenu/PhotoOutlined.svg"}
+                  src={'/assets/AdministrationMenu/PhotoOutlined.svg'}
                   layout="responsive"
                 />
               </div>
@@ -105,7 +105,7 @@ export default function CardAdministration({
           </section>
         </div>
       )}
-      {variant === "customerCard" && (
+      {variant === 'customerCard' && (
         <div className="w-[160px] transform rounded-b-2xl shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:w-[230px] lg:w-[280px]">
           <section className="hover:bg-slate-100">
             <div className="relative w-full">
@@ -119,7 +119,7 @@ export default function CardAdministration({
               />
               <div className="absolute top-3 w-full px-2 lg:top-4 lg:px-3">
                 <div className="flex justify-between">
-                  {isAvailable === "false" && <LabelStatus />}
+                  {isAvailable === 'false' && <LabelStatus />}
                   <ButtonDeleted />
                 </div>
               </div>
@@ -162,5 +162,5 @@ export default function CardAdministration({
         </div>
       )}
     </section>
-  );
+  )
 }

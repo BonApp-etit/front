@@ -1,5 +1,5 @@
-import Image from "next/image";
-import ButtonContained from "@/components/common_components/ButtonContained";
+import Image from 'next/image'
+import ButtonContained from '@/components/common_components/ButtonContained'
 export default function Error() {
   return (
     <main>
@@ -33,5 +33,5 @@ export default function Error() {
         </div>
       </section>
     </main>
-  );
+  )
 }

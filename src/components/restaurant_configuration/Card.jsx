@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import ButtonContained from "../common_components/ButtonContained";
-import LayoutCard from "../common_components/LayoutCard";
-import Image from "next/image";
-import clsx from "clsx";
+import { useState } from 'react'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import ButtonContained from '../common_components/ButtonContained'
+import LayoutCard from '../common_components/LayoutCard'
+import Image from 'next/image'
+import clsx from 'clsx'
 
 export default function Card({
   titleInfo,
@@ -14,12 +14,12 @@ export default function Card({
   isCashCard = false,
   tailwindClasses,
 }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false)
   const toggleExpand = () => {
     if (!isCashCard) {
-      setIsExpanded(!isExpanded);
+      setIsExpanded(!isExpanded)
     }
-  };
+  }
   return (
     <LayoutCard>
       <section className={`px-[16px] md:px-[35px] ${tailwindClasses}`}>
@@ -59,18 +59,18 @@ export default function Card({
           <button type="button" onClick={toggleExpand}>
             <ArrowRightIcon
               strokeWidth={2}
-              className={`h-7 w-7 text-cs500 transition-transform duration-300 ease-in-out md:h-8 md:w-8 lg:h-9 lg:w-9 ${isExpanded ? "rotate-90" : ""}`}
+              className={`h-7 w-7 text-cs500 transition-transform duration-300 ease-in-out md:h-8 md:w-8 lg:h-9 lg:w-9 ${isExpanded ? 'rotate-90' : ''}`}
             />
           </button>
         </div>
 
         <section
           className={clsx(
-            "transform overflow-hidden transition-all duration-300 ease-in-out",
+            'transform overflow-hidden transition-all duration-300 ease-in-out',
             {
-              "max-h-screen opacity-100": isExpanded,
-              "max-h-0 opacity-0": !isExpanded,
-            },
+              'max-h-screen opacity-100': isExpanded,
+              'max-h-0 opacity-0': !isExpanded,
+            }
           )}
         >
           <div className="mt-4 px-1">
@@ -93,5 +93,5 @@ export default function Card({
         </section>
       </section>
     </LayoutCard>
-  );
+  )
 }

@@ -1,7 +1,7 @@
 export default function DescriptionBox({
   tailwindClasses,
-  labelText = "",
-  placeholder = "",
+  labelText = '',
+  placeholder = '',
 }) {
   return (
     <div class="mb-4">
@@ -19,5 +19,5 @@ export default function DescriptionBox({
         placeholder={placeholder}
       />
     </div>
-  );
+  )
 }

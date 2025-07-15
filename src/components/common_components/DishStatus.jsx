@@ -1,4 +1,4 @@
-import SwitchLabel from "./Switch";
+import SwitchLabel from './Switch'
 
 export default function DishStatus() {
   return (
@@ -32,5 +32,5 @@ export default function DishStatus() {
         </tbody>
       </table>
     </section>
-  );
+  )
 }

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import UploadImageCard from "./UploadImageCard";
-import InputContained from "./InputContained";
-import DescriptionBox from "./DescriptionBox";
-import Card from "../restaurant_configuration/Card";
-import Checkbox from "./Checkbox";
-import IngredientsTable from "./IngredientsTable";
-import DishStatus from "./DishStatus";
-import LayoutCard from "./LayoutCard";
-import ButtonContained from "./ButtonContained";
+import React, { useState } from 'react'
+import UploadImageCard from './UploadImageCard'
+import InputContained from './InputContained'
+import DescriptionBox from './DescriptionBox'
+import Card from '../restaurant_configuration/Card'
+import Checkbox from './Checkbox'
+import IngredientsTable from './IngredientsTable'
+import DishStatus from './DishStatus'
+import LayoutCard from './LayoutCard'
+import ButtonContained from './ButtonContained'
 
 const Modal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <div
@@ -84,14 +84,14 @@ const Modal = ({ isOpen, onClose }) => {
           <DescriptionBox></DescriptionBox>
           <section className="flex flex-col gap-3">
             <Card
-              tailwindClasses={"!px-0"}
+              tailwindClasses={'!px-0'}
               titleInfo={<Checkbox labelText="Ingredientes base" />}
             >
               <IngredientsTable></IngredientsTable>
             </Card>
 
             <Card
-              tailwindClasses={"!px-0"}
+              tailwindClasses={'!px-0'}
               titleInfo={<Checkbox labelText="Ingredientes extra" />}
             >
               <IngredientsTable></IngredientsTable>
@@ -110,7 +110,7 @@ const Modal = ({ isOpen, onClose }) => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

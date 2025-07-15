@@ -1,6 +1,6 @@
-import InputContained from "@/components/common_components/InputContained";
-import ButtonContained from "@/components/common_components/ButtonContained";
-import QRCard from "@/components/common_components/QRGenerator/QRCard";
+import InputContained from '@/components/common_components/InputContained'
+import ButtonContained from '@/components/common_components/ButtonContained'
+import QRCard from '@/components/common_components/QRGenerator/QRCard'
 
 export default function QRGenerator() {
   return (
@@ -50,5 +50,5 @@ export default function QRGenerator() {
         <ButtonContained variant="generalPoppins" text="Guardar" />
       </div>
     </main>
-  );
+  )
 }

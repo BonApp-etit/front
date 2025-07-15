@@ -1,26 +1,26 @@
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Importa los estilos básicos de Swiper
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
-import AboutCard from "@/components/landing_sections/AboutCard";
+import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css' // Importa los estilos básicos de Swiper
+import 'swiper/css/pagination'
+import { Pagination } from 'swiper/modules'
+import AboutCard from '@/components/landing_sections/AboutCard'
 
 const tarjetasData = [
   {
-    texto: "Recetas de calidad",
-    src: "/assets/AboutCardsImages/Quality-recipes.svg",
+    texto: 'Recetas de calidad',
+    src: '/assets/AboutCardsImages/Quality-recipes.svg',
   },
-  { texto: "Facil de usar", src: "/assets/AboutCardsImages/Easy-to-use.svg" },
+  { texto: 'Facil de usar', src: '/assets/AboutCardsImages/Easy-to-use.svg' },
   {
-    texto: "Procesos Faciles",
-    src: "/assets/AboutCardsImages/Easy-processes.svg",
+    texto: 'Procesos Faciles',
+    src: '/assets/AboutCardsImages/Easy-processes.svg',
   },
-];
+]
 
 export default function Test() {
   return (
     <section className="mx-auto">
-      <div className="mx-auto hidden w-[1200px] justify-between lg:flex">
+      <div className="mx-auto hidden w-[1200px] justify-between xl:flex">
         {tarjetasData.map((tarjeta, index) => (
           <div
             key={index}
@@ -41,12 +41,11 @@ export default function Test() {
         ))}
       </div>
 
-      <div className="mx-auto block sm:max-w-[360px] md:max-w-[672px] lg:hidden lg:w-[1024px] xl:max-w-6xl">
+      <div className="mx-auto block sm:max-w-[360px] md:max-w-[672px] xl:hidden">
         <div className="mx-auto">
           <Swiper
             // loop={true}
             slidesPerView={1}
-            spaceBetween={10}
             pagination={{
               clickable: true,
             }}
@@ -54,14 +53,18 @@ export default function Test() {
               360: {
                 slidesPerView: 1,
                 centeredSlides: true,
+                spaceBetween: 10,
               },
               640: {
-                slidesPerView: 2,
-                spaceBetween: 130,
+                slidesPerView: 1,
+                spaceBetween: 100,
+
+                centeredSlides: true,
               },
               768: {
                 slidesPerView: 2,
                 centeredSlides: true,
+                spaceBetween: 40,
               },
             }}
             modules={[Pagination]}
@@ -94,5 +97,5 @@ export default function Test() {
 
     //    );
     //  })}
-  );
+  )
 }

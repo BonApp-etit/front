@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import CheckRounded from "../common_components/CheckRounded";
-import ButtonContained from "../common_components/ButtonContained";
-import clsx from "clsx";
+import React, { useState } from 'react'
+import Image from 'next/image'
+import CheckRounded from '../common_components/CheckRounded'
+import ButtonContained from '../common_components/ButtonContained'
+import clsx from 'clsx'
 
 const DB = [
   {
     ingredientesBase: [
-      { ingredient: "Queso", isAvailable: true },
-      { ingredient: "Mostaza", isAvailable: true },
-      { ingredient: "Salsa catsup", isAvailable: true },
-      { ingredient: "Papas a la francesa", isAvailable: false },
+      { ingredient: 'Queso', isAvailable: true },
+      { ingredient: 'Mostaza', isAvailable: true },
+      { ingredient: 'Salsa catsup', isAvailable: true },
+      { ingredient: 'Papas a la francesa', isAvailable: false },
     ],
   },
   {
     ingredientesExtra: [
-      { ingredient: "Queso", isAvailable: true, price: "15" },
+      { ingredient: 'Queso', isAvailable: true, price: '15' },
     ],
   },
-];
+]
 
 const ModalKitchenOrder = ({ isOpen, onClose, orderData }) => {
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <div
@@ -34,11 +34,11 @@ const ModalKitchenOrder = ({ isOpen, onClose, orderData }) => {
         <div className="flex items-center justify-between rounded-t border-b px-4 py-2">
           <div className="rounded-[20px] bg-cs500 px-4 py-2">
             <h3 className="font-poppins text-base font-semibold text-white">
-              {orderData.status === "active"
-                ? "Activo"
-                : orderData.status === "process"
-                  ? "En preparacion"
-                  : "Completado"}
+              {orderData.status === 'active'
+                ? 'Activo'
+                : orderData.status === 'process'
+                  ? 'En preparacion'
+                  : 'Completado'}
             </h3>
           </div>
 
@@ -87,7 +87,7 @@ const ModalKitchenOrder = ({ isOpen, onClose, orderData }) => {
           </section>
 
           <p className="w-full rounded-lg font-ubuntu text-sm font-normal leading-relaxed tracking-tight text-[#667473] md:text-base">
-            {orderData.description || "Sin comentarios"}
+            {orderData.description || 'Sin comentarios'}
             {/* Ajusta según tus datos */}
           </p>
 
@@ -103,7 +103,7 @@ const ModalKitchenOrder = ({ isOpen, onClose, orderData }) => {
                     isAvailable={ingredient.isAvailable}
                     labelText={ingredient.ingredient}
                   />
-                );
+                )
               })}
             </div>
           </section>
@@ -125,15 +125,15 @@ const ModalKitchenOrder = ({ isOpen, onClose, orderData }) => {
 
                     <span
                       className={clsx(
-                        "font-ubuntu text-sm font-bold leading-snug tracking-tight",
-                        { "text-[#667473]": !ingredient.isAvailable },
-                        { "text-cstext": ingredient.isAvailable },
+                        'font-ubuntu text-sm font-bold leading-snug tracking-tight',
+                        { 'text-[#667473]': !ingredient.isAvailable },
+                        { 'text-cstext': ingredient.isAvailable }
                       )}
                     >
                       $ {ingredient.price} MXN
                     </span>
                   </div>
-                );
+                )
               })}
             </div>
           </section>
@@ -156,7 +156,7 @@ const ModalKitchenOrder = ({ isOpen, onClose, orderData }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ModalKitchenOrder;
+export default ModalKitchenOrder

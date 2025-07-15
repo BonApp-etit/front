@@ -1,58 +1,58 @@
-import Form from "../../components/common_components/Form";
-import InputContained from "@/components/common_components/InputContained";
-import ButtonContained from "@/components/common_components/ButtonContained";
-import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
-import { loginSchema } from "@/hooks/validationSchemas";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Form from '../../components/common_components/Form'
+import InputContained from '@/components/common_components/InputContained'
+import ButtonContained from '@/components/common_components/ButtonContained'
+import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik'
+import { loginSchema } from '@/hooks/validationSchemas'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Login() {
-  const router = useRouter();
+  const router = useRouter()
   const handleLogin = async (values, { setSubmitting, setErrors }) => {
     try {
-      const response = await fetch("http://localhost:8080/auth/login", {
-        method: "POST",
+      const response = await fetch('http://localhost:8080/auth/login', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(values),
-      });
-      const data = await response.json();
+      })
+      const data = await response.json()
 
       if (data.success) {
-        console.log("Sesion iniciada");
-        const token = data.message.data?.token;
+        console.log('Sesion iniciada')
+        const token = data.message.data?.token
         if (token) {
-          localStorage.setItem("authToken", token);
-          console.log("Token guardado en local storage");
-          router.push("/administration_menu");
+          localStorage.setItem('authToken', token)
+          console.log('Token guardado en local storage')
+          router.push('/administration_menu')
         } else {
-          setErrors({ general: "Error de autenticacion" });
+          setErrors({ general: 'Error de autenticacion' })
         }
 
         // Guardar token en el navegador
       } else {
-        if (data.message === "Account not verified") {
-          setErrors({ general: "Cuenta no verificada. Redirigiendo..." });
-          router.push("/account_verification");
-        } else if (data.message === "Invalid data") {
-          setErrors({ general: "Correo o contraseña incorrectos" });
+        if (data.message === 'Account not verified') {
+          setErrors({ general: 'Cuenta no verificada. Redirigiendo...' })
+          router.push('/account_verification')
+        } else if (data.message === 'Invalid data') {
+          setErrors({ general: 'Correo o contraseña incorrectos' })
         } else {
-          setErrors({ general: "Ocurrio un error inesperado" });
+          setErrors({ general: 'Ocurrio un error inesperado' })
         }
       }
-      setSubmitting(false);
+      setSubmitting(false)
     } catch (error) {
-      setSubmitting(false);
-      console.error("Error de conexion", error);
-      console.log("Catch del cliente");
-      setErrors({ general: "Ocurrio un error inesperado" });
+      setSubmitting(false)
+      console.error('Error de conexion', error)
+      console.log('Catch del cliente')
+      setErrors({ general: 'Ocurrio un error inesperado' })
     }
-  };
+  }
   return (
     <main>
       <Formik
-        initialValues={{ email: "", password: "" }}
+        initialValues={{ email: '', password: '' }}
         validationSchema={loginSchema}
         onSubmit={handleLogin}
       >
@@ -113,8 +113,8 @@ export default function Login() {
               )}
               <div className="mb-5 mt-5 flex justify-center lg:mb-10">
                 <ButtonContained
-                  variant={"generalPoppins"}
-                  text={isSubmitting ? "Enviando" : "Entrar"}
+                  variant={'generalPoppins'}
+                  text={isSubmitting ? 'Enviando' : 'Entrar'}
                   type="submit"
                   showIcon={true}
                   isArrowLeft={false}
@@ -138,5 +138,5 @@ export default function Login() {
         )}
       </Formik>
     </main>
-  );
+  )
 }

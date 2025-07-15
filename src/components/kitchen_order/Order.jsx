@@ -1,5 +1,5 @@
-import LayoutCard from "../common_components/LayoutCard";
-import { ClockIcon } from "@heroicons/react/24/outline";
+import LayoutCard from '../common_components/LayoutCard'
+import { ClockIcon } from '@heroicons/react/24/outline'
 
 export default function Order({
   baseIgredients,
@@ -33,5 +33,5 @@ export default function Order({
         </div>
       </section>
     </LayoutCard>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Form({
   tittle,
@@ -44,5 +44,5 @@ export default function Form({
         </div>
       </div>
     </section>
-  );
+  )
 }

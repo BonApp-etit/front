@@ -1,7 +1,7 @@
-import Image from "next/image";
-import CategoriesButton from "@/components/administration_menu/CategoriesButton";
-import SearchBar from "@/components/administration_menu/SearchBar";
-import Cart from "./common_components/Cart";
+import Image from 'next/image'
+import CategoriesButton from '@/components/administration_menu/CategoriesButton'
+import SearchBar from '@/components/administration_menu/SearchBar'
+import Cart from './common_components/Cart'
 export default function TemplateMenu({
   userName,
   restaurantLogo,
@@ -46,7 +46,7 @@ export default function TemplateMenu({
               <div className="mb-3 w-full">
                 <SearchBar />
               </div>
-              <CategoriesButton names={["Entradas", "Bebidas", "Postres"]} />
+              <CategoriesButton names={['Entradas', 'Bebidas', 'Postres']} />
             </div>
           </div>
           <div>{children}</div>
@@ -55,5 +55,5 @@ export default function TemplateMenu({
         </div>
       </section>
     </main>
-  );
+  )
 }

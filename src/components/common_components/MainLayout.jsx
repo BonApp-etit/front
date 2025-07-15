@@ -5,5 +5,5 @@ export default function MainLayout({ children }) {
         {children}
       </div>
     </section>
-  );
+  )
 }

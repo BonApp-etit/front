@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 export default function AboutCard({ title, picture }) {
   return (
     <div className="inline-flex flex-col items-center justify-center gap-[19px] rounded-[30px] border border-[#e7d6d2] bg-[#fffbfa] p-10 pb-14">
@@ -14,5 +14,5 @@ export default function AboutCard({ title, picture }) {
         {title}
       </div>
     </div>
-  );
+  )
 }

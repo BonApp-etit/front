@@ -1,9 +1,9 @@
-import LayoutCard from "@/components/common_components/LayoutCard";
-import CardContent from "@/components/UserOrder/CardContent";
-import React from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import LayoutOrder from "@/components/UserOrder/LayoutOrder";
+import LayoutCard from '@/components/common_components/LayoutCard'
+import CardContent from '@/components/UserOrder/CardContent'
+import React from 'react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import LayoutOrder from '@/components/UserOrder/LayoutOrder'
 
 export default function PurchaseMade() {
   return (
@@ -14,7 +14,7 @@ export default function PurchaseMade() {
         showLoadingButton={false}
         swiperContainer={false}
         showSingleButton={true}
-        linkForward={"/customer_menu"}
+        linkForward={'/customer_menu'}
       >
         <LayoutCard>
           <CardContent />
@@ -22,5 +22,5 @@ export default function PurchaseMade() {
         </LayoutCard>
       </LayoutOrder>
     </main>
-  );
+  )
 }

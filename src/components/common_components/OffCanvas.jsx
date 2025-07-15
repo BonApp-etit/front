@@ -1,24 +1,24 @@
-import digitalMenu from "../../../public/assets/OffCanvas/digitalMenu.svg";
-import qrCode from "../../../public/assets/OffCanvas/qrCode.svg";
-import orders from "../../../public/assets/OffCanvas/Orders.svg";
-import myRestaurant from "../../../public/assets/OffCanvas/myRestaurant.svg";
-import Image from "next/image";
-import Logo from "../NavBar/Logo";
+import digitalMenu from '../../../public/assets/OffCanvas/digitalMenu.svg'
+import qrCode from '../../../public/assets/OffCanvas/qrCode.svg'
+import orders from '../../../public/assets/OffCanvas/Orders.svg'
+import myRestaurant from '../../../public/assets/OffCanvas/myRestaurant.svg'
+import Image from 'next/image'
+import Logo from '../NavBar/Logo'
 
 const menuItems = [
   {
-    label: "Menu Digital",
+    label: 'Menu Digital',
     icon: digitalMenu,
-    href: "/administration_menu",
+    href: '/administration_menu',
   },
-  { label: "Mis Mesas QR", icon: qrCode, href: "/qr_generator" },
-  { label: "Pedidos", icon: orders, href: "/kitchen_orders" },
+  { label: 'Mis Mesas QR', icon: qrCode, href: '/qr_generator' },
+  { label: 'Pedidos', icon: orders, href: '/kitchen_orders' },
   {
-    label: "Mi restaurante",
+    label: 'Mi restaurante',
     icon: myRestaurant,
-    href: "restaurant_configuration",
+    href: 'restaurant_configuration',
   },
-];
+]
 
 const OffCanvas = ({ IsOpen, onClose }) => {
   return (
@@ -26,7 +26,7 @@ const OffCanvas = ({ IsOpen, onClose }) => {
       {/* Drawer */}
       <div
         className={`fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto bg-white p-4 transition-transform ${
-          IsOpen ? "translate-x-0" : "-translate-x-full"
+          IsOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         tabIndex="-1"
         aria-labelledby="drawer-navigation-label"
@@ -86,7 +86,7 @@ const OffCanvas = ({ IsOpen, onClose }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default OffCanvas;
+export default OffCanvas

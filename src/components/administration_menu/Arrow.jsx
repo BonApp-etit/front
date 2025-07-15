@@ -1,12 +1,12 @@
-import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/outline";
-import { useSwiper } from "swiper/react";
+import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/outline'
+import { useSwiper } from 'swiper/react'
 
 export default function Arrow({ variant }) {
-  const swiper = useSwiper();
+  const swiper = useSwiper()
 
   return (
     <>
-      {variant === "left" && (
+      {variant === 'left' && (
         <button
           onClick={() => swiper && swiper.slidePrev()}
           aria-label="Slide Left"
@@ -17,7 +17,7 @@ export default function Arrow({ variant }) {
           />
         </button>
       )}
-      {variant === "right" && (
+      {variant === 'right' && (
         <button
           onClick={() => swiper && swiper.slideNext()}
           aria-label="Slide Right"
@@ -28,7 +28,7 @@ export default function Arrow({ variant }) {
           />
         </button>
       )}
-      {variant === "up" && (
+      {variant === 'up' && (
         <button
           onClick={() => swiper && swiper.slidePrev()}
           aria-label="Slide Up"
@@ -40,7 +40,7 @@ export default function Arrow({ variant }) {
           />
         </button>
       )}
-      {variant === "down" && (
+      {variant === 'down' && (
         <button
           onClick={() => swiper && swiper.slideNext()}
           aria-label="Slide Down"
@@ -53,5 +53,5 @@ export default function Arrow({ variant }) {
         </button>
       )}
     </>
-  );
+  )
 }
