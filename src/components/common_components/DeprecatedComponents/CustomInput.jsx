@@ -1,4 +1,4 @@
-import TextField from "@mui/material/TextField";
+import TextField from '@mui/material/TextField'
 const CustomInput = ({
   label,
   id,
@@ -13,8 +13,8 @@ const CustomInput = ({
   customHeight,
 }) => {
   return (
-    <div className={`w-full max-w-md mb-4 ${customWidth ? customWidth : ""}`}>
-      <label className="block text-lg font-medium mb-2">{label}</label>
+    <div className={`mb-4 w-full max-w-md ${customWidth ? customWidth : ''}`}>
+      <label className="mb-2 block text-lg font-medium">{label}</label>
       <TextField
         fullWidth
         id={id}
@@ -25,10 +25,10 @@ const CustomInput = ({
         placeholder={placeholder}
         error={error}
         helperText={helperText}
-        className={`bg-red-50 ${customHeight ? customHeight : ""}`}
+        className={`bg-red-50 ${customHeight ? customHeight : ''}`}
       />
     </div>
-  );
-};
+  )
+}
 
-export default CustomInput;
+export default CustomInput

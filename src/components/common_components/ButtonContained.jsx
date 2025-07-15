@@ -1,5 +1,5 @@
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/20/solid";
-import ArrowWrapper from "./ArrowWrapper";
+import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/20/solid'
+import ArrowWrapper from './ArrowWrapper'
 
 export default function ButtonContained({
   text,
@@ -12,7 +12,7 @@ export default function ButtonContained({
 }) {
   return (
     <main>
-      {variant === "generalPoppins" && (
+      {variant === 'generalPoppins' && (
         <button
           type={type}
           {...props}
@@ -25,7 +25,7 @@ export default function ButtonContained({
           )}
         </button>
       )}
-      {variant === "text" && (
+      {variant === 'text' && (
         <button
           type={type}
           {...props}
@@ -35,7 +35,7 @@ export default function ButtonContained({
           <span>{text}</span>
         </button>
       )}
-      {variant === "generalUbuntu" && (
+      {variant === 'generalUbuntu' && (
         <button
           type={type}
           text="Editar producto"
@@ -46,5 +46,5 @@ export default function ButtonContained({
         </button>
       )}
     </main>
-  );
+  )
 }

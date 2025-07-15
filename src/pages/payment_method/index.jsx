@@ -1,10 +1,10 @@
-import NavBar from "@/components/NavBar/NavBar";
-import React, { useState } from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import LayoutOrder from "@/components/UserOrder/LayoutOrder";
-import Card from "@/components/restaurant_configuration/Card";
-import InputContained from "@/components/common_components/InputContained";
+import NavBar from '@/components/NavBar/NavBar'
+import React, { useState } from 'react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import LayoutOrder from '@/components/UserOrder/LayoutOrder'
+import Card from '@/components/restaurant_configuration/Card'
+import InputContained from '@/components/common_components/InputContained'
 
 export default function PaymentMethod() {
   return (
@@ -13,8 +13,8 @@ export default function PaymentMethod() {
         swiperContainer="false"
         title="Metodo de pago "
         subtitle="Escoge tu metodo de pago."
-        linkForward={"/review"}
-        linkBackward={"/choose_products"}
+        linkForward={'/review'}
+        linkBackward={'/choose_products'}
       >
         <div className="flex flex-col gap-4">
           <div className="gap flex">
@@ -62,5 +62,5 @@ export default function PaymentMethod() {
         </div>
       </LayoutOrder>
     </main>
-  );
+  )
 }

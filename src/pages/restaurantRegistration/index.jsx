@@ -1,51 +1,51 @@
-import Form from "../../components/common_components/Form";
-import InputContained from "@/components/common_components/InputContained";
-import ButtonContained from "@/components/common_components/ButtonContained";
-import SignUpOptions from "@/components/common_components/SignUpOptions";
-import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
-import { registerSchema } from "@/hooks/validationSchemas";
-import NavBar from "@/components/NavBar/NavBar";
-import { useRouter } from "next/router";
-import UploadImageCard from "@/components/common_components/UploadImageCard";
+import Form from '../../components/common_components/Form'
+import InputContained from '@/components/common_components/InputContained'
+import ButtonContained from '@/components/common_components/ButtonContained'
+import SignUpOptions from '@/components/common_components/SignUpOptions'
+import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik'
+import { registerSchema } from '@/hooks/validationSchemas'
+import NavBar from '@/components/NavBar/NavBar'
+import { useRouter } from 'next/router'
+import UploadImageCard from '@/components/common_components/UploadImageCard'
 
 export default function RestaurantRegistration() {
-  const router = useRouter();
+  const router = useRouter()
   // Definición de la función handleSignUp
   const handleSignUp = async (values, { setSubmitting, setErrors }) => {
     try {
-      const response = await fetch("http://localhost:8080/user", {
-        method: "POST",
+      const response = await fetch('http://localhost:8080/user', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(values),
-      });
+      })
 
-      const data = await response.json();
-      setSubmitting(false); // Finaliza el estado de envio del formulario
+      const data = await response.json()
+      setSubmitting(false) // Finaliza el estado de envio del formulario
       if (data.success) {
-        console.log("Datos guardados en la DB");
-        router.push("/account_verification");
+        console.log('Datos guardados en la DB')
+        router.push('/account_verification')
       } else {
-        console.log("Algo paso");
+        console.log('Algo paso')
         // Si hay un error, muestra el mensaje en el formulario
-        setErrors({ general: data.message || "Ocurrió un error inesperado" });
+        setErrors({ general: data.message || 'Ocurrió un error inesperado' })
       }
     } catch (error) {
-      setSubmitting(false);
-      console.error("Error de conexión:", error);
-      setErrors({ general: "Error al conectar con el servidor" });
+      setSubmitting(false)
+      console.error('Error de conexión:', error)
+      setErrors({ general: 'Error al conectar con el servidor' })
     }
-  };
+  }
 
   return (
     <main>
       <Formik
         initialValues={{
-          restaurantName: "",
-          restaurantAdress: "",
-          name: "",
-          lastName: "",
+          restaurantName: '',
+          restaurantAdress: '',
+          name: '',
+          lastName: '',
         }}
         validationSchema={registerSchema}
         onSubmit={handleSignUp} // Asegúrate de que handleSignUp está bien definido y pasado correctamente
@@ -136,7 +136,7 @@ export default function RestaurantRegistration() {
                 <ButtonContained
                   variant="generalPoppins"
                   type="submit"
-                  text={isSubmitting ? "Cargando..." : "Registrarse"}
+                  text={isSubmitting ? 'Cargando...' : 'Registrarse'}
                   showIcon={true}
                   isArrowLeft={false}
                   disabled={isSubmitting} // Desactiva el botón mientras se procesa el envío
@@ -149,5 +149,5 @@ export default function RestaurantRegistration() {
         )}
       </Formik>
     </main>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import NavBar from "@/components/NavBar/NavBar";
-import MainLayout from "@/components/common_components/MainLayout";
-import UserTypeCard from "@/components/userType/UserTypeCard";
-import ButtonUserTypeCard from "@/components/userType/ButtonUserTypeCard";
+import NavBar from '@/components/NavBar/NavBar'
+import MainLayout from '@/components/common_components/MainLayout'
+import UserTypeCard from '@/components/userType/UserTypeCard'
+import ButtonUserTypeCard from '@/components/userType/ButtonUserTypeCard'
 export default function UserType() {
   return (
     <main>
@@ -23,5 +23,5 @@ export default function UserType() {
         </div>
       </MainLayout>
     </main>
-  );
+  )
 }

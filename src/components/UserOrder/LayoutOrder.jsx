@@ -1,9 +1,7 @@
-import MainLayout from "../common_components/MainLayout";
-import SwiperConfiguration from "../administration_menu/SwiperConfiguration";
-import { SwiperSlide } from "swiper/react";
-import TotalCard from "./TotalCard";
-import Stepper from "../common_components/Stepper";
-import React, { useState } from "react";
+import SwiperConfiguration from '../administration_menu/SwiperConfiguration'
+import TotalCard from './TotalCard'
+import Stepper from '../common_components/Stepper'
+import React, { useState } from 'react'
 
 export default function LayoutOrder({
   children,
@@ -15,11 +13,11 @@ export default function LayoutOrder({
   linkForward,
   linkBackward,
 }) {
-  const [currentStep, setCurrentStep] = useState(1); // Paso inicial
+  const [currentStep, setCurrentStep] = useState(1) // Paso inicial
 
-  const totalSteps = 5; // Número total de pasos
+  const totalSteps = 5 // Número total de pasos
   return (
-    <MainLayout>
+    <section>
       <div class="inline-flex flex-col items-start justify-start gap-1">
         <h1 class="self-stretch font-poppins text-[28px] font-medium leading-7 text-[#191c1e] md:text-4xl">
           {title}
@@ -45,7 +43,7 @@ export default function LayoutOrder({
             setCurrentStep={setCurrentStep}
             totalSteps={totalSteps}
             showLoadingButton={showLoadingButton}
-          ></TotalCard>
+          />
         </div>
       </div>
 
@@ -61,8 +59,8 @@ export default function LayoutOrder({
           showSingleButton={showSingleButton}
           linkForward={linkForward}
           linkBackward={linkBackward}
-        ></TotalCard>
+        />
       </div>
-    </MainLayout>
-  );
+    </section>
+  )
 }

@@ -1,31 +1,31 @@
-import React, { useState } from "react";
-import SwitchLabel from "./Switch"; // Asegúrate de tener tu componente Switch
-import MenuMobile from "../NavBar/MenuMobile"; // Asegúrate de tener tu componente MenuButton
-import { TrashIcon, EyeIcon } from "@heroicons/react/24/solid";
+import React, { useState } from 'react'
+import SwitchLabel from './Switch' // Asegúrate de tener tu componente Switch
+import MenuMobile from '../NavBar/MenuMobile' // Asegúrate de tener tu componente MenuButton
+import { TrashIcon, EyeIcon } from '@heroicons/react/24/solid'
 
 const IngredientsTable = () => {
   const [ingredients, setIngredients] = useState([
-    { name: "papas", status: true },
-  ]);
+    { name: 'papas', status: true },
+  ])
 
   // Agregar una nueva fila con valores predeterminados
   const addIngredient = () => {
-    setIngredients([...ingredients, { name: "", status: false }]);
-  };
+    setIngredients([...ingredients, { name: '', status: false }])
+  }
 
   // Manejar cambio de nombre del ingrediente
   const handleIngredientChange = (index, value) => {
-    const updatedIngredients = [...ingredients];
-    updatedIngredients[index].name = value;
-    setIngredients(updatedIngredients);
-  };
+    const updatedIngredients = [...ingredients]
+    updatedIngredients[index].name = value
+    setIngredients(updatedIngredients)
+  }
 
   // Manejar cambio del switch
   const handleStatusChange = (index) => {
-    const updatedIngredients = [...ingredients];
-    updatedIngredients[index].status = !updatedIngredients[index].status;
-    setIngredients(updatedIngredients);
-  };
+    const updatedIngredients = [...ingredients]
+    updatedIngredients[index].status = !updatedIngredients[index].status
+    setIngredients(updatedIngredients)
+  }
 
   return (
     <div className="overflow-x-auto">
@@ -70,10 +70,10 @@ const IngredientsTable = () => {
                   variant="table"
                   items={[
                     {
-                      text: "Eliminar",
+                      text: 'Eliminar',
                       icon: <TrashIcon className="h-5 w-5" />,
                     },
-                    { text: "Visible", icon: <EyeIcon className="h-5 w-5" /> },
+                    { text: 'Visible', icon: <EyeIcon className="h-5 w-5" /> },
                   ]}
                 />
               </td>
@@ -88,7 +88,7 @@ const IngredientsTable = () => {
                 className="rounded-xl bg-cs500 px-3 py-2 font-poppins text-xs font-semibold text-white hover:bg-cs600"
                 disabled={
                   ingredients.length === 0 ||
-                  ingredients[ingredients.length - 1].name === ""
+                  ingredients[ingredients.length - 1].name === ''
                 }
               >
                 Agregar ingrediente
@@ -98,7 +98,7 @@ const IngredientsTable = () => {
         </tbody>
       </table>
     </div>
-  );
-};
+  )
+}
 
-export default IngredientsTable;
+export default IngredientsTable

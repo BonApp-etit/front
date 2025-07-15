@@ -6,9 +6,9 @@ export default function InputContained({
   ...props
 }) {
   const variantClass =
-    variant === "outlined"
-      ? "mt-1 w-full rounded-lg border border-cs400 bg-[#FFF6F4] px-4 py-2 font-poppins text-xs font-normal text-black  placeholder:text-black/50 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-cs500 md:text-sm lg:text-base"
-      : "mt-1 w-full rounded-lg border border-[#FFF6F4] bg-[#FFF6F4] px-4 py-2 font-poppins text-xs font-normal text-black placeholder:text-black/50 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-cs500 md:text-sm lg:text-base";
+    variant === 'outlined'
+      ? 'mt-1 w-full rounded-lg border border-cs400 bg-[#FFF6F4] px-4 py-2 font-poppins text-xs font-normal text-black  placeholder:text-black/50 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-cs500 md:text-sm lg:text-base'
+      : 'mt-1 w-full rounded-lg border border-[#FFF6F4] bg-[#FFF6F4] px-4 py-2 font-poppins text-xs font-normal text-black placeholder:text-black/50 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-cs500 md:text-sm lg:text-base'
 
   return (
     <div className="mb-1">
@@ -27,5 +27,5 @@ export default function InputContained({
         className={variantClass}
       />
     </div>
-  );
+  )
 }

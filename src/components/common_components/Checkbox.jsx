@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 export default function Checkbox({ labelText, onChange }) {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(false)
 
   const handleChange = () => {
-    const newChecked = !checked;
-    setChecked(newChecked);
+    const newChecked = !checked
+    setChecked(newChecked)
     if (onChange) {
-      onChange(newChecked);
+      onChange(newChecked)
     }
-  };
+  }
 
   return (
     <div className="flex items-center">
@@ -29,5 +29,5 @@ export default function Checkbox({ labelText, onChange }) {
         {labelText}
       </label>
     </div>
-  );
+  )
 }

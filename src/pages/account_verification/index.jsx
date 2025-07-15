@@ -1,59 +1,58 @@
-import Form from "../../components/common_components/Form";
-import InputContained from "@/components/common_components/InputContained";
-import ButtonContained from "@/components/common_components/ButtonContained";
-import useIsTablet from "@/hooks/useIsTablet";
-import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
-import { codeSchema, emailSchema } from "@/hooks/validationSchemas";
-import NavBar from "@/components/NavBar/NavBar";
-import { useState } from "react";
-import { useRouter } from "next/router";
+import Form from '../../components/common_components/Form'
+import InputContained from '@/components/common_components/InputContained'
+import ButtonContained from '@/components/common_components/ButtonContained'
+import useIsTablet from '@/hooks/useIsTablet'
+import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik'
+import { codeSchema, emailSchema } from '@/hooks/validationSchemas'
+import NavBar from '@/components/NavBar/NavBar'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function AccountVerification() {
-  const router = useRouter();
-  const [step, setStep] = useState(1);
-  const isTablet = useIsTablet();
+  const router = useRouter()
+  const [step, setStep] = useState(1)
+  const isTablet = useIsTablet()
 
   const handleSubmit = async (values, { setSubmitting, setErrors }) => {
     try {
       const endpoint =
         step === 1
-          ? "http://localhost:8080/verification"
-          : "http://localhost:8080/verification/validation";
+          ? 'http://localhost:8080/verification'
+          : 'http://localhost:8080/verification/validation'
 
       const response = await fetch(endpoint, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(values),
-      });
+      })
 
-      const data = await response.json();
-      setSubmitting(false);
+      const data = await response.json()
+      setSubmitting(false)
 
       if (data.success) {
         if (step === 1) {
-          console.log("Código de verificación enviado");
-          setStep(2);
+          console.log('Código de verificación enviado')
+          setStep(2)
         } else {
-          console.log("Código de verificación validado");
-          router.push("/administration_menu");
+          console.log('Código de verificación validado')
+          router.push('/administration_menu')
         }
       } else {
-        setErrors({ general: data.error || "Ocurrió un error inesperado" });
+        setErrors({ general: data.error || 'Ocurrió un error inesperado' })
       }
     } catch (error) {
-      setSubmitting(false);
-      console.error("Error de conexión", error);
-      setErrors({ general: "Error al conectar el servidor" });
+      setSubmitting(false)
+      console.error('Error de conexión', error)
+      setErrors({ general: 'Error al conectar el servidor' })
     }
-  };
+  }
 
   return (
     <main>
-      <NavBar />
       <Formik
-        initialValues={{ email: "", code: "" }}
+        initialValues={{ email: '', code: '' }}
         validationSchema={step === 1 ? emailSchema : codeSchema}
         onSubmit={handleSubmit}
       >
@@ -63,8 +62,8 @@ export default function AccountVerification() {
             subtitleTop=""
             subtitleBottom={
               step === 1
-                ? "Ingresa tu correo electrónico para recibir tu código de verificación"
-                : "Ingresa el código enviado a tu correo"
+                ? 'Ingresa tu correo electrónico para recibir tu código de verificación'
+                : 'Ingresa el código enviado a tu correo'
             }
             src="/assets/Authentication/Authentication.svg"
             alt="AuthenticationImage"
@@ -90,8 +89,8 @@ export default function AccountVerification() {
                       disabled={isSubmitting}
                       text={
                         isSubmitting
-                          ? "Enviando..."
-                          : "Enviar código de verificación"
+                          ? 'Enviando...'
+                          : 'Enviar código de verificación'
                       }
                       showIcon={true}
                       variant="generalPoppins"
@@ -124,7 +123,7 @@ export default function AccountVerification() {
                     <ButtonContained
                       type="submit"
                       disabled={isSubmitting}
-                      text={isSubmitting ? "Verificando..." : "Verificar"}
+                      text={isSubmitting ? 'Verificando...' : 'Verificar'}
                       variant="generalPoppins"
                       showIcon={true}
                       isArrowLeft={false}
@@ -137,5 +136,5 @@ export default function AccountVerification() {
         )}
       </Formik>
     </main>
-  );
+  )
 }

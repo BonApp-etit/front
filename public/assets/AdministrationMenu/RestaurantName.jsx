@@ -8,5 +8,5 @@ export default function RestauranName({ restauranName, userName }) {
         {` ¡Hola ${userName}, Bienvenido!`}
       </h5>
     </section>
-  );
+  )
 }

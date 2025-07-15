@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 
 export default function ArrowWrapper({ isLeft, children }) {
   return (
@@ -7,5 +7,5 @@ export default function ArrowWrapper({ isLeft, children }) {
       <span>{children}</span>
       {!isLeft && <ArrowRightIcon className="ml-2 h-5 w-5" />}
     </div>
-  );
+  )
 }
