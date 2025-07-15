@@ -1,12 +1,12 @@
-import NavBar from "@/components/NavBar/NavBar";
-import LayoutCard from "@/components/common_components/LayoutCard";
-import CardContent from "@/components/UserOrder/CardContent";
-import { SwiperSlide } from "swiper/react";
-import React, { useState } from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import LayoutOrder from "@/components/UserOrder/LayoutOrder";
-import Card from "@/components/restaurant_configuration/Card";
+import NavBar from '@/components/NavBar/NavBar'
+import LayoutCard from '@/components/common_components/LayoutCard'
+import CardContent from '@/components/UserOrder/CardContent'
+import { SwiperSlide } from 'swiper/react'
+import React, { useState } from 'react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import LayoutOrder from '@/components/UserOrder/LayoutOrder'
+import Card from '@/components/restaurant_configuration/Card'
 
 export default function Review() {
   return (
@@ -16,8 +16,8 @@ export default function Review() {
         subtitle="Revisa que los productos y el metodo de pago sean correctos."
         showLoadingButton={false}
         swiperContainer={false}
-        linkBackward={"/payment_method"}
-        linkForward={"/purchase_made"}
+        linkBackward={'/payment_method'}
+        linkForward={'/purchase_made'}
       >
         <LayoutCard>
           <CardContent />
@@ -35,5 +35,5 @@ export default function Review() {
         </div>
       </LayoutOrder>
     </main>
-  );
+  )
 }

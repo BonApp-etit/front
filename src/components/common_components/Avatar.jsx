@@ -1,14 +1,14 @@
 export default function Avatar() {
   const User = {
-    firstName: "Leonardo",
-    lastName: "Meza",
-  };
+    firstName: 'Leonardo',
+    lastName: 'Meza',
+  }
 
-  let letters = [];
-  let claves = Object.keys(User);
+  let letters = []
+  let claves = Object.keys(User)
   for (let i = 0; i < claves.length; i++) {
-    let clave = claves[i];
-    letters += User[clave].substring(0, 1);
+    let clave = claves[i]
+    letters += User[clave].substring(0, 1)
   }
 
   return (
@@ -17,5 +17,5 @@ export default function Avatar() {
         {letters}
       </button>
     </section>
-  );
+  )
 }

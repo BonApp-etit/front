@@ -1,19 +1,19 @@
-import Card from "@/components/restaurant_configuration/Card";
-import Image from "next/image";
-import NavBar from "@/components/NavBar/NavBar";
-import MainLayout from "@/components/common_components/MainLayout";
-import InputContained from "@/components/common_components/InputContained";
-import UploadImageCard from "@/components/common_components/UploadImageCard";
+import Card from '@/components/restaurant_configuration/Card'
+import Image from 'next/image'
+import NavBar from '@/components/NavBar/NavBar'
+import MainLayout from '@/components/common_components/MainLayout'
+import InputContained from '@/components/common_components/InputContained'
+import UploadImageCard from '@/components/common_components/UploadImageCard'
 
 const DB = [
-  { titleInfo: "Nombre del restaurante", info: "Mr.burguer" },
+  { titleInfo: 'Nombre del restaurante', info: 'Mr.burguer' },
   {
-    titleInfo: "Direccion",
-    info: "Av. Adolfo López Mateos Sur 2375, Plaza del Sol, 45050 Zapopan, Jal.",
+    titleInfo: 'Direccion',
+    info: 'Av. Adolfo López Mateos Sur 2375, Plaza del Sol, 45050 Zapopan, Jal.',
   },
-  { titleInfo: "Telefono", info: "22-54-56-78" },
-  { titleInfo: "Correo electronico", info: "JohnDoue123@gmail.com" },
-];
+  { titleInfo: 'Telefono', info: '22-54-56-78' },
+  { titleInfo: 'Correo electronico', info: 'JohnDoue123@gmail.com' },
+]
 export default function RestauranConfiguration() {
   return (
     <main>
@@ -49,5 +49,5 @@ export default function RestauranConfiguration() {
         </section>
       </MainLayout>
     </main>
-  );
+  )
 }

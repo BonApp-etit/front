@@ -1,7 +1,7 @@
 export default function ButtonOutlined({ variant, text, type, ...props }) {
   return (
     <section>
-      {variant === "dashed" && (
+      {variant === 'dashed' && (
         <button
           type={type}
           {...props}
@@ -11,5 +11,5 @@ export default function ButtonOutlined({ variant, text, type, ...props }) {
         </button>
       )}
     </section>
-  );
+  )
 }

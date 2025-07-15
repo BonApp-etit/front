@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
 const useIsTablet = () => {
-  const [isTablet, setIsTablet] = useState(false);
+  const [isTablet, setIsTablet] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
-      const width = window.innerWidth;
-      setIsTablet(width >= 744 && width <= 1200);
-    };
+      const width = window.innerWidth
+      setIsTablet(width >= 744 && width <= 1200)
+    }
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
-  return isTablet;
-};
-export default useIsTablet;
+  return isTablet
+}
+export default useIsTablet

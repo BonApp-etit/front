@@ -1,34 +1,34 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import ButtonIncrease from "../administration_menu/ButtonIncrease";
-import CheckRounded from "./CheckRounded";
-import DescriptionBox from "./DescriptionBox";
-import ButtonContained from "./ButtonContained";
-import clsx from "clsx";
-import { FireIcon, ClockIcon } from "@heroicons/react/24/solid";
+import React, { useState } from 'react'
+import Image from 'next/image'
+import ButtonIncrease from '../administration_menu/ButtonIncrease'
+import CheckRounded from './CheckRounded'
+import DescriptionBox from './DescriptionBox'
+import ButtonContained from './ButtonContained'
+import clsx from 'clsx'
+import { FireIcon, ClockIcon } from '@heroicons/react/24/solid'
 
 const DB = [
   {
     ingredientesBase: [
-      { ingredient: "Chile Jalapeño", isAvailable: false },
-      { ingredient: "Queso", isAvailable: true },
-      { ingredient: "Pepinillos", isAvailable: true },
-      { ingredient: "Mostaza", isAvailable: true },
-      { ingredient: "Salsa catsup", isAvailable: true },
-      { ingredient: "Papas a la francesa", isAvailable: false },
+      { ingredient: 'Chile Jalapeño', isAvailable: false },
+      { ingredient: 'Queso', isAvailable: true },
+      { ingredient: 'Pepinillos', isAvailable: true },
+      { ingredient: 'Mostaza', isAvailable: true },
+      { ingredient: 'Salsa catsup', isAvailable: true },
+      { ingredient: 'Papas a la francesa', isAvailable: false },
     ],
   },
   {
     ingredientesExtra: [
-      { ingredient: "Queso", isAvailable: true, price: "15" },
-      { ingredient: "Tocino", isAvailable: false, price: "25" },
-      { ingredient: "Aguacate", isAvailable: true, price: "5" },
+      { ingredient: 'Queso', isAvailable: true, price: '15' },
+      { ingredient: 'Tocino', isAvailable: false, price: '25' },
+      { ingredient: 'Aguacate', isAvailable: true, price: '5' },
     ],
   },
-];
+]
 
 const ModalDetails = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <div
@@ -115,7 +115,7 @@ const ModalDetails = ({ isOpen, onClose }) => {
                     isAvailable={ingredient.isAvailable}
                     labelText={ingredient.ingredient}
                   />
-                );
+                )
               })}
             </div>
           </section>
@@ -137,15 +137,15 @@ const ModalDetails = ({ isOpen, onClose }) => {
 
                     <span
                       className={clsx(
-                        "font-ubuntu text-sm font-bold leading-snug tracking-tight",
-                        { "text-[#667473]": !ingredient.isAvailable },
-                        { "text-cstext": ingredient.isAvailable },
+                        'font-ubuntu text-sm font-bold leading-snug tracking-tight',
+                        { 'text-[#667473]': !ingredient.isAvailable },
+                        { 'text-cstext': ingredient.isAvailable }
                       )}
                     >
                       $ {ingredient.price} MXN
                     </span>
                   </div>
-                );
+                )
               })}
             </div>
           </section>
@@ -167,7 +167,7 @@ const ModalDetails = ({ isOpen, onClose }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ModalDetails;
+export default ModalDetails

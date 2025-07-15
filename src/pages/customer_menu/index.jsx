@@ -1,56 +1,55 @@
-import CardAdministration from "@/components/administration_menu/CardAdministration";
-import NavBar from "@/components/NavBar/NavBar";
-import { SwiperSlide } from "swiper/react";
-import Category from "@/components/administration_menu/Category";
-import TemplateMenu from "../../components/TemplateMenu";
-import ModalDetails from "@/components/common_components/ModalDetails";
-import { useState } from "react";
+import CardAdministration from '@/components/administration_menu/CardAdministration'
+import { SwiperSlide } from 'swiper/react'
+import Category from '@/components/administration_menu/Category'
+import TemplateMenu from '../../components/TemplateMenu'
+import ModalDetails from '@/components/common_components/ModalDetails'
+import { useState } from 'react'
 
 const DB = [
   {
-    nameDish: "Alitas",
+    nameDish: 'Alitas',
     description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "false",
-    image: "/assets/AdministrationMenu/chicken.svg",
+      'Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar',
+    price: '50.50',
+    isAvailable: 'false',
+    image: '/assets/AdministrationMenu/chicken.svg',
   },
   {
-    nameDish: "Alitas",
+    nameDish: 'Alitas',
     description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "true",
-    image: "/assets/AdministrationMenu/chicken.svg",
+      'Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar',
+    price: '50.50',
+    isAvailable: 'true',
+    image: '/assets/AdministrationMenu/chicken.svg',
   },
   {
-    nameDish: "Alitas",
+    nameDish: 'Alitas',
     description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "false",
-    image: "/assets/AdministrationMenu/chicken.svg",
+      'Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar',
+    price: '50.50',
+    isAvailable: 'false',
+    image: '/assets/AdministrationMenu/chicken.svg',
   },
   {
-    nameDish: "Alitas",
+    nameDish: 'Alitas',
     description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "true",
-    image: "/assets/AdministrationMenu/chicken.svg",
+      'Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar',
+    price: '50.50',
+    isAvailable: 'true',
+    image: '/assets/AdministrationMenu/chicken.svg',
   },
   {
-    nameDish: "Alitas",
+    nameDish: 'Alitas',
     description:
-      "Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar",
-    price: "50.50",
-    isAvailable: "false",
-    image: "/assets/AdministrationMenu/chicken.svg",
+      'Deliciosa orden de alitas empanizadas, aderezadas con toque de salsa especial, de la casa. Y aderezada de un queso Chedar',
+    price: '50.50',
+    isAvailable: 'false',
+    image: '/assets/AdministrationMenu/chicken.svg',
   },
-];
+]
 
-export default function AdministrationMenu() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export default function CustomerMenu() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <main className="">
       <TemplateMenu
@@ -115,5 +114,5 @@ export default function AdministrationMenu() {
         ></ModalDetails>
       </TemplateMenu>
     </main>
-  );
+  )
 }

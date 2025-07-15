@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 const FeatureCard = ({ image, title, description }) => {
   return (
@@ -9,15 +9,14 @@ const FeatureCard = ({ image, title, description }) => {
       <div className="absolute right-0 top-0 h-[38px] w-[43px] rounded-bl-[21px] rounded-tr-[19px] bg-cs500 md:h-[75px] md:w-[87px] md:rounded-bl-[42px] md:rounded-tr-[37]"></div>
 
       {/* Imagen */}
-      <div className="mx-auto mb-2 mt-5 w-[150px] md:mb-11 md:w-[300px] lg:mt-8 lg:w-[250px]">
-        <Image
-          src={image}
-          alt={title}
-          width={223}
-          height={262}
-          layout="responsive"
-        />
-      </div>
+
+      <Image
+        src={image}
+        alt={title}
+        width={223}
+        height={262}
+        className="mx-auto mb-2 mt-5 w-[150px] md:mb-11 md:w-[300px] lg:mt-8 lg:w-[250px]"
+      />
 
       {/* Contenedor para centrar título y descripción */}
       <div className="flex flex-col items-center gap-2">
@@ -33,7 +32,7 @@ const FeatureCard = ({ image, title, description }) => {
       </div>
     </div>
     // </div>
-  );
-};
+  )
+}
 
-export default FeatureCard;
+export default FeatureCard

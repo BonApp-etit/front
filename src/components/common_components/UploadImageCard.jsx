@@ -1,5 +1,5 @@
-import ButtonOutlined from "@/components/ButtonOutlined";
-import { CloudArrowUpIcon } from "@heroicons/react/20/solid";
+import ButtonOutlined from '@/components/ButtonOutlined'
+import { CloudArrowUpIcon } from '@heroicons/react/20/solid'
 export default function UploadImageCard({ text }) {
   return (
     <section className="mx-auto flex w-full items-center justify-center rounded-lg border-2 border-dashed border-cs500 px-7 py-3 md:w-[500px] md:px-14 md:py-2">
@@ -11,5 +11,5 @@ export default function UploadImageCard({ text }) {
         <ButtonOutlined variant="dashed" text="Cargar imagen"></ButtonOutlined>
       </div>
     </section>
-  );
+  )
 }

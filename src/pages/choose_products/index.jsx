@@ -1,11 +1,11 @@
-import NavBar from "@/components/NavBar/NavBar";
-import LayoutCard from "@/components/common_components/LayoutCard";
-import CardContent from "@/components/UserOrder/CardContent";
-import { SwiperSlide } from "swiper/react";
-import React, { useState } from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import LayoutOrder from "@/components/UserOrder/LayoutOrder";
+import NavBar from '@/components/NavBar/NavBar'
+import LayoutCard from '@/components/common_components/LayoutCard'
+import CardContent from '@/components/UserOrder/CardContent'
+import { SwiperSlide } from 'swiper/react'
+import React, { useState } from 'react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import LayoutOrder from '@/components/UserOrder/LayoutOrder'
 export default function ChooseProducts() {
   return (
     <main>
@@ -32,5 +32,5 @@ export default function ChooseProducts() {
         </SwiperSlide>
       </LayoutOrder>
     </main>
-  );
+  )
 }

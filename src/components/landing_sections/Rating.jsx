@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 export default function Rating() {
   return (
     <div className="mt-7 flex flex-col items-center lg:flex-row lg:justify-start">
@@ -30,5 +30,5 @@ export default function Rating() {
         <span className="font-normal text-black/50">⭐ 4.8 (450+ reviews)</span>
       </div>
     </div>
-  );
+  )
 }

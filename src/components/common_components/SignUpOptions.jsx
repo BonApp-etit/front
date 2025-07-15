@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function SignUpOptions() {
   return (
@@ -36,5 +36,5 @@ export default function SignUpOptions() {
         </button>
       </section>
     </div>
-  );
+  )
 }

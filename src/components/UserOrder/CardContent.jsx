@@ -1,6 +1,6 @@
-import Image from "next/image";
-import ButtonIncrease from "../administration_menu/ButtonIncrease";
-import clsx from "clsx";
+import Image from 'next/image'
+import ButtonIncrease from '../administration_menu/ButtonIncrease'
+import clsx from 'clsx'
 
 export default function CardContent({
   alt,
@@ -19,24 +19,24 @@ export default function CardContent({
           layout="responsive"
           alt="Hamburguer Image"
           src="/assets/userOrder/Hamburguer.svg"
-          className={clsx("object-cover", {
-            "saturate-0 filter": !isAvailable,
+          className={clsx('object-cover', {
+            'saturate-0 filter': !isAvailable,
           })}
         />
       </div>
       <div className="flex flex-col gap-2 md:gap-0">
         <h6
           className={clsx(
-            "font-ubuntu text-base font-bold text-cs600 md:text-xl",
-            { "text-[#B0B0B0]": !isAvailable },
+            'font-ubuntu text-base font-bold text-cs600 md:text-xl',
+            { 'text-[#B0B0B0]': !isAvailable }
           )}
         >
           Hamburguesa Sencilla
         </h6>
         <div
           className={clsx(
-            "font-ubuntu text-sm leading-snug tracking-tight text-[#272727] md:text-lg",
-            { "text-[#A8A8A8]": !isAvailable },
+            'font-ubuntu text-sm leading-snug tracking-tight text-[#272727] md:text-lg',
+            { 'text-[#A8A8A8]': !isAvailable }
           )}
         >
           <span className="font-normal">$</span>
@@ -55,5 +55,5 @@ export default function CardContent({
         </div>
       </div>
     </section>
-  );
+  )
 }
