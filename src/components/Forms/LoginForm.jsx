@@ -1,4 +1,4 @@
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 import ButtonContained from '@/components/common_components/ButtonContained'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { loginSchema } from '@/hooks/validationSchemas'
@@ -38,6 +38,7 @@ export default function LoginForm() {
           setErrors({ general: 'Ocurrio un error inesperado' })
         }
       }
+
       setSubmitting(false)
     } catch (error) {
       setSubmitting(false)
@@ -55,20 +56,12 @@ export default function LoginForm() {
     >
       {({ errors, isSubmitting }) => (
         <Form>
-          <div>
-            <Field
-              name="email"
-              as={InputContained}
-              label="Correo electrónico"
-              placeholder="Ingresa tu correo electrónico"
-              type="email"
-            />
-            <ErrorMessage
-              name="email"
-              component="p"
-              className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
-            />
-          </div>
+          <Input
+            name="email"
+            type="email"
+            label="Correo electronico"
+            placeholder="Ingresa tu correo electronico"
+          />
 
           <div className="mb-4">
             <div className="flex items-center justify-between">
@@ -82,19 +75,12 @@ export default function LoginForm() {
                 Olvidaste tu contraseña?
               </Link>
             </div>
-            <div>
-              <Field
-                name="password"
-                as={InputContained}
-                placeholder="Ingresa tu contraseña"
-                type="password"
-              />
-              <ErrorMessage
-                name="password"
-                component="div"
-                className="font-roboto text-sm text-red-500 md:text-base lg:text-lg"
-              />
-            </div>
+            <Input
+              name="password"
+              type="password"
+              label=""
+              placeholder="Ingresa tu contraseña"
+            />
           </div>
           {errors.general && (
             <p className="font-roboto text-sm text-red-500 md:text-base lg:text-lg">

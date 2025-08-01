@@ -2,7 +2,7 @@ import Card from '@/components/restaurant_configuration/Card'
 import Image from 'next/image'
 import NavBar from '@/components/NavBar/NavBar'
 import MainLayout from '@/components/common_components/MainLayout'
-import InputContained from '@/components/common_components/InputContained'
+import InputContained from '@/components/common_components/Input'
 import UploadImageCard from '@/components/common_components/UploadImageCard'
 
 const DB = [

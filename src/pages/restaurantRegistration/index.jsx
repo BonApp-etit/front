@@ -1,5 +1,5 @@
 import Form from '../../components/common_components/Form'
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 import ButtonContained from '@/components/common_components/ButtonContained'
 import SignUpOptions from '@/components/common_components/SignUpOptions'
 import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik'
@@ -62,7 +62,7 @@ export default function RestaurantRegistration() {
               <div>
                 <Field
                   name="restaurantName"
-                  as={InputContained}
+                  as={Input}
                   label="Nombre del restaurante o marca*"
                   placeholder="Ingresa el nombre de tu restaurante "
                   type="text"
@@ -76,7 +76,7 @@ export default function RestaurantRegistration() {
               <div>
                 <Field
                   name="restaurantAdress"
-                  as={InputContained}
+                  as={Input}
                   label="Direccion"
                   placeholder="Ingresa la direccion de tu restaurante"
                   type="text"
@@ -91,7 +91,7 @@ export default function RestaurantRegistration() {
               <div>
                 <Field
                   name="restaurantPhone"
-                  as={InputContained}
+                  as={Input}
                   label="Telefono"
                   placeholder="Ingresa el numero de telefono de tu restaurante"
                   type="text"
@@ -106,7 +106,7 @@ export default function RestaurantRegistration() {
               <div>
                 <Field
                   name="restaurantTables"
-                  as={InputContained}
+                  as={Input}
                   label="No.mesas (QR code)"
                   placeholder="Ingresa el numero de mesas que tiene tu restaurante"
                   type="password"

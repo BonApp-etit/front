@@ -1,5 +1,5 @@
 import Form from '../../components/common_components/Form'
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 import ButtonContained from '@/components/common_components/ButtonContained'
 import SignUpOptions from '@/components/common_components/SignUpOptions'
 import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik'
@@ -60,7 +60,7 @@ export default function SignUp(userType = 'comensal') {
               <div>
                 <Field
                   name="name"
-                  as={InputContained}
+                  as={Input}
                   label="Nombre*"
                   placeholder="Ingresa tu nombre"
                   type="text"
@@ -74,7 +74,7 @@ export default function SignUp(userType = 'comensal') {
               <div>
                 <Field
                   name="lastName"
-                  as={InputContained}
+                  as={Input}
                   label="Apellido*"
                   placeholder="Ingresa tu apellido"
                   type="text"
@@ -89,7 +89,7 @@ export default function SignUp(userType = 'comensal') {
               <div>
                 <Field
                   name="email"
-                  as={InputContained}
+                  as={Input}
                   label="Correo electrónico*"
                   placeholder="Ingresa tu correo electrónico"
                   type="email"
@@ -104,7 +104,7 @@ export default function SignUp(userType = 'comensal') {
               <div>
                 <Field
                   name="password"
-                  as={InputContained}
+                  as={Input}
                   label="Contraseña*"
                   placeholder="Ingresa tu contraseña"
                   type="password"

@@ -6,7 +6,7 @@ import Category from '@/components/administration_menu/Category'
 import TemplateMenu from '../../components/TemplateMenu'
 import React, { useState } from 'react'
 import Modal from '@/components/common_components/Modal'
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 import OffCanvas from '@/components/common_components/OffCanvas'
 const DB = [
   {
@@ -88,7 +88,7 @@ export default function AdministrationMenu() {
               ¡Comienza aqui agregando tu primer platillo!
             </p>
             <div>
-              <InputContained variant="outlined" />
+              <Input variant="outlined" />
             </div>
 
             <ButtonOutlined text="Agregar categoria" variant="dashed" />

@@ -1,5 +1,5 @@
 import Form from '../../components/common_components/Form'
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 import ButtonContained from '@/components/common_components/ButtonContained'
 import useIsTablet from '@/hooks/useIsTablet'
 import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik'
@@ -73,7 +73,7 @@ export default function AccountVerification() {
                 <div>
                   <Field
                     name="email"
-                    as={InputContained}
+                    as={Input}
                     label="Correo electrónico"
                     placeholder="Ingresa tu correo electrónico"
                     type="email"
@@ -104,7 +104,7 @@ export default function AccountVerification() {
                 <div>
                   <Field
                     name="code"
-                    as={InputContained}
+                    as={Input}
                     label="Código de verificación"
                     placeholder="Ingresa tu código de verificación"
                     type="text"

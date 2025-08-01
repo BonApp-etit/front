@@ -1,5 +1,5 @@
 import Form from '../../components/common_components/Form'
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 import ButtonContained from '@/components/common_components/ButtonContained'
 import NavBar from '@/components/NavBar/NavBar'
 import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik'
@@ -64,7 +64,7 @@ export default function CreatePassword() {
                 <Field
                   label="Contraseña"
                   name="password"
-                  as={InputContained}
+                  as={Input}
                   placeholder="Ingresa tu contraseña"
                   type="password"
                 />
@@ -79,7 +79,7 @@ export default function CreatePassword() {
                 <Field
                   label="Confirma tu contraseña"
                   name="passwordConfirmation"
-                  as={InputContained}
+                  as={Input}
                   placeholder="Confirma tu nueva contraseña"
                   type="password"
                 />

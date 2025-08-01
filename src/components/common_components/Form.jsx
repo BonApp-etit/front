@@ -32,15 +32,13 @@ export default function Form({
           </div>
           {/* Punto de control. Img 2div  */}
 
-          <div className="mx-auto w-full min-w-[100px] max-w-[320px] md:min-w-[300px] md:max-w-[400px] lg:max-w-[500px]">
-            <Image
-              width={550}
-              height={440}
-              src={src}
-              alt={alt}
-              layout="responsive"
-            />
-          </div>
+          <Image
+            width={550}
+            height={440}
+            src={src}
+            alt={alt}
+            className="mx-auto w-full min-w-[100px] max-w-[320px] md:min-w-[300px] md:max-w-[400px] lg:max-w-[500px]"
+          />
         </div>
       </div>
     </section>
