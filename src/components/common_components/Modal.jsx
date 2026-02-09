@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import UploadImageCard from './UploadImageCard'
-import InputContained from './InputContained'
+import Input from './Input'
 import DescriptionBox from './DescriptionBox'
 import Card from '../restaurant_configuration/Card'
 import Checkbox from './Checkbox'
@@ -52,25 +52,25 @@ const Modal = ({ isOpen, onClose }) => {
           <section className="lg:flex lg:gap-4">
             <UploadImageCard text="Añade una imagen a tu platillo!"></UploadImageCard>
             <div>
-              <InputContained
+              <Input
                 label="Nombre del platillo"
                 type="text"
                 variant="outlined"
                 placeholder="Hamburguesa"
               />
-              <InputContained
+              <Input
                 label="Precio"
                 type="text"
                 variant="outlined"
                 placeholder="$85"
               />
-              <InputContained
+              <Input
                 label="Tiempo estimado de preparación"
                 type="text"
                 variant="outlined"
                 placeholder="30min"
               />
-              <InputContained
+              <Input
                 label="kCal"
                 type="text"
                 variant="outlined"

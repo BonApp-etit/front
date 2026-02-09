@@ -4,7 +4,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import LayoutOrder from '@/components/UserOrder/LayoutOrder'
 import Card from '@/components/restaurant_configuration/Card'
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 
 export default function PaymentMethod() {
   return (
@@ -25,28 +25,28 @@ export default function PaymentMethod() {
               iconSrc="/assets/PaymentMethod/cardOutline.svg"
             >
               <div className="px-1">
-                <InputContained
+                <Input
                   label="Nombre del titular"
                   placeholder="Nombre del titular"
                   variant="outlined"
-                ></InputContained>
+                ></Input>
                 <div className="flex gap-20">
-                  <InputContained
+                  <Input
                     label="Expiracion"
                     placeholder="MM / YY"
                     variant="outlined"
-                  ></InputContained>
-                  <InputContained
+                  ></Input>
+                  <Input
                     label="CVV"
                     placeholder="***"
                     variant="outlined"
-                  ></InputContained>
+                  ></Input>
                 </div>
-                <InputContained
+                <Input
                   label="No.Tarjeta"
                   placeholder="0000 0000 0000 0000"
                   variant="outlined"
-                ></InputContained>
+                ></Input>
               </div>
             </Card>
           </div>

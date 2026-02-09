@@ -1,4 +1,4 @@
-import InputContained from '@/components/common_components/InputContained'
+import Input from '@/components/common_components/Input'
 import ButtonContained from '@/components/common_components/ButtonContained'
 import QRCard from '@/components/common_components/QRGenerator/QRCard'
 
@@ -17,7 +17,7 @@ export default function QRGenerator() {
       <div className="lg:flex lg:justify-between">
         <div className="flex max-w-[400px] items-end justify-between md:max-w-[700px] lg:space-x-7">
           <div className="max-w-[210px] md:max-w-[500px]">
-            <InputContained
+            <Input
               variant="outlined"
               placeholder="Ingresa el numero de mesas"
               label="No.Mesas"
