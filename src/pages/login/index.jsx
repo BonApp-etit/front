@@ -7,10 +7,10 @@ export default function Login() {
   const router = useRouter()
 
   return (
-    <main>
+    <main className="mx-auto px-4 sm:max-w-xl sm:px-0 md:max-w-2xl lg:max-w-7xl lg:px-14">
       <Form
         tittle="Iniciar sesión"
-        subtitleTop="Bienvenido de vuelta!!"
+        subtitleTop="¡Bienvenido de vuelta!"
         subtitleBottom=""
         src="/assets/Login/chef.svg"
         alt="LoginChefImage"
